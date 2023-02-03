@@ -1,0 +1,76 @@
+
+FPL_REVIEW.csv
+Download Data from fpl review
+
+
+
+SOCCER-SPI FOLDER
+Download updated data from 538
+
+
+team.json
+https://fantasy.premierleague.com/api/my-team/MY_TEAM_ID/
+
+
+REVIEW_DETAILED.csv
+For review_detailed file:
+1. Open Revie planner
+2. Press F12
+3. Copy paste the following code into console
+4. Press Enter
+
+
+let get_all_data = () => {
+    
+    let gws = Array.from(jQuery(".ptsshoq")).map(i => i.textContent).filter(i => i.includes('GW')).map(i => parseInt(i.split('GW')[1]))
+    let first_week = Math.min(...gws)
+    let last_week = Math.max(...gws)
+
+    let jsondata= jQuery("#fplr_api").text()
+    let d=JSON.parse(decodeURIComponent(escape(window.atob(jsondata))))
+
+    let main_keys = ['name', 'pos', 'team_abbrev', 'now_cost']
+    let gw_keys = ['opp', 'dmins', 'livpts', 'livxg', 'livxa', 'livcs', 'livbon']
+    let text_data = "ID,Name,Pos,Team,Price"
+    for (let w=first_week; w<=last_week; w++) {
+        text_data += `,${w}_fix,${w}_xmins,${w}_pts,${w}_g,${w}_a,${w}_cs,${w}_bon,${w}_dmins,${w}_likelihood`
+    }
+    let players = Object.entries(d)
+    players = players.filter(i => i[1] != 0)
+    players.forEach(e => {
+        let pid = e[0]
+        let p = e[1]
+        row_data = pid + "," + main_keys.map(i => p[i]).join(",")
+        for (let w=first_week; w<=last_week; w++) {
+            gw_keys.forEach(k => {
+                try {
+                    row_data += ',' + p[w][k]
+                }
+                catch {
+                    aa = 1
+                }
+            })
+            row_data += p[w].matchos ? ','+p[w].matchos.map(i => p[w][i].dmins).join(' ') : ','
+            row_data += p[w].matchos ? ','+p[w].matchos.map(i => p[w][i].likelihood).join(' ') : ','
+        }
+        text_data += '\n'+row_data
+    })
+
+    return text_data
+
+}
+
+function download_csv_data(csv, filename) {
+        var csvFile;
+        var downloadLink;
+        csvFile = new Blob([csv], {type: "text/csv"});
+        downloadLink = document.createElement("a");
+        downloadLink.download = filename;
+        downloadLink.href = window.URL.createObjectURL(csvFile);
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+    }
+
+text_data = get_all_data()
+download_csv_data(text_data, "review_detailed.csv")

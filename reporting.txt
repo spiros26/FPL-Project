@@ -1,0 +1,104 @@
+## GOALS
+npg model Index(['npxGp90', 'npxGp90(L4)', 'shp90', 'teamnpxGp90', 'opp_npxGAp90',
+       'minutes', 'was_home', 'npg'],
+      dtype='object')
+
+RandomForestRegressor()
+{'n_estimators': 100, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 8}
+Mean Absolute Error = 0.09317428507836685
+Mean Squared Error = 0.0581292195310445
+Root Mean Squared Error = 0.24110001976574888
+r2 = 0.13022062113897925
+
+
+XGBoost (saved)
+{'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.012}
+Mean Absolute Error = 0.09081437061089849
+Mean Squared Error = 0.05159879923089267
+Root Mean Squared Error = 0.22715369077101227
+r2 = 0.13175668836256138
+
+{'n_estimators': 600, 'max_depth': 2, 'learning_rate': 0.012}
+Mean Absolute Error = 0.10354680821353149
+Mean Squared Error = 0.059322078764207996
+Root Mean Squared Error = 0.24356124232769055
+r2 = 0.14258677808515885
+
+
+## ASSISTS
+Index(['xAp90', 'xAp90(L4)', 'kpp90', 'teamnpxGp90', 'opp_npxGp90',
+       'opp_npxGAp90', 'minutes', 'was_home', 'assists'],
+      dtype='object')
+
+RandomForestRegressor()
+{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 5, 'max_features': 'sqrt', 'max_depth': 8}
+Mean Absolute Error = 0.09884583815935495
+Mean Squared Error = 0.05907983621172266
+Root Mean Squared Error = 0.2430634407139886
+r2 = 0.06600074081055185
+
+
+XGBoost (saved)
+{'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.012}
+Mean Absolute Error = 0.10143785367863499
+Mean Squared Error = 0.05811468398330825
+Root Mean Squared Error = 0.24106987365348712
+r2 = 0.07899511888555744
+
+{'n_estimators': 400, 'max_depth': 4, 'learning_rate': 0.014}
+Mean Absolute Error = 0.10797163247691981
+Mean Squared Error = 0.06324455088744818
+Root Mean Squared Error = 0.2514846931474124
+r2 = 0.08109830812727015
+
+
+## PENALTIES
+
+{'n_estimators': 400, 'max_depth': 2, 'learning_rate': 0.01}
+Mean Absolute Error = 0.2202532182241741
+Mean Squared Error = 0.11812354800037957
+Root Mean Squared Error = 0.3458130918472582
+r2 = 0.015791677518459668
+Index(['team_npxG', 'oppteam_npxGA', 'was_home', 'pen_rate', 'proj_goals',
+       'team_npxGp90(L4)', 'oppteam_npxGAp90(L4)', 'team_pens'],
+      dtype='object')
+
+
+
+
+## TEAM GOALS
+{'n_estimators': 400, 'max_depth': 2, 'learning_rate': 0.01}
+Mean Absolute Error = 0.9344558568127388
+Mean Squared Error = 1.40194904813252
+Root Mean Squared Error = 1.1840392933228694
+r2 = 0.08658424179503699
+Index(['team1_npxG', 'team2_npxGA', 'was_home', 'team1_npxGp90(L4)',
+       'team2_npxGAp90(L4)', 'team1_goals'],
+      dtype='object')
+
+
+## BONUS
+{'n_estimators': 500, 'max_depth': 3, 'learning_rate': 0.01}
+Mean Absolute Error = 0.24567517831132055
+Mean Squared Error = 0.28618606317229567
+Root Mean Squared Error = 0.5349636092037435
+r2 = 0.13240082089787253
+
+## SAVES
+{'n_estimators': 700, 'max_depth': 2, 'learning_rate': 0.01}
+Mean Absolute Error = 0.710533904283739
+Mean Squared Error = 1.5511016092240437
+Root Mean Squared Error = 1.2454322981294663
+r2 = 0.612074482058801
+
+all info for saved models
+
+
+
+
+
+Some suggestions for ways to improve the score are:
+
+Feature engineering: creating new features out of the existing features
+Outlier removal
+Imputation of missing values: XGBoost is resilient to missing values, however one may like to try using the missingpy library
