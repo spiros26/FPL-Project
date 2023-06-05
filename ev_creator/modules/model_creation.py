@@ -5,6 +5,15 @@ import xgboost as xgb
 import math
 from sklearn.metrics import mean_absolute_error, mean_squared_error, mean_squared_log_error, r2_score
 import matplotlib.pyplot as plt
+from sklearn.model_selection import cross_val_score
+from sklearn.metrics import make_scorer
+
+
+def rmse_cv(model, X, y, cv):
+    rmse_scorer = make_scorer(lambda y_true, y_pred: math.sqrt(((y_true - y_pred) ** 2).mean()))
+    rmse_scores = cross_val_score(model, X, y, cv=cv, scoring=rmse_scorer)
+    print('RMSE scores:', rmse_scores)
+    print('Mean RMSE:', rmse_scores.mean())
 
 def metrics(model, X_train, X_test, y_train, y_test):
     predict_train = model.predict(X_train)
@@ -45,6 +54,7 @@ def model_creation(dataset, n, model, n_estimators_list, max_depth_list, learnin
         goals_rf.fit(X_train, y_train)
 
         metrics(goals_rf, X_train, X_test, y_train, y_test)
+        rmse_cv(goals_rf, X, y, 5)
         feature_importances(goals_rf, dataset, X_train)
         return goals_rf
 
@@ -60,5 +70,6 @@ def model_creation(dataset, n, model, n_estimators_list, max_depth_list, learnin
         goals_xgb.fit(X_train.values, y_train)
 
         metrics(goals_xgb, X_train, X_test, y_train, y_test)
+        rmse_cv(goals_xgb, X, y, 5)
         feature_importances(goals_xgb, dataset, X_train)
         return goals_xgb

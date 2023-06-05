@@ -1,0 +1,54 @@
+{
+    "horizon": 1,
+    "ft_value": 1.5,
+    "itb_value": 0,
+    "decay_base": 0.85,
+    "no_future_transfer": false,
+    "no_transfer_last_gws": 0,
+    "randomized": false,
+    "xmin_lb": 20,
+    "bench_weights": {
+        "0": 0.03,
+        "1": 0.21,
+        "2": 0.06,
+        "3": 0.003
+    },
+    "banned": [],
+    "locked": [],
+    "delete_tmp": true,
+    "secs": 300,
+    "use_cmd": false,
+    "future_transfer_limit": null,
+    "no_transfer_gws": [],
+    "booked_transfers": [],
+    "use_wc": null,
+    "use_bb": null,
+    "use_fh": null,
+    "chip_limits": {
+        "bb": 0,
+        "wc": 0,
+        "fh": 0,
+        "tc": 0
+    },
+    "num_transfers": null,
+    "hit_limit": null,
+    "preseason": false,
+    "cbc_path": "",
+    "no_opposing_play": false,
+    "pick_prices": {
+        "G": "",
+        "D": "",
+        "M": "",
+        "F": ""
+    },
+    "iteration": 1,
+    "iteration_criteria": "this_gw_transfer_in_out",
+    "datasource": "review",
+    "data_weights": {
+        "review": 50,
+        "review-odds": 0,
+        "mikkel": 0,
+        "kiwi": 50
+    },
+    "export_data": "final.csv"
+}

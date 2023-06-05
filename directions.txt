@@ -2,7 +2,7 @@
 FPL_REVIEW.csv
 Download Data from fpl review
 
-
+(UPDATE MASTER.CSV https://github.com/ChrisMusson/FPL-ID-Map to have all the new players)
 
 SOCCER-SPI FOLDER
 Download updated data from 538
@@ -16,7 +16,7 @@ REVIEW_DETAILED.csv
 For review_detailed file:
 1. Open Revie planner
 2. Press F12
-3. Copy paste the following code into console
+3. Copy paste the following code into console (thanks Sertalp!)
 4. Press Enter
 
 

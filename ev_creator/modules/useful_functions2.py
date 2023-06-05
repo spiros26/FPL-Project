@@ -1,9 +1,27 @@
 import pandas as pd
 import numpy as np
+import requests
 from tqdm import tqdm
+import json
 from modules.useful_functions import npg, pens_per_game, xpens_2022, save_points, minus_points_def, clean_sheets, xAppPoints, el_per_app, finishing_rate, penalty_finishing_rate, fixture_info, team_id, convert, previous, npxGAp90, last4npxGp90, npxGp90, shp90, opp_npxGp90, xAp90, kpp90, last4xAp90, opp_last4npxGp90, last4npxGAp90
 from modules.useful_functions import p90_main_df, avg, rates100, npg_rate_season, assist_rate_season
+import asyncio
+import aiohttp
+import nest_asyncio
+nest_asyncio.apply()
+from understat import Understat
 
+async def player_understat_file(id):
+    async with aiohttp.ClientSession() as session:
+        understat = Understat(session)
+        # Using **kwargs
+        player_matches = await understat.get_player_matches(id)
+        player_matches = pd.DataFrame(player_matches)
+        cols=[i for i in player_matches.columns if i not in ['position', 'h_team', 'a_team', 'date']]
+        for col in cols:
+            player_matches[col]=pd.to_numeric(player_matches[col])
+        return player_matches
+loop = asyncio.get_event_loop()
 
 is_home = {
     'H': True,
@@ -11,22 +29,24 @@ is_home = {
 }
 
 def add_fixture(fixtures, season, fix_prob, gw, idd, team_h, team_a):
-    adjusted_fixtures = fixtures
+    #adjusted_fixtures = fixtures.copy()
     adj_fix = fixtures[season]
     if 'fix_prob' not in adj_fix:
         adj_fix.insert(0, 'fix_prob', [1] * adj_fix.shape[0], True)
     if ((adj_fix.team_h == team_h) & (adj_fix.team_a == team_a) & (adj_fix.event == gw)).any():
         i = adj_fix[((adj_fix.team_h == team_h) & (adj_fix.team_a == team_a) & (adj_fix.event == gw))].index
         adj_fix.at[i, 'fix_prob'] = fix_prob
-        return adjusted_fixtures
+        return fixtures
 
     adj_fix.loc[len(adj_fix.index)] = [fix_prob, 0, gw, False, False, idd, '2023-05-28T15:00:00Z', 0, False, False, team_a, np.NaN, team_h, np.NaN, '[]', 0, 0, 0]
-    return adjusted_fixtures
-
+    return fixtures
 
 def adjust_fixtures(review_detailed, fixtures, teams, season, gws):
     teams_df = teams[season]
-    review_detailed = review_detailed[review_detailed[str(gws[0])+'_xmins']!=0]
+    try:
+        review_detailed = review_detailed[~((review_detailed[str(gws[0])+'_xmins']==0) & (review_detailed[str(gws[1])+'_xmins']==0))]
+    except:
+        review_detailed = review_detailed[~(review_detailed[str(gws[0])+'_xmins']==0)]
     l = []
     m = []
     for gw in gws:
@@ -35,32 +55,25 @@ def adjust_fixtures(review_detailed, fixtures, teams, season, gws):
     review_detailed[l] = review_detailed[l].fillna('')
     review_detailed[m] = review_detailed[m].fillna('0')
     idd = 1000
-    for i in range(20):
-        df = review_detailed.drop_duplicates(subset='Team', keep='first').iloc[i]
-        for gw in gws:
-            f_info = df[str(gw)+'_fix'].split('(')
-            fp_info = df[str(gw)+'_likelihood'].split()
-            '''
-            if len(f_info)-1 == 0:
-                opp_team = fixture_info2(i, season, gw, fixtures, teams)[0][0]
-                home = fixture_info2(i, season, gw, fixtures, teams)[0][1]
-                if home:
-                    fixtures = add_fixture(fixtures, season, float(fp_info[i]), gw, idd, i, teams_df[teams_df['name']==opp_team]['id'].iloc[0])
-                else:
-                    fixtures = add_fixture(fixtures, season, float(fp_info[i]), gw, idd, teams_df[teams_df['name']==opp_team]['id'].iloc[0], i)
-                idd = idd + 1
-            '''
-            for i in range(len(f_info)-1):
-                if is_home[f_info[i+1][0]]:
-                    team_h = teams_df[teams_df['short_name']==df['Team']]['id'].iloc[0]
-                    team_a = teams_df[teams_df['short_name']==f_info[i+1][4:]]['id'].iloc[0]
-                else:
-                    team_a = teams_df[teams_df['short_name']==df['Team']]['id'].iloc[0]
-                    team_h = teams_df[teams_df['short_name']==f_info[i+1][4:]]['id'].iloc[0]   
-                fixtures = add_fixture(fixtures, season, float(fp_info[i]), gw, idd, team_h, team_a)
-                idd = idd + 1
-    return fixtures
 
+    for i in range(20):
+        try:
+            df = review_detailed.drop_duplicates(subset='Team', keep='first').iloc[i]
+            for gw in gws:
+                f_info = df[str(gw)+'_fix'].split('(')
+                fp_info = str(df[str(gw)+'_likelihood']).split()
+                for i in range(len(f_info)-1):
+                    if is_home[f_info[i+1][0]]:
+                        team_h = teams_df[teams_df['short_name']==df['Team']]['id'].iloc[0]
+                        team_a = teams_df[teams_df['short_name']==f_info[i+1][4:]]['id'].iloc[0]
+                    else:
+                        team_a = teams_df[teams_df['short_name']==df['Team']]['id'].iloc[0]
+                        team_h = teams_df[teams_df['short_name']==f_info[i+1][4:]]['id'].iloc[0]   
+                    fixtures = add_fixture(fixtures, season, float(fp_info[i]), gw, idd, team_h, team_a)
+                    idd = idd + 1
+        except:
+            continue
+    return fixtures
 
 teams538 = {
     'Arsenal': 'Arsenal',
@@ -91,25 +104,42 @@ teams538 = {
 }
 
 
-def proj_scores(team_1, team_2, season, home):
-    proj_scores_df = pd.read_csv('soccer-spi/spi_matches.csv')
-    proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
-    df = proj_scores_df[proj_scores_df['season']==season]
-    if home:
-        df = df[(df['team1']==teams538[team_1]) & (df['team2']==teams538[team_2])]
-        xg1 = float(df['proj_score1'])
-        xg2 = float(df['proj_score2'])
-        return xg1,xg2
-    else:
-        df = df[(df['team1']==teams538[team_2]) & (df['team2']==teams538[team_1])]
-        xg1 = float(df['proj_score1'].iloc[0])
-        xg2 = float(df['proj_score2'].iloc[0])
-        return xg2,xg1 
+def proj_scores(proj_scores_df, team_1, team_2, season, home):
+    try:
+        df = proj_scores_df[proj_scores_df['season']==season]
+        if home:
+            df = df[(df['team1']==teams538[team_1]) & (df['team2']==teams538[team_2])]
+            xG1 = float(df['proj_score1'])
+            xG2 = float(df['proj_score2'])
+            return xG1,xG2
+        else:
+            df = df[(df['team1']==teams538[team_2]) & (df['team2']==teams538[team_1])]
+            xG1 = float(df['proj_score1'].iloc[0])
+            xG2 = float(df['proj_score2'].iloc[0])
+            return xG2,xG1 
+    except:
+        return 0.0, 0.0
 
-def prev_rate(PATH, season, fpl_str, gw, gw_no_lim, el):
+def spis(proj_scores_df, team_1, team_2, season, home):
+    try:
+        df = proj_scores_df[proj_scores_df['season']==season]
+        if home:
+            df = df[(df['team1']==teams538[team_1]) & (df['team2']==teams538[team_2])]
+            spi1 = float(df['spi1'])
+            spi2 = float(df['spi2'])
+            return spi1,spi2
+        else:
+            df = df[(df['team1']==teams538[team_2]) & (df['team2']==teams538[team_1])]
+            spi1 = float(df['spi1'].iloc[0])
+            spi2 = float(df['spi2'].iloc[0])
+            return spi2,spi1 
+    except:
+        return 0.0, 0.0
+
+
+def prev_rate(main_df, history_df, gw, gw_no_lim, el):
     if el == 'bonus':
         try:
-            main_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/gw.csv')
             if gw >= gw_no_lim:
                 ret_value = p90_main_df(main_df, el, gw)
                 return ret_value
@@ -117,7 +147,6 @@ def prev_rate(PATH, season, fpl_str, gw, gw_no_lim, el):
                 raise Exception()
         except:
             try:
-                history_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/history.csv')
                 ret_value = 90*sum(history_df['bonus'].to_list())/sum(history_df['minutes'].to_list())
                 return ret_value
             except:
@@ -125,7 +154,6 @@ def prev_rate(PATH, season, fpl_str, gw, gw_no_lim, el):
                 return ret_value
     elif el == 'saves':
         try:
-            main_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/gw.csv')
             if gw >= gw_no_lim:
                 ret_value = p90_main_df(main_df, el, gw)
                 return ret_value
@@ -133,7 +161,6 @@ def prev_rate(PATH, season, fpl_str, gw, gw_no_lim, el):
                 raise Exception()
         except:
             try:
-                history_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/history.csv')
                 ret_value = 90*sum(history_df['saves'].to_list())/sum(history_df['minutes'].to_list())
                 return ret_value
             except:
@@ -141,7 +168,6 @@ def prev_rate(PATH, season, fpl_str, gw, gw_no_lim, el):
                 return ret_value
     elif el == 'yc':
         try:
-            main_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/gw.csv')
             if gw >= gw_no_lim:
                 ret_value = el_per_app(main_df, gw, el)
                 return ret_value
@@ -149,13 +175,11 @@ def prev_rate(PATH, season, fpl_str, gw, gw_no_lim, el):
                 raise Exception()
         except:
             try:
-                history_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/history.csv')
                 ret_value = 90*sum(history_df['yellow_cards'].to_list())/sum(history_df['minutes'].to_list())
                 return ret_value
             except:
                 ret_value = 0.15
                 return ret_value
-
 
 
 def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x): 
@@ -196,6 +220,9 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         npxGp90l100 = df['npxGp90l100'][x]
         sh_ratel100 = df['sh_ratel100'][x]
         savesp90 = df['savesp90'][x]
+        spi_team = df['spi_team'][x]
+        pen_chance = df['pen_chance'][x]
+        spi_opp_team = df['spi_opp_team'][x]
 
         app = xAppPoints(int(mins))[0]
         chance60 = xAppPoints(int(mins))[1]
@@ -204,15 +231,17 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         miss_pen_points = 0
         xg_pen = 0.79
         xpens = pens.predict([[teamnpxGp90, oppnpxGAp90, home, pen_rate, team_proj_goals, teamnpxGp90l4, oppnpxGAp90l4]])[0]
+        xpen_goals = xpens * xg_pen * penalty_finishing_rate * pen_chance
+        '''
         pen_takers = xpens_2022[team]
-
         for x in range(len(pen_takers)):
             if pen_takers[x][0] == player_id:
                 xpen_goals = (mins/90)*pen_takers[x][1] * xpens* xg_pen * penalty_finishing_rate  # pen_takers[x][1] is the chance of the player being 1st choice pen taker
                 #miss_pen_points = -2*xpens*(1-xg_pen*penalty_finishing_rate)
-                
-        xGoals = npgoals.predict([[npg_ratel100, npxGp90l100, sh_ratel100, npg_rate, npxGp90, npxGp90l4, shp90, teamnpxGp90, oppnpxGAp90, mins, home]])[0] + xpen_goals
-        xAssists = assists.predict([[assist_ratel100, xAp90l100, kp_ratel100, assist_rate, xAp90, xAp90l4, kpp90, teamnpxGp90, oppnpxGp90, oppnpxGAp90, mins, home]])[0]
+        '''  
+
+        xGoals = npgoals.predict([[npg_ratel100, npxGp90l100, sh_ratel100, npg_rate, npxGp90, npxGp90l4, shp90, teamnpxGp90, oppnpxGAp90, spi_opp_team, spi_team, mins, home]])[0] + xpen_goals
+        xAssists = assists.predict([[assist_ratel100, xAp90l100, kp_ratel100, assist_rate, xAp90, xAp90l4, kpp90, teamnpxGp90, oppnpxGp90, spi_opp_team, oppnpxGAp90, spi_team, mins, home]])[0]
         #xCS = clean_sheets(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
         xCS = clean_sheets(opp_proj_goals)
         xBonus = bonus.predict([[bonusp90, position, npxGp90, xAp90, npxGAp90, oppnpxGp90, oppnpxGAp90, mins, home]])[0]
@@ -231,14 +260,17 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         points.insert(8, 'pen_miss_points', [miss_pen_points], True)
 
         if position == 1:
-            total = app + 3*xAssists + 4*chance60*xCS + xBonus + chance60*xMinus_def + xSave_points - xYC + miss_pen_points
+            total = app + 3*xAssists + 4*chance60*xCS + xBonus + chance60*xMinus_def + xSave_points - (mins/90)*xYC + miss_pen_points
         if position == 2:
-            total = app + 6*xGoals + 3*xAssists + 4*chance60*xCS + xBonus + chance60*xMinus_def - xYC + miss_pen_points
+            total = app + 6*xGoals + 3*xAssists + 4*chance60*xCS + xBonus + chance60*xMinus_def - (mins/90)*xYC + miss_pen_points
         if position == 3:
-            total = app + 5*xGoals + 3*xAssists + chance60*xCS + xBonus - xYC + miss_pen_points
+            total = app + 5*xGoals + 3*xAssists + chance60*xCS + xBonus - (mins/90)*xYC + miss_pen_points
         if position == 4:
-            total = app + 4*xGoals + 3*xAssists + xBonus - xYC + miss_pen_points
-
+            total = app + 4*xGoals + 3*xAssists + xBonus - (mins/90)*xYC + miss_pen_points
+        
+        # Checks
+        if total < 0 or mins==0:
+            total = 0
         points.insert(9, 'total', [total], True)
 
         return points
@@ -255,122 +287,34 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         points.insert(8, 'pen_miss_points', [0.0], True)
         points.insert(9, 'total', [0.0], True)
         return points
-        
-        
 
-def compute_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, id_dict_df, fpl_str_df_path, PATH, fixtures, teams, team_stats_dict, xpens_2022, npgoals, assists, team_goals, bonus, saves, gw_no_lim, seasons):
-    xpoints = {}
-    for q in range(horizon):
-        xpoints['gw_'+str(next_gw+q)] = []
-    mins = {}
-    for q in range(horizon):
-        mins['gw_'+str(next_gw+q)] = []
-    total = []
-    xmins = []
-    fpl_id = ids[season]
-    #review_df = review_df[:5]      #for tests
-    for player_id in tqdm(review_df['ID'].to_list()): 
-        try:
-            name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
-            row = id_dict_df[id_dict_df[fpl_id]==player_id].index[0]
-            gws = list(range(next_gw, next_gw + horizon))
+
+def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_horizon, gw, i, pid):
+    gws = list(range(next_gw, next_gw + horizon))
+    penmins = []
+    for n in range(len(xpens_2022[team])):
+        for player_id in review_df['ID'].to_list():
             xmins = []
-            xp = []
-            for q in range(horizon):
-                try:
-                    xmins.append(list(map(float, str(review_detailed[review_detailed['ID']==player_id][str(gws[q])+'_dmins'].iloc[0]).split())))
-                except:
-                    xmins.append(list(map(float, str(review_detailed[review_detailed['ID']==player_id][str(next_gw + review_horizon - 1)+'_dmins'].iloc[0]).split())))
-            df = pd.DataFrame()
-
-            understat_str = convert(str(id_dict_df.iloc[row]['Understat_Name'])) + '_' + str(id_dict_df.iloc[row]['Understat_ID']) + '.csv'
-            #fpl_str_prev = convert(str(id_dict_df.iloc[row]['FPL_Name'])) + '_' + str(id_dict_df.iloc[row][ids[previous(season)]])
-            try:
-                fpl_str = convert(str(id_dict_df.iloc[row]['FPL_Name'])) + '_' + str(id_dict_df.iloc[row][ids[season]])
-                main_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/gw.csv')
-            except:
-                fpl_str_df = pd.read_csv(fpl_str_df_path)
-                fpl_str_df = fpl_str_df[fpl_str_df['22-23']==player_id]
-                fpl_str = fpl_str_df['first_name'].iloc[0] + '_' + fpl_str_df['second_name'].iloc[0] + '_' + str(fpl_str_df['22-23'].iloc[0])
-            understat_df = pd.read_csv(PATH + season + '/understat/' + understat_str)
-
-            for gw in gws:
-                opponent_team = []
-                home = []
-                kickoff_time = []
-                xp_gw = []
-                bpm = prev_rate(PATH, season, fpl_str, gw, gw_no_lim, 'bonus')
-                yc = prev_rate(PATH, season, fpl_str, gw, gw_no_lim, 'yc')
-                team_name = teams[season].iloc[team_id(player_id, season, players_raw)-1, 5]
-                fix = fixture_info(player_id, season, gw, fixtures, teams, players_raw)
-                for i in range(len(fix)):
-                    cmp_df = pd.DataFrame()
-                    opponent_team.append(fix[i][0])
-                    home.append(fix[i][1])
-                    kickoff_time.append(fix[i][2])   
-
-                    pos = int(players_raw[season][players_raw[season]['id'] == int(id_dict_df.iloc[row][fpl_id])]['element_type'])
-            
-                    cmp_df.insert(0, 'opp_npxGAp90', [npxGAp90(opponent_team[i], kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'npxGp90(L4)', [last4npxGp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
-                    cmp_df.insert(0, 'xAp90(L4)', [last4xAp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
-                    cmp_df.insert(0, 'npxGp90', [npxGp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
-                    cmp_df.insert(0, 'xAp90', [xAp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
-                    cmp_df.insert(0, 'position', [pos], True)
-                    cmp_df.insert(0, 'opp_npxGp90l4', [opp_last4npxGp90(opponent_team[i], kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'opp_npxGp90', [opp_npxGp90(opponent_team[i], kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'npxGAp90l4', [last4npxGAp90(team_name, kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'npxGAp90', [npxGAp90(team_name, kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'kpp90', [kpp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
-                    cmp_df.insert(0, 'shp90', [shp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
-                    cmp_df.insert(0, 'teamnpxGp90', [opp_npxGp90(team_name, kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'team_proj_goals', [proj_scores(team_name, opponent_team[i], int(season[:4]), home[i])[0]], True)
-                    cmp_df.insert(0, 'opp_proj_goals', [proj_scores(team_name, opponent_team[i], int(season[:4]), home[i])[1]], True)
-                    cmp_df.insert(0, 'bonusp90', [bpm], True) 
-                    cmp_df.insert(0, 'was_home', [home[i]], True)
-                    cmp_df.insert(0, 'xYC', [yc], True)
-                    cmp_df.insert(0, 'team', [team_name], True)
-                    cmp_df.insert(0, 'id', [player_id], True)
-                    cmp_df.insert(0, 'minutes', [xmins[gw-gws[0]][i]], True)
-                    cmp_df.insert(0, 'finishing_rate', [finishing_rate(understat_df)], True)
-                    cmp_df.insert(0, 'penalty_finishing_rate', [penalty_finishing_rate(understat_df)], True)
-
-                    points_df = xPoints(cmp_df,xpens_2022,npgoals, assists, team_goals, bonus, saves, 0)
-                    xp_gw.append(points_df['total'][0])
-                xp.append(xp_gw)
-            
-            tot = 0
-            for q in range(horizon):
-                xpoints['gw_'+str(next_gw+q)].append(round(sum(xp[q]),2))
-                tot += sum(xp[q])
-            total.append(round(tot,2))
-            
-        except:
-            for q in range(horizon):
-                xpoints['gw_'+str(next_gw+q)].append(0)
-                mins['gw_'+str(next_gw+q)].append(0)
-            total.append(0)
-            
-    for q in range(horizon):
-        try:
-            review_df.insert(7+3*q, str(next_gw+q)+'_xP', xpoints['gw_'+str(next_gw+q)], True)
-        except:
-            review_df.insert(len(review_df.keys()), str(next_gw+q)+'_xMins', xmins[q], True)
-            review_df.insert(len(review_df.keys()), str(next_gw+q)+'_xP', xpoints['gw_'+str(next_gw+q)], True)
-    review_df.insert(len(review_df.keys()), 'total', total, True)
-
-    for q in range(horizon):
-        try:
-            review_df.drop([str(next_gw+q)+'_Pts'], axis=1, inplace=True)
-            review_df.rename(columns={str(next_gw+q)+'_xP': str(next_gw+q)+'_Pts'}, inplace=True)
-        except:
-            review_df.rename(columns={str(next_gw+q)+'_xP': str(next_gw+q)+'_Pts'}, inplace=True)
-    
-    review_df = review_df.iloc[:,list(range((5+2*horizon+1))) + [-1]]
-    return review_df
+            if xpens_2022[team][n][0] == player_id:
+                for q in range(horizon):
+                    try:
+                        xmins.append(list(map(float, str(review_detailed[review_detailed['ID']==player_id][str(gws[q])+'_dmins'].iloc[0]).split())))
+                    except:
+                        xmins.append(list(map(float, str(review_detailed[review_detailed['ID']==player_id][str(next_gw + review_horizon - 1)+'_dmins'].iloc[0]).split())))
+                penmins.append(xmins)
+    sum = penmins[0][gw-next_gw][i]/90 + (1-penmins[0][gw-next_gw][i]/90)*penmins[1][gw-next_gw][i]/90 + (1-penmins[0][gw-next_gw][i]/90)*(1-penmins[1][gw-next_gw][i]/90)*penmins[2][gw-next_gw][i]/90
+    if pid == xpens_2022[team][0][0]:
+        return (1/sum)*penmins[0][gw-next_gw][i]/90
+    elif pid == xpens_2022[team][1][0]:
+        return (1/sum)*(1-penmins[0][gw-next_gw][i]/90)*penmins[1][gw-next_gw][i]/90
+    elif pid == xpens_2022[team][2][0]:
+        return (1/sum)*(1-penmins[0][gw-next_gw][i]/90)*(1-penmins[1][gw-next_gw][i]/90)*penmins[2][gw-next_gw][i]/90
+    else:
+        return 0
 
 
-def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, id_dict_df, fpl_str_df_path, PATH, fixtures, teams, team_stats_dict, npgoals, assists, team_goals, bonus, saves, pens, gw_no_lim, seasons):
+
+def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, id_dict_df, master_path, data538_PATH, fixtures, teams, team_stats_dict, npgoals, assists, team_goals, bonus, saves, pens, gw_no_lim, seasons):
     xpoints = {}
     xbp = {}
     xgoals = {}
@@ -399,13 +343,16 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     xmins = []
     fpl_id = ids[season]
     gws = list(range(next_gw, next_gw + horizon))
+    proj_scores_df = pd.read_csv(data538_PATH)
+    proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
     # Update fixture probabilities
     fixtures = adjust_fixtures(review_detailed, fixtures, teams, season, gws)
+    master_df = pd.read_csv(master_path)
     #review_df = review_df[:5]      #for tests
     for player_id in tqdm(review_df['ID'].to_list()): 
         try:
-            name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
-            row = id_dict_df[id_dict_df[fpl_id]==player_id].index[0]
+            #name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
+            #row = id_dict_df[id_dict_df[fpl_id]==player_id].iloc[0]
             #pos = review_df[review_df['ID']==player_id]['Pos'].iloc[0]
             xmins = []
             xp = []
@@ -424,7 +371,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 except:
                     xmins.append(list(map(float, str(review_detailed[review_detailed['ID']==player_id][str(next_gw + review_horizon - 1)+'_dmins'].iloc[0]).split())))
             df = pd.DataFrame()
-
+            '''
             understat_str = convert(str(id_dict_df.iloc[row]['Understat_Name'])) + '_' + str(id_dict_df.iloc[row]['Understat_ID']) + '.csv'
             #fpl_str_prev = convert(str(id_dict_df.iloc[row]['FPL_Name'])) + '_' + str(id_dict_df.iloc[row][ids[previous(season)]])
             try:
@@ -434,7 +381,12 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 fpl_str_df = pd.read_csv(fpl_str_df_path)
                 fpl_str_df = fpl_str_df[fpl_str_df['22-23']==player_id]
                 fpl_str = fpl_str_df['first_name'].iloc[0] + '_' + fpl_str_df['second_name'].iloc[0] + '_' + str(fpl_str_df['22-23'].iloc[0])
-            understat_df = pd.read_csv(PATH + season + '/understat/' + understat_str)
+            '''
+            url = 'https://fantasy.premierleague.com/api/element-summary/' + str(player_id) + '/'
+            main_df = pd.DataFrame(requests.get(url).json()['history'])
+            history_df = pd.DataFrame(requests.get(url).json()['history_past'])
+            understat_id = int(master_df[master_df['22-23']==player_id]['understat'].iloc[0])
+            understat_df = loop.run_until_complete(player_understat_file(understat_id))
 
             for gw in gws:
                 opponent_team = []
@@ -451,9 +403,9 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 xapp_gw = []
                 xyc_gw = []
                 xpm_gw = []
-                bp90 = prev_rate(PATH, season, fpl_str, gw, gw_no_lim, 'bonus')
-                sp90 = prev_rate(PATH, season, fpl_str, gw, gw_no_lim, 'saves')
-                yc = prev_rate(PATH, season, fpl_str, gw, gw_no_lim, 'yc')
+                bp90 = prev_rate(main_df, history_df, gw, gw_no_lim, 'bonus')
+                sp90 = prev_rate(main_df, history_df, gw, gw_no_lim, 'saves')
+                yc = prev_rate(main_df, history_df, gw, gw_no_lim, 'yc')
                 teamid = team_id(player_id, season, players_raw)
                 team_name = teams[season].iloc[teamid-1, 5]
                 fix = fixture_info(player_id, season, gw, fixtures, teams, players_raw)
@@ -464,8 +416,10 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     kickoff_time.append(fix[i][2])   
                     fix_prob.append(fix[i][3])
                     pen_list = pens_per_game(fixtures, season, team_stats_dict, teams, teamid, gw_no_lim)[0]
+                    pen_chance = pentakers_chance(team_name, review_df, review_detailed, horizon, next_gw, review_horizon, gw, i, player_id)
 
-                    pos = int(players_raw[season][players_raw[season]['id'] == int(id_dict_df.iloc[row][fpl_id])]['element_type'])
+                    #pos = int(players_raw[season][players_raw[season]['id'] == int(id_dict_df.iloc[row][fpl_id])]['element_type'])  something's wrong
+                    pos = review_detailed[review_detailed['ID']==player_id]['Pos'].iloc[0]
             
                     cmp_df.insert(0, 'opp_npxGAp90', [npxGAp90(opponent_team[i], kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
                     cmp_df.insert(0, 'npxGp90(L4)', [last4npxGp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
@@ -482,8 +436,10 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'kpp90', [kpp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
                     cmp_df.insert(0, 'shp90', [shp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
                     cmp_df.insert(0, 'teamnpxGp90', [opp_npxGp90(team_name, kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'team_proj_goals', [proj_scores(team_name, opponent_team[i], int(season[:4]), home[i])[0]], True)
-                    cmp_df.insert(0, 'opp_proj_goals', [proj_scores(team_name, opponent_team[i], int(season[:4]), home[i])[1]], True)
+                    cmp_df.insert(0, 'team_proj_goals', [proj_scores(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[0]], True)
+                    cmp_df.insert(0, 'opp_proj_goals', [proj_scores(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[1]], True)
+                    cmp_df.insert(0, 'spi_team', [spis(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[0]], True)
+                    cmp_df.insert(0, 'spi_opp_team', [spis(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[1]], True)
                     cmp_df.insert(0, 'bonusp90', [bp90], True) 
                     cmp_df.insert(0, 'savesp90', [sp90], True)
                     cmp_df.insert(0, 'pen_rate', [avg(pen_list)], True)
@@ -499,6 +455,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'kp_ratel100', [rates100(understat_df, kickoff_time[i], 'key_passes')], True)
                     cmp_df.insert(0, 'team', [team_name], True)
                     cmp_df.insert(0, 'id', [player_id], True)
+                    cmp_df.insert(0, 'pen_chance', [pen_chance], True)
                     cmp_df.insert(0, 'minutes', [xmins[gw-gws[0]][i]], True)
                     cmp_df.insert(0, 'finishing_rate', [finishing_rate(understat_df)], True)
                     cmp_df.insert(0, 'penalty_finishing_rate', [penalty_finishing_rate(understat_df)], True)

@@ -11,7 +11,7 @@ Root Mean Squared Error = 0.24110001976574888
 r2 = 0.13022062113897925
 
 
-XGBoost (saved)
+XGBoost 
 {'n_estimators': 500, 'max_depth': 2, 'learning_rate': 0.012}
 Mean Absolute Error = 0.09081437061089849
 Mean Squared Error = 0.05159879923089267
@@ -23,6 +23,29 @@ Mean Absolute Error = 0.10354680821353149
 Mean Squared Error = 0.059322078764207996
 Root Mean Squared Error = 0.24356124232769055
 r2 = 0.14258677808515885
+
+{'n_estimators': 400, 'max_depth': 3, 'learning_rate': 0.012} SPI538(npgdataset.csv)
+Mean Absolute Error = 0.09388791871315537
+Mean Squared Error = 0.05348282261927357
+Root Mean Squared Error = 0.23126353499692417
+r2 = 0.14614678298714967
+Index(['npg_ratel100', 'npxGp90l100', 'sh_ratel100', 'npg_rate', 'npxGp90',
+       'npxGp90(L4)', 'shp90', 'teamnpxGp90', 'opp_npxGAp90', 'spi_opp_team',
+       'spi_team', 'minutes', 'was_home', 'npg'],
+      dtype='object')
+
+
+{'n_estimators': 600, 'max_depth': 3, 'learning_rate': 0.012}
+Mean Absolute Error = 0.09111221903727906
+Mean Squared Error = 0.052273012457785865
+Root Mean Squared Error = 0.2286329207655491
+r2 = 0.15026347083069302
+RMSE scores: [0.2555387  0.24446021 0.21636662 0.22925162 0.23973504]
+Mean RMSE: 0.23707043869708944
+Index(['npg_ratel100', 'npxGp90l100', 'sh_ratel100', 'npg_rate', 'npxGp90',
+       'npxGp90(L4)', 'shp90', 'teamnpxGp90', 'opp_npxGAp90', 'spi_opp_team',
+       'spi_team', 'minutes', 'was_home', 'npg'],
+      dtype='object')
 
 
 ## ASSISTS
@@ -50,6 +73,17 @@ Mean Absolute Error = 0.10797163247691981
 Mean Squared Error = 0.06324455088744818
 Root Mean Squared Error = 0.2514846931474124
 r2 = 0.08109830812727015
+
+{'n_estimators': 300, 'max_depth': 3, 'learning_rate': 0.014}
+Mean Absolute Error = 0.10284651613631951
+Mean Squared Error = 0.05487230876260293
+Root Mean Squared Error = 0.2342483911633182
+r2 = 0.0880768907291769
+RMSE scores: [0.25365855 0.24468772 0.23076101 0.23922696 0.23260064]
+Index(['assist_ratel100', 'xAp90l100', 'kp_ratel100', 'assist_rate', 'xAp90',
+       'xAp90(L4)', 'kpp90', 'teamnpxGp90', 'opp_npxGp90', 'spi_opp_team',
+       'opp_npxGAp90', 'spi_team', 'minutes', 'was_home', 'assists'],
+      dtype='object')
 
 
 ## PENALTIES

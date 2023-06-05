@@ -1,24 +1,31 @@
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
-from modules.useful_functions import p90_main_df, avg, rates100, npg_rate_season, assist_rate_season, convert_date, pens_per_game, npxGAp90, last4npxGp90, npxGp90, shp90, opp_npxGp90, npg, team, xAp90, kpp90, kpp90l4, last4xAp90, opp_last4npxGp90, last4npxGAp90, shp90l4
+from modules.useful_functions import team_id, p90_main_df, avg, rates100, npg_rate_season, assist_rate_season, convert_date, pens_per_game, npxGAp90, last4npxGp90, npxGp90, shp90, opp_npxGp90, npg, team, xAp90, kpp90, kpp90l4, last4xAp90, opp_last4npxGp90, last4npxGAp90, shp90l4
 import time
-from modules.useful_functions2 import proj_scores
+from modules.useful_functions2 import proj_scores, spis
 
 
 def npg_dataset_creation(seasons, players_raw, player_info_dict, teams, team_stats_dict, fixtures, gw_no_limit):
     gframes = []
- 
+    proj_scores_df = pd.read_csv('soccer-spi/spi_matches.csv')
+    proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
+
     for season in seasons:
-        for row in tqdm(range(len(player_info_dict[season]))):
+        for row in tqdm(range(len(player_info_dict[season]))): 
             
             main_df = player_info_dict[season][row][0]
             understat_df = player_info_dict[season][row][1]
-        
+            player_id = main_df['element'].iloc[0]
+            teamid = team_id(player_id, season, players_raw)
+            team_name = teams[season].iloc[teamid-1, 5]
+
             # Change some things in the dataframe
             main_df = main_df.drop(['creativity', 'ict_index', 'goals_scored', 'influence', 'threat', 'saves', 'own_goals', 'penalties_missed', 'penalties_saved', 'red_cards', 'yellow_cards', 'bonus', 'bps', 'assists', 'clean_sheets', 'goals_conceded', 'team_a_score', 'team_h_score', 'transfers_balance', 'transfers_in', 'transfers_out', 'selected'], axis=1)
 
             main_df['opponent_team'] = [teams[season].iloc[main_df['opponent_team'][x]-1, 5] for x in range(main_df.shape[0])]
+            main_df.insert(0, 'spi_team', [spis(proj_scores_df, team_name, main_df['opponent_team'][x], int(season[:4]), main_df['was_home'][x])[0] for x in range(main_df.shape[0])], True)
+            main_df.insert(0, 'opp_spi_team', [spis(proj_scores_df, team_name, main_df['opponent_team'][x], int(season[:4]), main_df['was_home'][x])[1] for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'opp_npxGAp90', [npxGAp90(main_df['opponent_team'][x], main_df['kickoff_time'][x], season, team_stats_dict, gw_no_limit) for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'npxGp90(L4)', [last4npxGp90(understat_df, int(season[:4]), main_df['kickoff_time'][x], gw_no_limit) for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'npxGp90', [npxGp90(understat_df, int(season[:4]), main_df['kickoff_time'][x], gw_no_limit) for x in range(main_df.shape[0])], True)
@@ -29,6 +36,8 @@ def npg_dataset_creation(seasons, players_raw, player_info_dict, teams, team_sta
             main_df.insert(0, 'sh_ratel100', [rates100(understat_df, main_df['kickoff_time'][x], 'shots') for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'npg_rate', [npg_rate_season(understat_df, main_df['kickoff_time'][x], int(season[:4])) for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'npg', npg(main_df, understat_df, int(season[:4])), True)
+            main_df.insert(0, 'proj_goals', [proj_scores(proj_scores_df, team_name, main_df['opponent_team'][x], int(season[:4]), main_df['was_home'][x])[0] for x in range(main_df.shape[0])], True)
+            main_df.insert(0, 'opp_proj_goals', [proj_scores(proj_scores_df, team_name, main_df['opponent_team'][x], int(season[:4]), main_df['was_home'][x])[1] for x in range(main_df.shape[0])], True)
 
             main_df = main_df.drop(['fixture', 'opponent_team'], axis=1)
             gframes.append(main_df)
@@ -38,10 +47,11 @@ def npg_dataset_creation(seasons, players_raw, player_info_dict, teams, team_sta
     data = data.drop(['round', 'value', 'element', 'kickoff_time', 'total_points'], axis=1)
 
     cols = data.columns.tolist()
-    cols = [cols[4], cols[3], cols[2], cols[1], cols[7], cols[8], cols[6], cols[5], cols[9], cols[10], cols[11], cols[0]] 
+    cols = [cols[6], cols[5], cols[4], cols[3], cols[9], cols[10], cols[8], cols[7], cols[11], cols[12], cols[13], cols[14], cols[15], cols[0], cols[1], cols[2]] 
     data = data[cols]
 
     data = data.dropna()
+    data = data[data['spi_team'] > 0]
     print('Dataset size: ' ,data.shape)
     #data = data[data['minutes'] != 0]
 
@@ -50,6 +60,8 @@ def npg_dataset_creation(seasons, players_raw, player_info_dict, teams, team_sta
 
 def penalties_dataset_creation(seasons, fixtures, teams, team_stats_dict, gw_no_limit):
     frames = []
+    proj_scores_df = pd.read_csv('soccer-spi/spi_matches.csv')
+    proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
     for season in seasons:
         for team_id in tqdm(range(1,21)):
             fix = fixtures[season]
@@ -72,27 +84,36 @@ def penalties_dataset_creation(seasons, fixtures, teams, team_stats_dict, gw_no_
                 data.insert(2, 'was_home', [home], True)
                 data.insert(3, 'pen_rate', [avg(pens[:i])], True)
                 data.insert(4, 'proj_goals', [proj_scores(team, opp_team, int(season[:4]), home)[0]], True)
-                data.insert(5, 'team_npxGp90(L4)', [opp_last4npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_limit)], True)
-                data.insert(6, 'oppteam_npxGAp90(L4)', [last4npxGAp90(opp_team, kickoff_time, season, team_stats_dict, gw_no_limit)], True)
-                data.insert(7, 'team_pens', [pens[i]], True)
+                data.insert(5, 'spi_team', [spis(proj_scores_df, team, opp_team, int(season[:4]), home)[0]])
+                data.insert(6, 'spi_opp_team', [spis(proj_scores_df, team, opp_team, int(season[:4]), home)[1]])
+                data.insert(7, 'team_npxGp90(L4)', [opp_last4npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_limit)], True)
+                data.insert(8, 'oppteam_npxGAp90(L4)', [last4npxGAp90(opp_team, kickoff_time, season, team_stats_dict, gw_no_limit)], True)
+                data.insert(9, 'team_pens', [pens[i]], True)
                 frames.append(data)
     data = pd.concat(frames)
     data = data.dropna()
+    data = data[data['spi_team'] > 0]
     return data
 
  
-def assists_dataset_creation(seasons, player_info_dict, teams, team_stats_dict, fixtures, gw_no_limit):
+def assists_dataset_creation(seasons, player_info_dict, teams, players_raw, team_stats_dict, fixtures, gw_no_limit):
     aframes = []
-
+    proj_scores_df = pd.read_csv('soccer-spi/spi_matches.csv')
+    proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
     for season in seasons:
         for row in tqdm(range(len(player_info_dict[season]))): 
             
             main_df = player_info_dict[season][row][0]
             understat_df = player_info_dict[season][row][1]
+            player_id = main_df['element'].iloc[0]
+            teamid = team_id(player_id, season, players_raw)
+            team_name = teams[season].iloc[teamid-1, 5]
             main_df = main_df.drop(['creativity', 'ict_index', 'influence', 'threat', 'saves', 'own_goals', 'penalties_missed', 'penalties_saved', 'red_cards', 'yellow_cards', 'bonus', 'bps', 'goals_scored', 'clean_sheets', 'goals_conceded', 'team_a_score', 'team_h_score', 'transfers_balance', 'transfers_in', 'transfers_out', 'selected'], axis=1)
 
             main_df['opponent_team'] = [teams[season].iloc[main_df['opponent_team'][x]-1, 5] for x in range(main_df.shape[0])]
             main_df.insert(0, 'opp_npxGAp90', [npxGAp90(main_df['opponent_team'][x], main_df['kickoff_time'][x], season, team_stats_dict, gw_no_limit) for x in range(main_df.shape[0])], True) 
+            main_df.insert(0, 'spi_team', [spis(proj_scores_df, team_name, main_df['opponent_team'][x], int(season[:4]), main_df['was_home'][x])[0] for x in range(main_df.shape[0])], True)
+            main_df.insert(0, 'spi_opp_team', [spis(proj_scores_df, team_name, main_df['opponent_team'][x], int(season[:4]), main_df['was_home'][x])[1] for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'xAp90(L4)', [last4xAp90(understat_df, int(season[:4]), main_df['kickoff_time'][x], gw_no_limit) for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'kpp90', [kpp90(understat_df, int(season[:4]), main_df['kickoff_time'][x], gw_no_limit) for x in range(main_df.shape[0])], True)
             main_df.insert(0, 'teamnpxGp90', [opp_npxGp90(team(main_df['fixture'][x], main_df['was_home'][x], season, teams, fixtures), main_df['kickoff_time'][x], season, team_stats_dict, gw_no_limit) for x in range(main_df.shape[0])], True)
@@ -110,10 +131,11 @@ def assists_dataset_creation(seasons, player_info_dict, teams, team_stats_dict, 
     data = data.drop(['round', 'value', 'element', 'kickoff_time', 'total_points'], axis=1)
 
     cols = data.columns.tolist()
-    cols = [cols[2], cols[1], cols[0], cols[3], cols[5], cols[8], cols[7], cols[6], cols[4], cols[9], cols[11], cols[12], cols[10]] 
+    cols = [cols[2], cols[1], cols[0], cols[3], cols[5], cols[8], cols[7], cols[6], cols[4], cols[9], cols[11], cols[10], cols[13], cols[14], cols[12]] 
     data = data[cols]
 
     data = data.dropna()
+    data = data[data['spi_team'] > 0]
     print('Dataset size: ' ,data.shape)
     #data = data[data['minutes'] != 0]
 

@@ -606,6 +606,7 @@ def players_data(id_dict_df, ids, PATH):
         main_df = main_dfs_2019[x]
         player_info_dict_2019[i] = (main_df, understat_df)
         i=i+1
+    
     print('Players from 2019-20 season: ', len(player_info_dict_2019))
 
     understat_dfs_2020 = understat_dfs_2020 + understat_dfs_promoted_players_2020

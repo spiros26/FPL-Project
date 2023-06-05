@@ -300,6 +300,8 @@ def xAppPoints(xmins):
   chance60 = 1-float(sum)
   if xmins == 0:
     return (0,0)
+  elif xmins < 30:
+    return (0.033*xmins, chance60)
   else:
     return (2*chance60 + 1 - chance60, chance60)
 
@@ -417,30 +419,52 @@ def assist_rate_season(df, kickoff_time, season):
         return 90*sum(new_df['assists'].to_list()[c:])/sum(new_df['time'].to_list()[c:])
     except:
         return rates100(df, kickoff_time, 'assists')
-
+'''
 xpens_2022 = {
       'Arsenal': [(13, 1)], #saka
-      'Aston Villa': [(40, 0.4)], #ings, watkins
+      'Aston Villa': [(40, 1)], #watkins
       'Brentford': [(80, 1), (95, 0)], #toney, mbeumo
-      'Brighton': [(116, 0.98), (104, 0.02)], #mac allister, gross
+      'Brighton': [(116, 1), (104, 0)], #mac allister, gross
       'Bournemouth':[(105, 1)], #solanke                                                        
-      'Chelsea':  [(145, 0.75), (142, 0.25)], # havertz, mount
-      'Crystal Palace': [(160, 1), (166, 0)], #zaha, edouard
-      'Everton': [(191, 1)], #dcl
-      'Leeds':  [(227, 0), (225, 1)], #bamford, rodrigo
-      'Leicester':  [(255, 0.5), (259, 0.4), (261, 0.1)], #vardy, tielemans, maddison
+      'Chelsea':  [(145, 0.95), (146, 0.05)], # havertz, james
+      'Crystal Palace': [(160, 1), (169, 0)], #zaha, eze
+      'Everton': [(191, 1), (189, 0)], #dcl, gray
+      'Leeds':  [(227, 0.2), (225, 0.8)], #bamford, rodrigo
+      'Leicester':  [(255, 0), (259, 0), (261, 0.4), (262, 0.6)], #vardy, tielemans, maddison, IHEANACHO
       'Liverpool': [(283, 1), (282, 0)], #salah, fabinho
-      'Man City':  [(318,1), (303, 0)], #haaland, mahrez
-      'Man Utd': [(335, 0.25), (333, 0.75)], #rashford, bruno
-      'Newcastle': [(356, 1), (354, 0)], #wilson, wood
+      'Man City':  [(318,1), (303, 0.4)], #haaland, mahrez
+      'Man Utd': [(335, 0.15), (333, 0.85)], #rashford, bruno
+      'Newcastle': [(356, 0.5), (594, 0.5)], #wilson, isak
       'Nott\'m Forest':[(315, 1)], #johnson                                                     
       'Southampton':  [(407, 1)], #jwp
       'Spurs': [(427, 1), (428, 0)], #kane, son
-      'Fulham': [(210, 1), (346, 0)], #mitro, andreas                                                   
-      'West Ham': [(464, 0.9), (465, 0.1)], #benrahma, bowen
-      'Wolves': [(476, 0.8), (480, 0.2)], #jimenez, neves
+      'Fulham': [(210, 0), (346, 0), (618, 0.9)], #mitro, andreas, vinicious                                                   
+      'West Ham': [(464, 0.7), (465, 0.15), (458, 0.15)], #benrahma, bowen, antonio
+      'Wolves': [(476, 0.4), (480, 0.6)], #jimenez, neves
   }
-
+'''
+xpens_2022 = {
+      'Arsenal': [(13, 0), (28, 0), (19, 0)], #saka, jesus, martinelli
+      'Aston Villa': [(40, 0), (29, 0), (45, 0)], #watkins, coutinho, bailey
+      'Brentford': [(80, 0), (95, 0), (83, 0)], #toney, mbeumo, dasilva
+      'Brighton': [(116, 0), (104, 0), (103, 0)], #mac allister, gross, wellbeck
+      'Bournemouth':[(66, 0), (58, 0), (70, 0)], #solanke, stanislas, billing                                                        
+      'Chelsea':  [(145, 0), (146, 0), (142, 0)], # havertz, james, mount
+      'Crystal Palace': [(169, 0), (160, 0), (166, 0)], #eze, zaha, edouard
+      'Everton': [(191, 0), (179, 0), (189, 0)], #dcl, townsend, gray
+      'Leeds':  [(227, 0), (225, 0), (223, 0)], #bamford, rodrigo, klich
+      'Leicester':  [(262, 0), (261, 0), (255, 0)], #iheanacho, maddison, vardy
+      'Liverpool': [(283, 0), (282, 0), (274, 0)], #salah, fabinho, milner
+      'Man City':  [(318, 0), (303, 0), (319, 0)], #haaland, mahrez, alvarez
+      'Man Utd': [(333, 0), (335, 0), (345, 0)], #bruno, rashford, martial
+      'Newcastle': [(356, 0), (594, 0), (371, 0)], #wilson, isak, joelinton
+      'Nott\'m Forest':[(493, 0), (394, 0), (734, 0)], #gibbs-white, johnson, ayew                                                     
+      'Southampton':  [(407, 0), (406, 0), (405, 0)], #jwp, elyonousi, armstrong
+      'Spurs': [(427, 0), (428, 0), (448, 0)], #kane, son, perisic
+      'Fulham': [(210, 0), (346, 0), (212, 0)], #mitro, andreas, wilson                                                   
+      'West Ham': [(460, 0), (464, 0), (603, 0)], #lanzini, benrahma, paqueta
+      'Wolves': [(476, 0), (480, 0), (481, 0)], #jimenez, neves, hwang
+  }
   
 def pens_per_game(fixtures, season, team_stats_dict, teams, team_id, gw_no_lim):
     fix = fixtures[season]
