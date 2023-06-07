@@ -5,12 +5,20 @@ import json
 import datetime
 import pandas as pd
 import argparse
+import time
 
 if __name__=="__main__":
+    '''
     base_folder = pathlib.Path()
     sys.path.append(str(base_folder / "../src"))
+
+
     from multi_period_dev import connect, get_my_data, prep_data, solve_multi_period_fpl
     import data_parser as pr
+    '''
+    start_time = time.time()
+    sys.path.append("../src")
+    from multi_period_dev import prep_data, solve_multi_period_fpl
 
     with open('../data/regular_settings.json') as f:
         options = json.load(f)
@@ -56,3 +64,4 @@ if __name__=="__main__":
     result_table = pd.DataFrame(response)
     result_table.to_csv(f'../../app/results/table_{stamp}.csv')
     print(result_table[['iter', 'buy', 'sell', 'score']])
+    print("--- %s seconds ---" % (time.time() - start_time))

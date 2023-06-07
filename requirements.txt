@@ -24,3 +24,6 @@ xgboost==1.7.1
 sasoptpy>=1.0.5a0
 fuzzywuzzy
 python-Levenshtein
+
+# HIGHS Solver - https://github.com/JuliaBinaryWrappers/HiGHSstatic_jll.jl/releases - HiGHSstatic.v1.4.2.x86_64-w64-mingw32.tar.gz
+

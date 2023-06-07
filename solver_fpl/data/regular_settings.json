@@ -1,7 +1,7 @@
 {
     "horizon": 1,
     "ft_value": 1.5,
-    "itb_value": 0,
+    "itb_value": 0.05,
     "decay_base": 0.85,
     "no_future_transfer": false,
     "no_transfer_last_gws": 0,
@@ -50,5 +50,7 @@
         "mikkel": 0,
         "kiwi": 50
     },
+    "solver": "highs",
+    "solver_path": "../../highs_solver/bin/highs",
     "export_data": "final.csv"
 }
