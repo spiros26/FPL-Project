@@ -1,4 +1,4 @@
-**Description**
+** ## Description**
 
 An open-source, full-scale Fantasy Premier League model.
 The system was designed to produce optimal Fantasy Premier League decisions. 
