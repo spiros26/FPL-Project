@@ -1,4 +1,4 @@
-A system for optimizing Fantasy Premier League decisions.
+A project designed to produce optimal Fantasy Premier League decisions.
 
 ![Alt text](./data_flow.png?raw=true)
 
