@@ -1,30 +1,35 @@
-** ## Description**
-
-An open-source, full-scale Fantasy Premier League model.
-The system was designed to produce optimal Fantasy Premier League decisions. 
-See the data flow of the project on the diagram below:
+# FPL Copilot
 
 ![Alt text](./data_flow.png?raw=true)
 
-**Installation**
+
+### Description
+
+An open-source, full-scale Fantasy Premier League model.
+The system was designed to produce optimal Fantasy Premier League decisions. 
+
+### Installation
 
 A project designed to produce optimal Fantasy Premier League decisions.
 
-**Data Sources**
+### Data Sources
 
 A project designed to produce optimal Fantasy Premier League decisions.
 
-**Code Structure**
+### Code Structure
 
 A project designed to produce optimal Fantasy Premier League decisions.
 
-**Results**
+### Results
 
 A project designed to produce optimal Fantasy Premier League decisions.
 
-**Future Work**
+### Future Work
 
 A project designed to produce optimal Fantasy Premier League decisions.
+
+### Acknowledgements
+
 
 
 **My Google Slides presentation:** [Presentation](https://docs.google.com/presentation/d/1OXzX-5xrvi5fKxBk613t66wvC10UwuWqj6A1C8JHtVU/edit?usp=sharing)
