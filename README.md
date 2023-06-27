@@ -29,13 +29,14 @@ The system was designed to:
 I used a version of Sertalp's [solver](https://github.com/sertalpbilal/FPL-Optimization-Tools) that I personally integrated with the rest of the project and modified in some ways.
 
 ## Results
+![Screenshot 2023-06-27 173707](https://github.com/spiros26/FPL-Project/assets/71256846/f6f627b5-44cb-46ad-87af-43e5c86da653)
 
 ![models_bubbleplot](https://github.com/spiros26/FPL-Project/assets/71256846/cee791eb-ac0d-4455-a6ce-88fe4ea1ecb0)
 
-![Alt text](./data_flow.png?raw=true)
-
 **The FPL Team managed by the model, got the #1 Place in the GW24 League (>25000 teams) - season:2022/23**
+![gw24](https://github.com/spiros26/FPL-Project/assets/71256846/49f5043c-52ad-4ad7-9b20-1c5437ce2143)
 
+![AITeam](https://github.com/spiros26/FPL-Project/assets/71256846/9e138e88-c991-4bdd-b358-681c845efbd3)
 
 
 ## Future Work
