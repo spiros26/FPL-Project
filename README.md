@@ -13,21 +13,36 @@ The system was designed to:
 - Contribute to the FPL Analytics
   
 ## Installation
-- **Python Version:** 3.9.5
+- Python Version: 3.9.5
 - `pip install -r requirements.txt`
 - Highs solver already there, Download cbc solver if you choose
 
 ## Data Sources
 
 1. Fantasy Premier League API
-2. Understat
-3. Vaastav’s GitHub repo [3](https://github.com/vaastav/Fantasy-Premier-League)
-4. FiveThirtyEight
-5. Chris Musson’s ID Map
+2. [Understat]([https://github.com/vaastav/Fantasy-Premier-League](https://understat.com/)) 
+3. [Vaastav’s GitHub repo](https://github.com/vaastav/Fantasy-Premier-League)
+4. [FiveThirtyEight](https://fivethirtyeight.com/)
+5. [Chris Musson’s ID Map](https://github.com/ChrisMusson/FPL-ID-Map)
 
 ## Code Structure
 
-A project designed to produce optimal Fantasy Premier League decisions.
+├── Projections
+│   ├── data1.csv
+│   ├── data2.csv
+│   ├── cleanedData
+│       ├── cleaneddata1.csv
+|       └── cleaneddata2.csv
+├── data_acquisition.py
+├── data_preprocessing.ipynb
+├── data_analysis.ipynb
+├── data_modelling.ipynb
+├── Img
+│   ├── img1.png
+│   └── Headerheader.jpg
+├── LICENSE
+├── README.md
+└── .gitignore
 
 ## Results
 
