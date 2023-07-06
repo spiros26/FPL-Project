@@ -1,5 +1,5 @@
 {
-    "horizon": 1,
+    "horizon": 2,
     "ft_value": 1.5,
     "itb_value": 0.05,
     "decay_base": 0.85,
@@ -41,7 +41,7 @@
         "M": "",
         "F": ""
     },
-    "iteration": 1,
+    "iteration": 3,
     "iteration_criteria": "this_gw_transfer_in_out",
     "datasource": "review",
     "data_weights": {

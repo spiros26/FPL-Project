@@ -578,6 +578,114 @@ def players_data(id_dict_df, ids, PATH):
                 pd.read_csv(PATH + season + '/players/José_Malheiro de Sá_478/gw.csv')
     ]
 
+    season = '2023-24'
+    understat_dfs_2023 = [
+                    pd.read_csv(PATH +  season + '/understat/Joelinton_87.csv'),
+                    pd.read_csv(PATH +  season + '/understat/Thiago_Alcántara_229.csv'),
+                    pd.read_csv(PATH + season + '/understat/Kevin_De_Bruyne_447.csv'),
+                    pd.read_csv(PATH + season + '/understat/Philippe_Coutinho_488.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Mohamed_Elneny_496.csv'),
+                    pd.read_csv(PATH + season + '/understat/David_de_Gea_546.csv'),
+                    pd.read_csv(PATH + season + '/understat/Virgil_van_Dijk_833.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Oriol_Romeu_842.csv'),
+                    pd.read_csv(PATH + season + '/understat/Bruno_Fernandes_1228.csv'),
+                    pd.read_csv(PATH + season + '/understat/Emerson_7430.csv'),
+                    pd.read_csv(PATH + season + '/understat/Alisson_1257.csv'),
+                #     pd.read_csv(PATH + season + '/understat/Allan_1379.csv'),
+                    pd.read_csv(PATH + season + '/understat/Jorginho_1389.csv'),
+                #     pd.read_csv(PATH + season + '/understat/Alex_Telles_1828.csv'),
+                    pd.read_csv(PATH + season + '/understat/Emiliano_Buendía_2203.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Jonny_2280.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Cristiano_Ronaldo_2371.csv'),
+                    pd.read_csv(PATH + season + '/understat/João_Cancelo_2379.csv'),
+                #    pd.read_csv(PATH + season + '/understat/André_Gomes_2383.csv'),
+                    pd.read_csv(PATH + season + '/understat/Thiago_Silva_3288.csv'),
+                    pd.read_csv(PATH + season + '/understat/Lucas_Moura_3293.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Ricardo_Pereira_3303.csv'),
+                    pd.read_csv(PATH + season + '/understat/Fabinho_3420.csv'),
+                #    pd.read_csv(PATH + season + '/understat/João_Moutinho_3422.csv'),
+                    pd.read_csv(PATH + season + '/understat/Bernardo_Silva_3635.csv'),
+                    pd.read_csv(PATH + season + '/understat/Gabriel_Jesus_5543.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Anwar_El_Ghazi_5612.csv'),
+                    pd.read_csv(PATH + season + '/understat/Richarlison_6026.csv'),
+                    pd.read_csv(PATH + season + '/understat/Ederson_6054.csv'),
+                    pd.read_csv(PATH + season + '/understat/Douglas_Luiz_6122.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Nélson_Semedo_6163.csv'),
+                    pd.read_csv(PATH + season + '/understat/Pedro_Neto_6382.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Júnior_Firpo_6485.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Rayan_Ait_Nouri_6674.csv'),
+                    pd.read_csv(PATH + season + '/understat/Fred_6817.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Rúben_Neves_6853.csv'),
+                    pd.read_csv(PATH + season + '/understat/Emile_Smith-Rowe_7230.csv'),
+                    pd.read_csv(PATH + season + '/understat/Diogo_Dalot_7281.csv'),
+                    pd.read_csv(PATH + season + '/understat/Ezri_Konsa_Ngoyo_7726.csv'),
+                    pd.read_csv(PATH + season + '/understat/Gabriel_Martinelli_7752.csv'),
+                #    pd.read_csv(PATH + season + '/understat/Daniel_Podence_8291.csv'),
+                    pd.read_csv(PATH + season + '/understat/Bruno_Guimarães_8327.csv'),
+                    pd.read_csv(PATH + season + '/understat/Alexis_Mac_Allister_8379.csv'),
+                    pd.read_csv(PATH + season + '/understat/Rúben_Dias_8961.csv'),
+                    pd.read_csv(PATH + season + '/understat/David_Raya_9676.csv'),
+                    pd.read_csv(PATH + season + '/understat/Mads_Bech_Sørensen_9683.csv'),
+                    pd.read_csv(PATH + season + '/understat/Mads_Roerslev_9685.csv'),
+                    pd.read_csv(PATH + season + '/understat/Albert_Sambi_Lokonga_9689.csv'),
+                #     pd.read_csv(PATH + season + '/understat/Nuno_Tavares_9691.csv'),
+                    pd.read_csv(PATH + season + '/understat/José_Sá_9740.csv')
+
+    ]
+
+    main_dfs_2023 = [
+                pd.read_csv(PATH + season + '/players/Joelinton Cássio_Apolinário de Lira_371/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Thiago_Alcántara do Nascimento_277/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Kevin_De Bruyne_301/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Philippe_Coutinho Correia_29/gw.csv'),
+        #      pd.read_csv(PATH + season + '/players/Mohamed_Elneny_4/gw.csv'),
+                pd.read_csv(PATH + season + '/players/David_De Gea Quintana_327/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Virgil_van Dijk_280/gw.csv'),
+        #        pd.read_csv(PATH + season + '/players/Oriol_Romeu Vidal_402/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Bruno_Borges Fernandes_333/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Emerson_Leite de Souza Junior_445/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Alisson_Ramses Becker_281/gw.csv'),
+        #     pd.read_csv(PATH + season + '/players/Allan_Marques Loureiro_183/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Jorge Luiz_Frello Filho_130/gw.csv'),
+            #    pd.read_csv(PATH + season + '/players/Alex_Telles_334/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Emiliano_Buendía Stati_42/gw.csv'),
+          #      pd.read_csv(PATH + season + '/players/Jonathan_Castro Otto_477/gw.csv'),
+          3      pd.read_csv(PATH + season + '/players/Cristiano Ronaldo_dos Santos Aveiro_326/gw.csv'),
+                pd.read_csv(PATH + season + '/players/João_Cancelo_306/gw.csv'),
+            #    pd.read_csv(PATH + season + '/players/André_Tavares Gomes_184/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Thiago_Emiliano da Silva_128/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Lucas_Rodrigues Moura da Silva_431/gw.csv'),
+            #   pd.read_csv(PATH + season + '/players/Ricardo Domingos_Barbosa Pereira_256/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Fabio Henrique_Tavares_282/gw.csv'),
+             #   pd.read_csv(PATH + season + '/players/João Filipe Iria_Santos Moutinho_503/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Bernardo_Veiga de Carvalho e Silva_311/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Gabriel_Fernando de Jesus_28/gw.csv'),
+            #  pd.read_csv(PATH + season + '/players/Anwar_El Ghazi_51/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Richarlison_de Andrade_454/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Ederson_Santana de Moraes_307/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Douglas Luiz_Soares de Paulo_46/gw.csv'),
+           #     pd.read_csv(PATH + season + '/players/Nélson_Cabral Semedo_482/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Pedro_Lomba Neto_486/gw.csv'),
+            #    pd.read_csv(PATH + season + '/players/Héctor Junior_Firpo Adames_239/gw.csv'),
+           #     pd.read_csv(PATH + season + '/players/Rayan_Aït-Nouri_487/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Frederico_Rodrigues de Paula Santos_331/gw.csv'),
+           #     pd.read_csv(PATH + season + '/players/Rúben_da Silva Neves_480/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Emile_Smith Rowe_12/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Diogo_Dalot Teixeira_342/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Ezri_Konsa Ngoyo_44/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Gabriel_Martinelli Silva_19/gw.csv'),
+            #    pd.read_csv(PATH + season + '/players/Daniel_Castelo Podence_483/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Bruno_Guimarães Rodriguez Moura_374/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Alexis_Mac Allister_116/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Rúben_Gato Alves Dias_312/gw.csv'),
+                pd.read_csv(PATH + season + '/players/David_Raya Martin_81/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Mads_Bech Sørensen_91/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Mads_Roerslev Rasmussen_90/gw.csv'),
+                pd.read_csv(PATH + season + '/players/Albert_Sambi Lokonga_18/gw.csv'),
+            #    pd.read_csv(PATH + season + '/players/Nuno_Varela Tavares_17/gw.csv'),
+                pd.read_csv(PATH + season + '/players/José_Malheiro de Sá_478/gw.csv')
+    ]
+
 
     understat_dfs_2019 = understat_dfs_2019 + understat_dfs_promoted_players_2019
     main_dfs_2019 = main_dfs_2019 + main_dfs_promoted_players_2019
@@ -692,11 +800,40 @@ def players_data(id_dict_df, ids, PATH):
         i=i+1
     print('Players from 2022-23 season: ', len(player_info_dict_2022))
 
+
+    season = '2023-24'
+    player_info_dict_2023 = {}
+    to_be_added_2023 = []
+    i=0
+
+    for row in tqdm(range(1,id_dict_df.shape[0])):
+        fpl_id = ids[season]
+        understat_str = convert(str(id_dict_df.iloc[row]['Understat_Name'])) + '_' + str(id_dict_df.iloc[row]['Understat_ID']) + '.csv'
+        fpl_str = convert(str(id_dict_df.iloc[row]['FPL_Name'])) + '_' + str(id_dict_df.iloc[row][fpl_id])
+
+        try:
+            understat_df = pd.read_csv(PATH + season + '/understat/' + understat_str)
+            main_df = pd.read_csv(PATH + season + '/players/' + fpl_str + '/gw.csv')
+            player_info_dict_2023[i] = (main_df, understat_df)
+            i=i+1
+        except: 
+            to_be_added_2023.append(row)
+            continue
+    
+    for x in range(len(understat_dfs_2023)):
+        understat_df = understat_dfs_2023[x]
+        main_df = main_dfs_2023[x]
+        player_info_dict_2023[i] = (main_df, understat_df)
+        i=i+1
+    print('Players from 2023-24 season: ', len(player_info_dict_2023))
+
+
     player_info_dict = {
         '2019-20': player_info_dict_2019,
         '2020-21': player_info_dict_2020,
         '2021-22': player_info_dict_2021,
-        '2022-23': player_info_dict_2022
+        '2022-23': player_info_dict_2022,
+        '2023-24': player_info_dict_2023
     }
 
     return player_info_dict

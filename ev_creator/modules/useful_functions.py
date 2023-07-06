@@ -168,6 +168,7 @@ def last4xAp90(df, season, kickoff_time, gw_no_lim):
     return np.nan
 
 def npxGp90(df, season, kickoff_time, gw_no_lim):
+  x = 0
   try:
     for x in range(df[df['season']==season].shape[0]):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):

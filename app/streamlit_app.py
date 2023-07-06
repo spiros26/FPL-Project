@@ -195,11 +195,11 @@ elif choice == "Login":
             # Box
             st.subheader('Expected Points')
             current_gw = 35
-            df = pd.read_csv('../Projections/ALEX/alex-GW' + str(current_gw) + '.csv')
-            st.write(df)
+            data = pd.read_csv('../Projections/ALEX/alex-GW' + str(current_gw) + '.csv')
+            st.write(data)
 
             # Download box
-            csv = convert_df(df)
+            csv = convert_df(data)
             st.download_button(
             "Download",
             csv,

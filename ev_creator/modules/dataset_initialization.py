@@ -356,11 +356,85 @@ def dataset_initialization(PATH):
     }
 
 
+    # Team Stats 2023/24
+    season = '2023-24'
+    loop = asyncio.get_event_loop()
+
+    if loop.run_until_complete(team_understat_file('Arsenal', int(season[:4]))).shape[0] == loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])-1)).shape[0]:
+        team_stats_dict_2023 = {
+        'Arsenal': pd.DataFrame(),
+        'Aston Villa': pd.DataFrame(),
+        'Brentford': pd.DataFrame(),
+        'Brighton': pd.DataFrame(),
+        'Bournemouth': pd.DataFrame(),
+        'Chelsea': pd.DataFrame(),
+        'Crystal Palace': pd.DataFrame(),
+        'Everton': pd.DataFrame(),
+        'Sheffield United': pd.DataFrame(),
+        'Luton': pd.DataFrame(),
+        'Liverpool': pd.DataFrame(),
+        'Man City': pd.DataFrame(),
+        'Man Utd': pd.DataFrame(),
+        'Newcastle': pd.DataFrame(),
+        'Fulham': pd.DataFrame(),
+        'Burnley': pd.DataFrame(),
+        'Spurs': pd.DataFrame(),
+        'Nott\'m Forest': pd.DataFrame(),
+        'West Ham': pd.DataFrame(),
+        'Wolves': pd.DataFrame()
+    }
+    else:
+        Arsenal_stats_df = loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])))
+        Aston_Villa_stats_df = loop.run_until_complete(team_understat_file('Aston Villa', int(season[:4])))
+        Brentford_stats_df = loop.run_until_complete(team_understat_file('Brentford', int(season[:4])))
+        Brighton_stats_df = loop.run_until_complete(team_understat_file('Brighton', int(season[:4])))
+        Bournemouth_stats_df = loop.run_until_complete(team_understat_file('Bournemouth', int(season[:4])))
+        Chelsea_stats_df = loop.run_until_complete(team_understat_file('Chelsea', int(season[:4])))
+        Crystal_Palace_stats_df = loop.run_until_complete(team_understat_file('Crystal Palace', int(season[:4])))
+        Everton_stats_df = loop.run_until_complete(team_understat_file('Everton', int(season[:4])))
+        Sheffield_United_stats_df = loop.run_until_complete(team_understat_file('Sheffield United', int(season[:4])))
+        Luton_stats_df = loop.run_until_complete(team_understat_file('Luton', int(season[:4])))
+        Liverpool_stats_df = loop.run_until_complete(team_understat_file('Liverpool', int(season[:4])))
+        Manchester_City_stats_df = loop.run_until_complete(team_understat_file('Manchester City', int(season[:4])))
+        Manchester_United_stats_df = loop.run_until_complete(team_understat_file('Manchester United', int(season[:4])))
+        Newcastle_United_stats_df = loop.run_until_complete(team_understat_file('Newcastle United', int(season[:4])))
+        Fulham_stats_df = loop.run_until_complete(team_understat_file('Fulham', int(season[:4])))
+        Burnley_stats_df = loop.run_until_complete(team_understat_file('Burnley', int(season[:4])))
+        Tottenham_stats_df = loop.run_until_complete(team_understat_file('Tottenham', int(season[:4])))
+        Nottingham_Forest_stats_df = loop.run_until_complete(team_understat_file('Nottingham Forest', int(season[:4])))
+        West_Ham_stats_df = loop.run_until_complete(team_understat_file('West Ham', int(season[:4])))
+        Wolverhampton_Wanderers_stats_df = loop.run_until_complete(team_understat_file('Wolverhampton Wanderers', int(season[:4])))
+
+        team_stats_dict_2023 = {
+            'Arsenal': Arsenal_stats_df,
+            'Aston Villa': Aston_Villa_stats_df,
+            'Brentford': Brentford_stats_df,
+            'Brighton': Brighton_stats_df,
+            'Bournemouth': Bournemouth_stats_df,
+            'Chelsea': Chelsea_stats_df,
+            'Crystal Palace': Crystal_Palace_stats_df,
+            'Everton': Everton_stats_df,
+            'Sheffield Utd': Sheffield_United_stats_df,
+            'Luton': Luton_stats_df,
+            'Liverpool':Liverpool_stats_df,
+            'Man City': Manchester_City_stats_df,
+            'Man Utd': Manchester_United_stats_df,
+            'Newcastle': Newcastle_United_stats_df,
+            'Fulham': Fulham_stats_df,
+            'Burnley': Burnley_stats_df,
+            'Spurs': Tottenham_stats_df,
+            'Nott\'m Forest': Nottingham_Forest_stats_df,
+            'West Ham': West_Ham_stats_df,
+            'Wolves': Wolverhampton_Wanderers_stats_df
+        }
+
+
     team_stats_dict = {
         '2019-20': team_stats_dict_2019,
         '2020-21': team_stats_dict_2020,
         '2021-22': team_stats_dict_2021,
-        '2022-23': team_stats_dict_2022
+        '2022-23': team_stats_dict_2022,
+        '2023-24': team_stats_dict_2023
     }
 
     url = 'https://fantasy.premierleague.com/api/fixtures/'
@@ -368,7 +442,8 @@ def dataset_initialization(PATH):
         '2019-20': pd.read_csv(PATH + '2019-20/fixtures.csv'),
         '2020-21': pd.read_csv(PATH + '2020-21/fixtures.csv'),
         '2021-22': pd.read_csv(PATH + '2021-22/fixtures.csv'),
-        '2022-23': pd.json_normalize(requests.get(url).json())
+        '2022-23': pd.read_csv(PATH + '2022-23/fixtures.csv'),
+        '2023-24': pd.json_normalize(requests.get(url).json())
     }
 
     url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
@@ -376,23 +451,26 @@ def dataset_initialization(PATH):
         '2019-20': pd.read_csv(PATH + '2019-20/players_raw.csv'),
         '2020-21': pd.read_csv(PATH + '2020-21/players_raw.csv'),
         '2021-22': pd.read_csv(PATH + '2021-22/players_raw.csv'),
-        '2022-23': pd.DataFrame(requests.get(url).json()['elements'])
+        '2022-23': pd.read_csv(PATH + '2022-23/players_raw.csv'),
+        '2023-24': pd.DataFrame(requests.get(url).json()['elements'])
     }
 
     teams = {
         '2019-20': pd.read_csv(PATH + '2019-20/teams.csv'),
         '2020-21': pd.read_csv(PATH + '2020-21/teams.csv'),
         '2021-22': pd.read_csv(PATH + '2021-22/teams.csv'),
-        '2022-23': pd.DataFrame(requests.get(url).json()['teams'])
+        '2022-23': pd.read_csv(PATH + '2022-23/teams.csv'),
+        '2023-24': pd.DataFrame(requests.get(url).json()['teams'])
     }
 
     ids = {
         '2019-20': 'FPL_ID_2019',
         '2020-21': 'FPL_ID_2020',
         '2021-22': 'FPL_ID_2021',
-        '2022-23': 'FPL_ID_2022'
+        '2022-23': 'FPL_ID_2022',
+        '2023-24': 'FPL_ID_2023'
     }
 
-    seasons = ['2019-20', '2020-21', '2021-22', '2022-23']
+    seasons = ['2019-20', '2020-21', '2021-22', '2022-23', '2023-24']
 
     return team_stats_dict, fixtures, players_raw, teams, ids, seasons

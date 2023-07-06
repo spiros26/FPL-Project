@@ -511,9 +511,12 @@ def solve_multi_period_fpl(data, options):
                 os.system(command)
             else:
                 process = Popen(command, shell=False)
+                print(1)
                 process.wait()
+                print(1)
 
             # Parsing
+            print(1)
             with open(f'tmp/{problem_name}_{problem_id}_{iter}_sol.txt', 'r') as f:
                 for v in model.get_variables():
                     v.set_value(0)
