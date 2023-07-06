@@ -38,7 +38,7 @@ def add_fixture(fixtures, season, fix_prob, gw, idd, team_h, team_a):
         adj_fix.at[i, 'fix_prob'] = fix_prob
         return fixtures
 
-    adj_fix.loc[len(adj_fix.index)] = [fix_prob, 0, gw, False, False, idd, '2023-05-28T15:00:00Z', 0, False, False, team_a, np.NaN, team_h, np.NaN, '[]', 0, 0, 0]
+    adj_fix.loc[len(adj_fix.index)] = [fix_prob, 0, gw, False, False, idd, '2024-05-28T15:00:00Z', 0, False, False, team_a, np.NaN, team_h, np.NaN, '[]', 0, 0, 0]
     return fixtures
 
 def adjust_fixtures(review_detailed, fixtures, teams, season, gws):
@@ -232,6 +232,7 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         xg_pen = 0.79
         xpens = pens.predict([[teamnpxGp90, oppnpxGAp90, home, pen_rate, team_proj_goals, teamnpxGp90l4, oppnpxGAp90l4]])[0]
         xpen_goals = xpens * xg_pen * penalty_finishing_rate * pen_chance
+        miss_pen_points = -2 * xpens * (1-xg_pen*penalty_finishing_rate) * pen_chance
         '''
         pen_takers = xpens_2022[team]
         for x in range(len(pen_takers)):

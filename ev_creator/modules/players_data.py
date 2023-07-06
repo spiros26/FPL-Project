@@ -650,7 +650,7 @@ def players_data(id_dict_df, ids, PATH):
             #    pd.read_csv(PATH + season + '/players/Alex_Telles_334/gw.csv'),
                 pd.read_csv(PATH + season + '/players/Emiliano_Buendía Stati_42/gw.csv'),
           #      pd.read_csv(PATH + season + '/players/Jonathan_Castro Otto_477/gw.csv'),
-          3      pd.read_csv(PATH + season + '/players/Cristiano Ronaldo_dos Santos Aveiro_326/gw.csv'),
+          #      pd.read_csv(PATH + season + '/players/Cristiano Ronaldo_dos Santos Aveiro_326/gw.csv'),
                 pd.read_csv(PATH + season + '/players/João_Cancelo_306/gw.csv'),
             #    pd.read_csv(PATH + season + '/players/André_Tavares Gomes_184/gw.csv'),
                 pd.read_csv(PATH + season + '/players/Thiago_Emiliano da Silva_128/gw.csv'),

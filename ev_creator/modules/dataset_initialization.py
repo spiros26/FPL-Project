@@ -370,7 +370,7 @@ def dataset_initialization(PATH):
         'Chelsea': pd.DataFrame(),
         'Crystal Palace': pd.DataFrame(),
         'Everton': pd.DataFrame(),
-        'Sheffield United': pd.DataFrame(),
+        'Sheffield Utd': pd.DataFrame(),
         'Luton': pd.DataFrame(),
         'Liverpool': pd.DataFrame(),
         'Man City': pd.DataFrame(),

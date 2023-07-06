@@ -3,7 +3,7 @@ import pandas as pd
 from numpy import NaN
 import math
 
-first_season = '2016-17'
+first_season = '2019-20'
 
 #wrong its actually first name + _ + second_name
 def convert(name):
@@ -34,21 +34,8 @@ def previous(season):
   return str(season1) + season[4] + str(season2)
 
 
-
-def last4xGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
-  for x in range(team_stats_dict[season][team].shape[0]):
-    if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
-      break
-  if x < gw_no_lim:
-    if season != first_season:
-      try:
-        return float(team_stats_dict[previous(season)][team][['xGA']].mean())
-      except:
-        return 2.0
-    return float(team_stats_dict[season][team].iloc[:x][['xGA']].mean())
-  return float(team_stats_dict[season][team].iloc[x-gw_no_lim:x][['xGA']].mean())
-
 def last4npxGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
+  x = 0
   for x in range(team_stats_dict[season][team].shape[0]):
     if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
       break
@@ -61,7 +48,9 @@ def last4npxGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
     return float(team_stats_dict[season][team].iloc[:x][['npxGA']].mean())
   return float(team_stats_dict[season][team].iloc[x-gw_no_lim:x][['npxGA']].mean())
 
+
 def npxGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
+  x = 0
   for x in range(team_stats_dict[season][team].shape[0]):
     if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
       break
@@ -74,48 +63,9 @@ def npxGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
     return float(team_stats_dict[season][team].iloc[:x][['npxGA']].mean())
   return float(team_stats_dict[season][team].iloc[:x][['npxGA']].mean())
 
-def xGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
-  for x in range(team_stats_dict[season][team].shape[0]):
-    if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
-      break
-  if x < gw_no_lim:
-    if season != first_season:
-      try:
-        return float(team_stats_dict[previous(season)][team][['xGA']].mean())
-      except:
-        return 2.0
-    return float(team_stats_dict[season][team].iloc[:x][['xGA']].mean())
-  return float(team_stats_dict[season][team].iloc[:x][['xGA']].mean())
-
-
-def opp_last4xGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
-  for x in range(team_stats_dict[season][team].shape[0]):
-    if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
-      break
-  if x < gw_no_lim:
-    if season != first_season:
-      try:
-        return float(team_stats_dict[previous(season)][team][['xG']].mean())
-      except:
-        return 0.6
-    return float(team_stats_dict[season][team].iloc[:x][['xG']].mean())
-  return float(team_stats_dict[season][team].iloc[x-gw_no_lim:x][['xG']].mean())
-
-
-def opp_xGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
-  for x in range(team_stats_dict[season][team].shape[0]):
-    if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
-      break
-  if x < gw_no_lim:
-    if season != first_season:
-      try:
-        return float(team_stats_dict[previous(season)][team][['xG']].mean())
-      except:
-        return 0.8
-    return float(team_stats_dict[season][team].iloc[:x][['xG']].mean())
-  return float(team_stats_dict[season][team].iloc[:x][['xG']].mean())
 
 def opp_npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
+  x = 0
   for x in range(team_stats_dict[season][team].shape[0]):
     if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
       break
@@ -128,7 +78,9 @@ def opp_npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
     return float(team_stats_dict[season][team].iloc[:x][['npxG']].mean())
   return float(team_stats_dict[season][team].iloc[:x][['npxG']].mean())
 
+
 def opp_last4npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
+  x = 0
   for x in range(team_stats_dict[season][team].shape[0]):
     if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
       break
@@ -141,7 +93,9 @@ def opp_last4npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
     return float(team_stats_dict[season][team].iloc[:x][['npxG']].mean())
   return float(team_stats_dict[season][team].iloc[x-gw_no_lim:x][['npxG']].mean())
 
+
 def last4npxGp90(df, season, kickoff_time, gw_no_lim):
+  x = 0
   try:
     for x in range(df[df['season']==season].shape[0]):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
@@ -154,7 +108,9 @@ def last4npxGp90(df, season, kickoff_time, gw_no_lim):
   except:
     return np.nan
 
+
 def last4xAp90(df, season, kickoff_time, gw_no_lim):
+  x = 0
   try:
     for x in range(df[df['season']==season].shape[0]):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
@@ -166,6 +122,7 @@ def last4xAp90(df, season, kickoff_time, gw_no_lim):
     return float(90*df[df['season']==season][::-1].iloc[x-gw_no_lim:x][['xA']].sum()/float(df[df['season']==season][::-1].iloc[x-gw_no_lim:x][['time']].sum()))
   except:
     return np.nan
+
 
 def npxGp90(df, season, kickoff_time, gw_no_lim):
   x = 0
@@ -182,20 +139,8 @@ def npxGp90(df, season, kickoff_time, gw_no_lim):
     return np.nan
 
 
-def xGp90(df, season, kickoff_time, gw_no_lim):
-  try:
-    for x in range(df[df['season']==season].shape[0]):
-      if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
-        x=x-1
-        break
-    if x < gw_no_lim:
-      #get last season's data
-      return float(90*df[df['season']==season-1][['xG']].sum()/float(df[df['season']==season-1][['time']].sum()))
-    return float(90*df[df['season']==season][::-1].iloc[:x][['xG']].sum()/float(df[df['season']==season][::-1].iloc[:x][['time']].sum()))
-  except:
-    return np.nan
-
 def xAp90(df, season, kickoff_time, gw_no_lim):
+  x = 0
   try:
     for x in range(df[df['season']==season].shape[0]):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
@@ -208,7 +153,9 @@ def xAp90(df, season, kickoff_time, gw_no_lim):
   except:
     return np.nan
 
+
 def shp90(df, season, kickoff_time, gw_no_lim):
+  x = 0
   try:
     for x in range(df[df['season']==season].shape[0]):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
@@ -221,20 +168,9 @@ def shp90(df, season, kickoff_time, gw_no_lim):
   except:
     return np.nan
 
-def kpp90l4(df, season, kickoff_time, gw_no_lim):
-  try:
-    for x in range(df[df['season']==season].shape[0]):
-      if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
-        x=x-1
-        break
-    if x < gw_no_lim:
-      #get last season's data
-      return float(90*df[df['season']==season-1][['key_passes']].sum()/float(df[df['season']==season-1][['time']].sum()))
-    return float(90*df[df['season']==season][::-1].iloc[x-gw_no_lim:x][['key_passes']].sum()/float(df[df['season']==season][::-1].iloc[x-gw_no_lim:x][['time']].sum()))
-  except:
-    return np.nan
 
 def kpp90(df, season, kickoff_time, gw_no_lim):
+  x = 0
   try:
     for x in range(df[df['season']==season].shape[0]):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
@@ -244,19 +180,6 @@ def kpp90(df, season, kickoff_time, gw_no_lim):
       #get last season's data
       return float(90*df[df['season']==season-1][['key_passes']].sum()/float(df[df['season']==season-1][['time']].sum()))
     return float(90*df[df['season']==season][::-1].iloc[:x][['key_passes']].sum()/float(df[df['season']==season][::-1].iloc[:x][['time']].sum()))
-  except:
-    return np.nan
-
-def shp90l4(df, season, kickoff_time, gw_no_lim):
-  try:
-    for x in range(df[df['season']==season].shape[0]):
-      if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
-        x=x-1
-        break
-    if x < gw_no_lim:
-      #get last season's data
-      return float(90*df[df['season']==season-1][['shots']].sum()/float(df[df['season']==season-1][['time']].sum()))
-    return float(90*df[df['season']==season][::-1].iloc[x-gw_no_lim:x][['shots']].sum()/float(df[df['season']==season][::-1].iloc[x-gw_no_lim:x][['time']].sum()))
   except:
     return np.nan
 
@@ -319,6 +242,11 @@ def save_points(xsaves):
 def team_id(player_id, season, players_raw):
   return players_raw[season][players_raw[season]['id']==player_id]['team'].iloc[0]
   
+def previous_team_id(team_id, season, teams):
+  t = teams[season] 
+  team_name = t[t['id']==team_id]['name'].iloc[0]
+  t_prev = teams[previous(season)]
+  return t_prev[t_prev['name']==team_name]['id'].iloc[0]
 
 def fixture_info(player_id, season, gw, fixtures, teams, players_raw):
   team = team_id(player_id, season, players_raw)
@@ -402,6 +330,8 @@ def rates100(df, kickoff_time, el):
 def npg_rate_season(df, kickoff_time, season):
     try:
         new_df = df[df['season']==season]
+        if new_df.shape[0] < 4:
+          return npg_rate_season(df, kickoff_time, season-1)
         i = 0
         while new_df['date'].iloc[i] >= convert_date(kickoff_time):
             i=i+1
@@ -413,6 +343,8 @@ def npg_rate_season(df, kickoff_time, season):
 def assist_rate_season(df, kickoff_time, season):
     try:
         new_df = df[df['season']==season]
+        if new_df.shape[0] < 4:
+          return assist_rate_season(df, kickoff_time, season-1)
         i = 0
         while new_df['date'].iloc[i] >= convert_date(kickoff_time):
             i=i+1
@@ -475,7 +407,12 @@ def pens_per_game(fixtures, season, team_stats_dict, teams, team_id, gw_no_lim):
     pens = []
     team_df = team_stats_dict[season][team]
     if team_df.shape[0] < gw_no_lim:
-      return [0.15, 0.15, 0.15, 0.15], 0
+      try:
+        if not team_stats_dict[previous(season)][team].empty:
+            prev_id = previous_team_id(team_id, season, teams)
+            return pens_per_game(fixtures, previous(season), team_stats_dict, teams, prev_id, gw_no_lim)
+      except:
+          return [0.1, 0.1, 0.1, 0.1], 0
     while team_fixtures['kickoff_time'].iloc[cnt] == None:
         cnt+=1
     for i in range(team_df.shape[0]):
