@@ -331,7 +331,8 @@ def npg_rate_season(df, kickoff_time, season):
     try:
         new_df = df[df['season']==season]
         if new_df.shape[0] < 4:
-          return npg_rate_season(df, kickoff_time, season-1)
+          new_df = df[df['season']==season-1]
+          return 90*sum(new_df['npg'].to_list())/sum(new_df['time'].to_list())
         i = 0
         while new_df['date'].iloc[i] >= convert_date(kickoff_time):
             i=i+1
@@ -344,7 +345,8 @@ def assist_rate_season(df, kickoff_time, season):
     try:
         new_df = df[df['season']==season]
         if new_df.shape[0] < 4:
-          return assist_rate_season(df, kickoff_time, season-1)
+          new_df = df[df['season']==season-1]
+          return 90*sum(new_df['assists'].to_list())/sum(new_df['time'].to_list())
         i = 0
         while new_df['date'].iloc[i] >= convert_date(kickoff_time):
             i=i+1
@@ -379,7 +381,7 @@ xpens_2022 = {
 xpens_2022 = {
       'Arsenal': [(19, 0), (8, 0), (6, 0)], #saka, jesus, havertz
       'Aston Villa': [(60, 0), (38, 0), (34, 0)], #watkins, coutinho, bailey
-      'Brentford': [(117, 0), (118, 0), (119, 0)], #toney, mbeumo, wissa
+      'Brentford': [(118, 0), (117, 0), (119, 0)], #toney, mbeumo, wissa
       'Brighton': [(134, 0), (154, 0), (132, 0)], #gross, welbeck, ferguson
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
       'Chelsea':  [(216, 0), (206, 0), (195, 0)], # sterling, james, chilwell       add nkunku 2nd/1st

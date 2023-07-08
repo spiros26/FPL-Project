@@ -100,7 +100,8 @@ teams538 = {
     'Norwich': 'Norwich City',
     'Burnley': 'Burnley',
     'West Brom' : 'West Bromwich Albion',
-    'Sheffield Utd': 'Sheffield United'
+    'Sheffield Utd': 'Sheffield United',
+    'Luton': 'Luton'
 }
 
 
@@ -118,7 +119,20 @@ def proj_scores(proj_scores_df, team_1, team_2, season, home):
             xG2 = float(df['proj_score2'].iloc[0])
             return xG2,xG1 
     except:
-        return 0.0, 0.0
+        try:
+            df = proj_scores_df
+            if home:
+                df = df[(df['team1']==teams538[team_1]) & (df['team2']==teams538[team_2])]
+                xG1 = float(df['proj_score1'].iloc[df.shape[0]-1])
+                xG2 = float(df['proj_score2'].iloc[df.shape[0]-1])
+                return xG1,xG2
+            else:
+                df = df[(df['team1']==teams538[team_2]) & (df['team2']==teams538[team_1])]
+                xG1 = float(df['proj_score1'].iloc[df.shape[0]-1])
+                xG2 = float(df['proj_score2'].iloc[df.shape[0]-1])
+                return xG2,xG1
+        except:
+            return 0.0, 0.0
 
 def spis(proj_scores_df, team_1, team_2, season, home):
     try:
@@ -134,7 +148,20 @@ def spis(proj_scores_df, team_1, team_2, season, home):
             spi2 = float(df['spi2'].iloc[0])
             return spi2,spi1 
     except:
-        return 0.0, 0.0
+        try:
+            df = proj_scores_df
+            if home:
+                df = df[(df['team1']==teams538[team_1]) & (df['team2']==teams538[team_2])]
+                xG1 = float(df['spi1'].iloc[df.shape[0]-1])
+                xG2 = float(df['spi2'].iloc[df.shape[0]-1])
+                return xG1,xG2
+            else:
+                df = df[(df['team1']==teams538[team_2]) & (df['team2']==teams538[team_1])]
+                xG1 = float(df['spi1'].iloc[df.shape[0]-1])
+                xG2 = float(df['spi2'].iloc[df.shape[0]-1])
+                return xG2,xG1
+        except:
+            return 0.0, 0.0
 
 
 def prev_rate(main_df, history_df, gw, gw_no_lim, el):
@@ -241,10 +268,10 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
                 #miss_pen_points = -2*xpens*(1-xg_pen*penalty_finishing_rate)
         '''  
 
-        xGoals = npgoals.predict([[npg_ratel100, npxGp90l100, sh_ratel100, npg_rate, npxGp90, npxGp90l4, shp90, teamnpxGp90, oppnpxGAp90, spi_opp_team, spi_team, mins, home]])[0] + xpen_goals
+        xGoals = finishing_rate * npgoals.predict([[npg_ratel100, npxGp90l100, sh_ratel100, npg_rate, npxGp90, npxGp90l4, shp90, teamnpxGp90, oppnpxGAp90, spi_opp_team, spi_team, mins, home]])[0] + xpen_goals
         xAssists = assists.predict([[assist_ratel100, xAp90l100, kp_ratel100, assist_rate, xAp90, xAp90l4, kpp90, teamnpxGp90, oppnpxGp90, spi_opp_team, oppnpxGAp90, spi_team, mins, home]])[0]
-        xCS = clean_sheets(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
-        #xCS = clean_sheets(opp_proj_goals)
+        #xCS = clean_sheets(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
+        xCS = clean_sheets(opp_proj_goals)
         xBonus = bonus.predict([[bonusp90, position, npxGp90, xAp90, npxGAp90, oppnpxGp90, oppnpxGAp90, mins, home]])[0]
         #xMinus_def = minus_points_def(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
         xMinus_def = minus_points_def(opp_proj_goals)
@@ -291,6 +318,8 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
 
 
 def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_horizon, gw, i, pid):
+    if team == 'Luton':
+        return 0
     gws = list(range(next_gw, next_gw + horizon))
     penmins = []
     for n in range(len(xpens_2022[team])):
@@ -349,7 +378,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     # Update fixture probabilities
     fixtures = adjust_fixtures(review_detailed, fixtures, teams, season, gws)
     master_df = pd.read_csv(master_path)
-    review_df = review_df[:5]      #for tests
+    #review_df = review_df[:5]      #for tests
     for player_id in tqdm(review_df['ID'].to_list()): 
         #try:
             #name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
@@ -386,7 +415,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
             url = 'https://fantasy.premierleague.com/api/element-summary/' + str(int(player_id)) + '/'
             main_df = pd.DataFrame(requests.get(url).json()['history'])
             history_df = pd.DataFrame(requests.get(url).json()['history_past'])
-            understat_id = int(master_df[master_df['22-23']==player_id]['understat'].iloc[0])
+            understat_id = int(master_df[master_df[season[2:]]==player_id]['understat'].iloc[0])
             understat_df = loop.run_until_complete(player_understat_file(understat_id))
 
             for gw in gws:
@@ -460,7 +489,8 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'minutes', [xmins[gw-gws[0]][i]], True)
                     cmp_df.insert(0, 'finishing_rate', [finishing_rate(understat_df)], True)
                     cmp_df.insert(0, 'penalty_finishing_rate', [penalty_finishing_rate(understat_df)], True)
-
+                    if player_id == 355:
+                        cmp_df.to_csv('haaland.csv')
                     points_df = xPoints(cmp_df, npgoals, assists, team_goals, bonus, saves, pens, 0)
                     xp_gw.append(fix_prob[i] * points_df['total'][0])
                     xg_gw.append(fix_prob[i] * points_df['goals'][0])
