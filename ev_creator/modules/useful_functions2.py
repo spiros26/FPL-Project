@@ -243,8 +243,8 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
 
         xGoals = npgoals.predict([[npg_ratel100, npxGp90l100, sh_ratel100, npg_rate, npxGp90, npxGp90l4, shp90, teamnpxGp90, oppnpxGAp90, spi_opp_team, spi_team, mins, home]])[0] + xpen_goals
         xAssists = assists.predict([[assist_ratel100, xAp90l100, kp_ratel100, assist_rate, xAp90, xAp90l4, kpp90, teamnpxGp90, oppnpxGp90, spi_opp_team, oppnpxGAp90, spi_team, mins, home]])[0]
-        #xCS = clean_sheets(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
-        xCS = clean_sheets(opp_proj_goals)
+        xCS = clean_sheets(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
+        #xCS = clean_sheets(opp_proj_goals)
         xBonus = bonus.predict([[bonusp90, position, npxGp90, xAp90, npxGAp90, oppnpxGp90, oppnpxGAp90, mins, home]])[0]
         #xMinus_def = minus_points_def(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
         xMinus_def = minus_points_def(opp_proj_goals)
@@ -315,7 +315,7 @@ def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_
 
 
 
-def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, id_dict_df, master_path, data538_PATH, fixtures, teams, team_stats_dict, npgoals, assists, team_goals, bonus, saves, pens, gw_no_lim, seasons):
+def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, master_path, data538_PATH, fixtures, teams, team_stats_dict, npgoals, assists, team_goals, bonus, saves, pens, gw_no_lim, seasons):
     xpoints = {}
     xbp = {}
     xgoals = {}
@@ -349,9 +349,9 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     # Update fixture probabilities
     fixtures = adjust_fixtures(review_detailed, fixtures, teams, season, gws)
     master_df = pd.read_csv(master_path)
-    #review_df = review_df[:5]      #for tests
+    review_df = review_df[:5]      #for tests
     for player_id in tqdm(review_df['ID'].to_list()): 
-        try:
+        #try:
             #name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
             #row = id_dict_df[id_dict_df[fpl_id]==player_id].iloc[0]
             #pos = review_df[review_df['ID']==player_id]['Pos'].iloc[0]
@@ -383,7 +383,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 fpl_str_df = fpl_str_df[fpl_str_df['22-23']==player_id]
                 fpl_str = fpl_str_df['first_name'].iloc[0] + '_' + fpl_str_df['second_name'].iloc[0] + '_' + str(fpl_str_df['22-23'].iloc[0])
             '''
-            url = 'https://fantasy.premierleague.com/api/element-summary/' + str(player_id) + '/'
+            url = 'https://fantasy.premierleague.com/api/element-summary/' + str(int(player_id)) + '/'
             main_df = pd.DataFrame(requests.get(url).json()['history'])
             history_df = pd.DataFrame(requests.get(url).json()['history_past'])
             understat_id = int(master_df[master_df['22-23']==player_id]['understat'].iloc[0])
@@ -497,7 +497,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 xsave_points['gw_'+str(next_gw+q)].append(round(sum(save_points[q]),3))
                 tot += sum(xp[q])
             total.append(round(tot,3))
-            
+            '''
         except:
             for q in range(horizon):
                 xpoints['gw_'+str(next_gw+q)].append(0)
@@ -512,7 +512,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 xsave_points['gw_'+str(next_gw+q)].append(0)
                 mins['gw_'+str(next_gw+q)].append(0)
             total.append(0)
-            
+            '''
     for q in range(horizon):
         try:
             review_df.insert(7+3*q, str(next_gw+q)+'_xP', xpoints['gw_'+str(next_gw+q)], True)
