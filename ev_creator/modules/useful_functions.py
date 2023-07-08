@@ -385,18 +385,18 @@ xpens_2022 = {
       'Chelsea':  [(216, 0), (206, 0), (195, 0)], # sterling, james, chilwell       add nkunku 2nd/1st
       'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         add zaha 2nd
       'Everton': [(246, 0), (253, 0), (259, 0)], #dcl, gray, mcneil
-      'Luton':  [(227, 0), (225, 0), (223, 0)], #bamford, rodrigo, klich            #continue
-      'Leicester':  [(262, 0), (261, 0), (255, 0)], #iheanacho, maddison, vardy
-      'Liverpool': [(283, 0), (282, 0), (274, 0)], #salah, fabinho, milner
-      'Man City':  [(318, 0), (303, 0), (319, 0)], #haaland, mahrez, alvarez
-      'Man Utd': [(333, 0), (335, 0), (345, 0)], #bruno, rashford, martial
-      'Newcastle': [(356, 0), (594, 0), (371, 0)], #wilson, isak, joelinton
-      'Nott\'m Forest':[(493, 0), (394, 0), (734, 0)], #gibbs-white, johnson, ayew                                                     
-      'Southampton':  [(407, 0), (406, 0), (405, 0)], #jwp, elyonousi, armstrong
-      'Spurs': [(427, 0), (428, 0), (448, 0)], #kane, son, perisic
-      'Fulham': [(210, 0), (346, 0), (212, 0)], #mitro, andreas, wilson                                                   
-      'West Ham': [(460, 0), (464, 0), (603, 0)], #lanzini, benrahma, paqueta
-      'Wolves': [(476, 0), (480, 0), (481, 0)], #jimenez, neves, hwang
+      'Luton':  [(227, 0), (225, 0), (223, 0)], #Morris, Adebayo, Woodrow           #fix add luton players
+      'Burnley':  [(177, 0), (170, 0), (161, 0)], #rodriguez, gudmundsson, brownhill
+      'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
+      'Man City':  [(355, 0), (359, 0), (343, 0)], #haaland, mahrez, alvarez
+      'Man Utd': [(373, 0), (396, 0), (390, 0)], #bruno, rashford, martial
+      'Newcastle': [(433, 0), (415, 0), (416, 0)], #wilson, isak, joelinton
+      'Nott\'m Forest':[(447, 0), (450, 0), (437, 0)], #gibbs-white, johnson, awoniyi                                                     
+      'Sheffield Utd':  [(477, 0), (488, 0), (481, 0)], #brewster, norwood, fleck
+      'Spurs': [(500, 0), (516, 0), (504, 0)], #kane, son, maddison
+      'Fulham': [(278, 0), (267, 0), (288, 0)], #mitro, andreas, wilson                                                   
+      'West Ham': [(525, 0), (539, 0), (526, 0)], #benrahma, paqueta, bowen
+      'Wolves': [(558, 0), (557, 0), (567, 0)], #jimenez, hwang, neto
   }
   
 def pens_per_game(fixtures, season, team_stats_dict, teams, team_id, gw_no_lim):
