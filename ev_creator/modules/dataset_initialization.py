@@ -7,6 +7,7 @@ import aiohttp
 import nest_asyncio
 nest_asyncio.apply()
 from understat import Understat
+import time
 
 
 async def team_understat_file(team, season):
@@ -309,28 +310,27 @@ def dataset_initialization(PATH):
 
     # Team Stats 2022/23
     season = '2022-23'
-    loop = asyncio.get_event_loop()
 
-    Arsenal_stats_df = loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])))
-    Aston_Villa_stats_df = loop.run_until_complete(team_understat_file('Aston Villa', int(season[:4])))
-    Brentford_stats_df = loop.run_until_complete(team_understat_file('Brentford', int(season[:4])))
-    Brighton_stats_df = loop.run_until_complete(team_understat_file('Brighton', int(season[:4])))
-    Bournemouth_stats_df = loop.run_until_complete(team_understat_file('Bournemouth', int(season[:4])))
-    Chelsea_stats_df = loop.run_until_complete(team_understat_file('Chelsea', int(season[:4])))
-    Crystal_Palace_stats_df = loop.run_until_complete(team_understat_file('Crystal Palace', int(season[:4])))
-    Everton_stats_df = loop.run_until_complete(team_understat_file('Everton', int(season[:4])))
-    Leeds_stats_df = loop.run_until_complete(team_understat_file('Leeds', int(season[:4])))
-    Leicester_stats_df = loop.run_until_complete(team_understat_file('Leicester', int(season[:4])))
-    Liverpool_stats_df = loop.run_until_complete(team_understat_file('Liverpool', int(season[:4])))
-    Manchester_City_stats_df = loop.run_until_complete(team_understat_file('Manchester City', int(season[:4])))
-    Manchester_United_stats_df = loop.run_until_complete(team_understat_file('Manchester United', int(season[:4])))
-    Newcastle_United_stats_df = loop.run_until_complete(team_understat_file('Newcastle United', int(season[:4])))
-    Fulham_stats_df = loop.run_until_complete(team_understat_file('Fulham', int(season[:4])))
-    Southampton_stats_df = loop.run_until_complete(team_understat_file('Southampton', int(season[:4])))
-    Tottenham_stats_df = loop.run_until_complete(team_understat_file('Tottenham', int(season[:4])))
-    Nottingham_Forest_stats_df = loop.run_until_complete(team_understat_file('Nottingham Forest', int(season[:4])))
-    West_Ham_stats_df = loop.run_until_complete(team_understat_file('West Ham', int(season[:4])))
-    Wolverhampton_Wanderers_stats_df = loop.run_until_complete(team_understat_file('Wolverhampton Wanderers', int(season[:4])))
+    Arsenal_stats_df = pd.read_csv(PATH + season + '/understat/understat_Arsenal.csv')
+    Aston_Villa_stats_df = pd.read_csv(PATH + season + '/understat/understat_Aston_Villa.csv')
+    Brentford_stats_df = pd.read_csv(PATH + season + '/understat/understat_Brentford.csv')
+    Brighton_stats_df = pd.read_csv(PATH + season + '/understat/understat_Brighton.csv')
+    Bournemouth_stats_df = pd.read_csv(PATH + season + '/understat/understat_Bournemouth.csv')
+    Chelsea_stats_df = pd.read_csv(PATH + season + '/understat/understat_Chelsea.csv')
+    Crystal_Palace_stats_df = pd.read_csv(PATH + season + '/understat/understat_Crystal_Palace.csv')
+    Everton_stats_df = pd.read_csv(PATH + season + '/understat/understat_Everton.csv')
+    Leeds_stats_df = pd.read_csv(PATH + season + '/understat/understat_Leeds.csv')
+    Leicester_stats_df = pd.read_csv(PATH + season + '/understat/understat_Leicester.csv')
+    Liverpool_stats_df = pd.read_csv(PATH + season + '/understat/understat_Liverpool.csv')
+    Manchester_City_stats_df = pd.read_csv(PATH + season + '/understat/understat_Manchester_City.csv')
+    Manchester_United_stats_df = pd.read_csv(PATH + season + '/understat/understat_Manchester_United.csv')
+    Newcastle_United_stats_df = pd.read_csv(PATH + season + '/understat/understat_Newcastle_United.csv')
+    Fulham_stats_df = pd.read_csv(PATH + season + '/understat/understat_Fulham.csv')
+    Southampton_stats_df = pd.read_csv(PATH + season + '/understat/understat_Southampton.csv')
+    Tottenham_stats_df = pd.read_csv(PATH + season + '/understat/understat_Tottenham.csv')
+    Nottingham_Forest_stats_df = pd.read_csv(PATH + season + '/understat/understat_Nottingham_Forest.csv')
+    West_Ham_stats_df = pd.read_csv(PATH + season + '/understat/understat_West_Ham.csv')
+    Wolverhampton_Wanderers_stats_df = pd.read_csv(PATH + season + '/understat/understat_Wolverhampton_Wanderers.csv')
 
     team_stats_dict_2022 = {
         'Arsenal': Arsenal_stats_df,

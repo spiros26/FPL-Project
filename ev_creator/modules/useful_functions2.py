@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import requests
 from tqdm import tqdm
+import time
 import json
 from modules.useful_functions import npg, pens_per_game, xpens_2022, save_points, minus_points_def, clean_sheets, xAppPoints, el_per_app, finishing_rate, penalty_finishing_rate, fixture_info, team_id, convert, previous, npxGAp90, last4npxGp90, npxGp90, shp90, opp_npxGp90, xAp90, kpp90, last4xAp90, opp_last4npxGp90, last4npxGAp90
 from modules.useful_functions import p90_main_df, avg, rates100, npg_rate_season, assist_rate_season
@@ -167,7 +168,7 @@ def spis(proj_scores_df, team_1, team_2, season, home):
 def prev_rate(main_df, history_df, gw, gw_no_lim, el):
     if el == 'bonus':
         try:
-            if gw >= gw_no_lim:
+            if gw > gw_no_lim:
                 ret_value = p90_main_df(main_df, el, gw)
                 return ret_value
             else:
@@ -181,7 +182,7 @@ def prev_rate(main_df, history_df, gw, gw_no_lim, el):
                 return ret_value
     elif el == 'saves':
         try:
-            if gw >= gw_no_lim:
+            if gw > gw_no_lim:
                 ret_value = p90_main_df(main_df, el, gw)
                 return ret_value
             else:
@@ -195,7 +196,7 @@ def prev_rate(main_df, history_df, gw, gw_no_lim, el):
                 return ret_value
     elif el == 'yc':
         try:
-            if gw >= gw_no_lim:
+            if gw > gw_no_lim:
                 ret_value = el_per_app(main_df, gw, el)
                 return ret_value
             else:
@@ -416,7 +417,8 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
             main_df = pd.DataFrame(requests.get(url).json()['history'])
             history_df = pd.DataFrame(requests.get(url).json()['history_past'])
             understat_id = int(master_df[master_df[season[2:]]==player_id]['understat'].iloc[0])
-            understat_df = loop.run_until_complete(player_understat_file(understat_id))
+            #understat_df = loop.run_until_complete(player_understat_file(understat_id))
+            understat_df = pd.read_csv('../data/Fantasy-Premier-League/data/2022-23/understat/' + master_df[master_df[season[2:]]==player_id]['first_name'].iloc[0] + '_' + master_df[master_df[season[2:]]==player_id]['second_name'].iloc[0] + '_' + str(understat_id) + '.csv')
 
             for gw in gws:
                 opponent_team = []
@@ -475,8 +477,8 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'pen_rate', [avg(pen_list)], True)
                     cmp_df.insert(0, 'was_home', [home[i]], True)
                     cmp_df.insert(0, 'xYC', [yc], True)
-                    cmp_df.insert(0, 'npg_rate', [npg_rate_season(df, kickoff_time[i], int(season[:4]))], True)
-                    cmp_df.insert(0, 'assist_rate', [assist_rate_season(df, kickoff_time[i], int(season[:4]))], True)
+                    cmp_df.insert(0, 'npg_rate', [npg_rate_season(understat_df, kickoff_time[i], int(season[:4]))], True)
+                    cmp_df.insert(0, 'assist_rate', [assist_rate_season(understat_df, kickoff_time[i], int(season[:4]))], True)
                     cmp_df.insert(0, 'npg_ratel100', [rates100(understat_df, kickoff_time[i], 'npg')], True)
                     cmp_df.insert(0, 'assist_ratel100', [rates100(understat_df, kickoff_time[i], 'assists')], True)
                     cmp_df.insert(0, 'npxGp90l100', [rates100(understat_df, kickoff_time[i], 'npxG')], True)

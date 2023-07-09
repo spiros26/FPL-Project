@@ -379,9 +379,9 @@ xpens_2022 = {
   }
 '''
 xpens_2022 = {
-      'Arsenal': [(19, 0), (8, 0), (6, 0)], #saka, jesus, havertz
+      'Arsenal': [(19, 0), (13, 0), (6, 0)], #saka, jesus8, havertz
       'Aston Villa': [(60, 0), (38, 0), (34, 0)], #watkins, coutinho, bailey
-      'Brentford': [(118, 0), (117, 0), (119, 0)], #toney, mbeumo, wissa
+      'Brentford': [(117, 0), (108, 0), (119, 0)], #toney, mbeumo, wissa
       'Brighton': [(134, 0), (154, 0), (132, 0)], #gross, welbeck, ferguson
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
       'Chelsea':  [(216, 0), (206, 0), (195, 0)], # sterling, james, chilwell       add nkunku 2nd/1st
@@ -389,7 +389,7 @@ xpens_2022 = {
       'Everton': [(246, 0), (253, 0), (259, 0)], #dcl, gray, mcneil
       'Luton':  [(227, 0), (225, 0), (223, 0)], #Morris, Adebayo, Woodrow           #fix add luton players
       'Burnley':  [(177, 0), (170, 0), (161, 0)], #rodriguez, gudmundsson, brownhill
-      'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
+      'Liverpool': [(308, 0), (297, 0), (290, 0)], #salah, mac allister304, fabinho296
       'Man City':  [(355, 0), (359, 0), (343, 0)], #haaland, mahrez, alvarez
       'Man Utd': [(373, 0), (396, 0), (390, 0)], #bruno, rashford, martial
       'Newcastle': [(433, 0), (415, 0), (416, 0)], #wilson, isak, joelinton
