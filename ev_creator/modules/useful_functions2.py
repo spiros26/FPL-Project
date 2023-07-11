@@ -168,7 +168,7 @@ def spis(proj_scores_df, team_1, team_2, season, home):
 def prev_rate(main_df, history_df, gw, gw_no_lim, el):
     if el == 'bonus':
         try:
-            if gw > gw_no_lim:
+            if main_df.shape[0] >= gw_no_lim:
                 ret_value = p90_main_df(main_df, el, gw)
                 return ret_value
             else:
@@ -182,7 +182,7 @@ def prev_rate(main_df, history_df, gw, gw_no_lim, el):
                 return ret_value
     elif el == 'saves':
         try:
-            if gw > gw_no_lim:
+            if main_df.shape[0] >= gw_no_lim:
                 ret_value = p90_main_df(main_df, el, gw)
                 return ret_value
             else:
@@ -196,7 +196,7 @@ def prev_rate(main_df, history_df, gw, gw_no_lim, el):
                 return ret_value
     elif el == 'yc':
         try:
-            if gw > gw_no_lim:
+            if main_df.shape[0] >= gw_no_lim:
                 ret_value = el_per_app(main_df, gw, el)
                 return ret_value
             else:
@@ -381,7 +381,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     master_df = pd.read_csv(master_path)
     #review_df = review_df[:5]      #for tests
     for player_id in tqdm(review_df['ID'].to_list()): 
-        #try:
+        try:
             #name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
             #row = id_dict_df[id_dict_df[fpl_id]==player_id].iloc[0]
             #pos = review_df[review_df['ID']==player_id]['Pos'].iloc[0]
@@ -417,8 +417,8 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
             main_df = pd.DataFrame(requests.get(url).json()['history'])
             history_df = pd.DataFrame(requests.get(url).json()['history_past'])
             understat_id = int(master_df[master_df[season[2:]]==player_id]['understat'].iloc[0])
-            #understat_df = loop.run_until_complete(player_understat_file(understat_id))
-            understat_df = pd.read_csv('../data/Fantasy-Premier-League/data/2022-23/understat/' + master_df[master_df[season[2:]]==player_id]['first_name'].iloc[0] + '_' + master_df[master_df[season[2:]]==player_id]['second_name'].iloc[0] + '_' + str(understat_id) + '.csv')
+            understat_df = loop.run_until_complete(player_understat_file(understat_id))
+            #understat_df = pd.read_csv('../data/Fantasy-Premier-League/data/2022-23/understat/' + master_df[master_df[season[2:]]==player_id]['first_name'].iloc[0] + '_' + master_df[master_df[season[2:]]==player_id]['second_name'].iloc[0] + '_' + str(understat_id) + '.csv')
 
             for gw in gws:
                 opponent_team = []
@@ -491,8 +491,8 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'minutes', [xmins[gw-gws[0]][i]], True)
                     cmp_df.insert(0, 'finishing_rate', [finishing_rate(understat_df)], True)
                     cmp_df.insert(0, 'penalty_finishing_rate', [penalty_finishing_rate(understat_df)], True)
-                    if player_id == 355:
-                        cmp_df.to_csv('haaland.csv')
+                    if player_id == 373:
+                        cmp_df.to_csv('bruno.csv')
                     points_df = xPoints(cmp_df, npgoals, assists, team_goals, bonus, saves, pens, 0)
                     xp_gw.append(fix_prob[i] * points_df['total'][0])
                     xg_gw.append(fix_prob[i] * points_df['goals'][0])
@@ -529,7 +529,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 xsave_points['gw_'+str(next_gw+q)].append(round(sum(save_points[q]),3))
                 tot += sum(xp[q])
             total.append(round(tot,3))
-            '''
+            
         except:
             for q in range(horizon):
                 xpoints['gw_'+str(next_gw+q)].append(0)
@@ -544,7 +544,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                 xsave_points['gw_'+str(next_gw+q)].append(0)
                 mins['gw_'+str(next_gw+q)].append(0)
             total.append(0)
-            '''
+            
     for q in range(horizon):
         try:
             review_df.insert(7+3*q, str(next_gw+q)+'_xP', xpoints['gw_'+str(next_gw+q)], True)
