@@ -24,6 +24,20 @@ def convert_date(date):
     n += c
   return n 
 
+def next_spi(pl_matches, team, date):
+    try:
+        i = 0
+        df = pl_matches[(pl_matches['team1']==team) | (pl_matches['team2']==team)]
+        while df['date'].iloc[i] < date:
+            i = i+1
+        i = i+1
+        if df['team1'].iloc[i] == team:
+            return df['spi1'].iloc[i]
+        else:
+            return df['spi2'].iloc[i]
+    except:
+        return np.NaN
+    
 def previous(season):
   if season ==first_season:
     return season

@@ -1,41 +1,25 @@
 Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
 Copyright (c) 2022 ERGO-Code under MIT licence terms
-Number of PL entries in BOUNDS section is 2
-Number of BV entries in BOUNDS section is 9226
-MIP  mp_h2_od_d0.85_KqIv1_2 has 15796 rows; 9234 cols; 60793 nonzeros; 9231 integer variables
+Number of PL entries in BOUNDS section is 6
+Number of BV entries in BOUNDS section is 34462
+MIP  mp_h6_od_d0.85_gv5EP_0 has 59558 rows; 34482 cols; 229924 nonzeros; 34475 integer variables
 
 Presolve is switched off
 
 Solving MIP model with:
-   15796 rows
-   9234 cols (9226 binary, 5 integer, 0 implied int., 3 continuous)
-   60793 nonzeros
+   59558 rows
+   34482 cols (34462 binary, 13 integer, 0 implied int., 7 continuous)
+   229924 nonzeros
 
         Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
      Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
 
-         0       0         0   0.00%   -inf            inf                  inf        0      0      0         0     0.1s
-         0       0         0   0.00%   -133.4968761    inf                  inf        0      0      1      2196     0.4s
- C       0       0         0   0.00%   -130.9466791    153826.286089    100.09%      398     21    785      3273     3.9s
- L       0       0         0   0.00%   -128.587298     -127.804539        0.61%      172     94    785      5963    11.7s
- L       0       0         0   0.00%   -128.5814219    -127.804539        0.61%      174     97    785      9969    12.3s
-         1       0         1 100.00%   -127.8126096    -127.804539        0.01%      204     93   1310     18007    18.6s
-
-Solving report
-  Status            Optimal
-  Primal bound      -127.804539
-  Dual bound        -127.812609646
-  Gap               0.00631% (tolerance: 0.01%)
-  Solution status   feasible
-                    -127.804539 (objective)
-                    0 (bound viol.)
-                    2.78837130398e-12 (int. viol.)
-                    0 (row viol.)
-  Timing            18.65 (total)
-                    0.01 (presolve)
-                    0.00 (postsolve)
-  Nodes             1
-  LP iterations     18007 (total)
-                    6317 (strong br.)
-                    3803 (separation)
-                    4803 (heuristics)
+         0       0         0   0.00%   -inf            inf                  inf        0      0      0         0     0.2s
+         0       0         0   0.00%   -298.8005375    inf                  inf        0      0      3      6366     1.0s
+ R       0       0         0   0.00%   -297.8844188    -276.854315        7.60%     1204     28     11      7673     3.3s
+ C       0       0         0   0.00%   -297.4875       -277.925347        7.04%     1688     51     11      9273     8.3s
+         0       0         0   0.00%   -295.9916869    -277.925347        6.50%     2832    154     11     15359    13.4s
+         0       0         0   0.00%   -295.7370928    -277.925347        6.41%     3677    188     11     19026    19.1s
+         0       0         0   0.00%   -295.5467257    -277.925347        6.34%     4123    201     11     22999    24.3s
+         0       0         0   0.00%   -295.4179287    -277.925347        6.29%     3083    213     11     28161    29.8s
+         0       0         0   0.00%   -295.3523048    -277.925347        6.27%     2911    227     11     31424    35.9s

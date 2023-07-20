@@ -77,7 +77,7 @@ def prep_data(my_data, options):
         if e['is_next']:
             gw = e['id']
             break
-    gw = 35 #just for tests
+    #gw = 35 #just for tests
     horizon = options.get('horizon', 3)
 
     element_data = pd.DataFrame(fpl_data['elements'])

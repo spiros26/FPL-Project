@@ -345,7 +345,7 @@ def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_
 
 
 
-def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, master_path, data538_PATH, fixtures, teams, team_stats_dict, npgoals, assists, team_goals, bonus, saves, pens, gw_no_lim, seasons):
+def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, review_detailed, players_raw, ids, master_path, spis2023, fixtures, teams, team_stats_dict, npgoals, assists, team_goals, bonus, saves, strengths, projected_goals, pens, gw_no_lim, seasons):
     xpoints = {}
     xbp = {}
     xgoals = {}
@@ -374,8 +374,8 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     xmins = []
     fpl_id = ids[season]
     gws = list(range(next_gw, next_gw + horizon))
-    proj_scores_df = pd.read_csv(data538_PATH)
-    proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
+    #proj_scores_df = pd.read_csv(data538_PATH)
+    #proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
     # Update fixture probabilities
     fixtures = adjust_fixtures(review_detailed, fixtures, teams, season, gws)
     master_df = pd.read_csv(master_path)
@@ -468,10 +468,10 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'kpp90', [kpp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
                     cmp_df.insert(0, 'shp90', [shp90(understat_df, int(season[:4]), kickoff_time[i], gw_no_lim)], True)
                     cmp_df.insert(0, 'teamnpxGp90', [opp_npxGp90(team_name, kickoff_time[i], season, team_stats_dict, gw_no_lim)], True)
-                    cmp_df.insert(0, 'team_proj_goals', [proj_scores(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[0]], True)
-                    cmp_df.insert(0, 'opp_proj_goals', [proj_scores(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[1]], True)
-                    cmp_df.insert(0, 'spi_team', [spis(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[0]], True)
-                    cmp_df.insert(0, 'spi_opp_team', [spis(proj_scores_df, team_name, opponent_team[i], int(season[:4]), home[i])[1]], True)
+                    cmp_df.insert(0, 'team_proj_goals', [projected_goals.predict([[spis2023[team_name][gw-1], spis2023[opponent_team[i]][gw-1], home[i]]])[0]], True)
+                    cmp_df.insert(0, 'opp_proj_goals', [projected_goals.predict([[spis2023[opponent_team[i]][gw-1], spis2023[team_name][gw-1], not home[i]]])[0]], True)
+                    cmp_df.insert(0, 'spi_team', [spis2023[team_name][gw-1]], True)
+                    cmp_df.insert(0, 'spi_opp_team', [spis2023[opponent_team[i]][gw-1]], True)
                     cmp_df.insert(0, 'bonusp90', [bp90], True) 
                     cmp_df.insert(0, 'savesp90', [sp90], True)
                     cmp_df.insert(0, 'pen_rate', [avg(pen_list)], True)
@@ -491,8 +491,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
                     cmp_df.insert(0, 'minutes', [xmins[gw-gws[0]][i]], True)
                     cmp_df.insert(0, 'finishing_rate', [finishing_rate(understat_df)], True)
                     cmp_df.insert(0, 'penalty_finishing_rate', [penalty_finishing_rate(understat_df)], True)
-                    if player_id == 373:
-                        cmp_df.to_csv('bruno.csv')
+
                     points_df = xPoints(cmp_df, npgoals, assists, team_goals, bonus, saves, pens, 0)
                     xp_gw.append(fix_prob[i] * points_df['total'][0])
                     xg_gw.append(fix_prob[i] * points_df['goals'][0])

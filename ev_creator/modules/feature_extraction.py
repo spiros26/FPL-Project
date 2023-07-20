@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from tqdm import tqdm
-from modules.useful_functions import team_id, p90_main_df, avg, rates100, npg_rate_season, assist_rate_season, convert_date, pens_per_game, npxGAp90, last4npxGp90, npxGp90, shp90, opp_npxGp90, npg, team, xAp90, kpp90, kpp90l4, last4xAp90, opp_last4npxGp90, last4npxGAp90, shp90l4
+from modules.useful_functions import next_spi, team_id, p90_main_df, avg, rates100, npg_rate_season, assist_rate_season, convert_date, pens_per_game, npxGAp90, last4npxGp90, npxGp90, shp90, opp_npxGp90, npg, team, xAp90, kpp90, last4xAp90, opp_last4npxGp90, last4npxGAp90
 import time
 from modules.useful_functions2 import proj_scores, spis
 
@@ -305,3 +305,31 @@ def pens_dataset_creation():
     data = data.dropna()
 
     return data, df_2021
+
+
+
+def spi_dataset_creation(matches_path):
+    matches = pd.read_csv(matches_path)
+    pl_matches = matches[matches['league_id']==2411]
+    df1 = pl_matches[['spi1', 'spi2', 'score1', 'score2', 'xg1', 'xg2']]
+    df2 = df1.rename(columns={'spi1': 'spi2', 'spi2': 'spi1', 'score1': 'score2', 'score2': 'score1', 'xg1': 'xg2', 'xg2': 'xg1'})
+    df2 = df2[['spi1', 'spi2', 'score1', 'score2', 'xg1', 'xg2']]
+    df2.insert(6, 'was_home', [False]*df2.shape[0], True)
+    df1.insert(6, 'was_home', [True]*df1.shape[0], True)
+    df1.insert(7, 'next_spi', [next_spi(pl_matches, pl_matches['team1'].iloc[x], pl_matches['date'].iloc[x]) for x in range(pl_matches.shape[0])], True)
+    df2.insert(7, 'next_spi', [next_spi(pl_matches, pl_matches['team2'].iloc[x], pl_matches['date'].iloc[x]) for x in range(pl_matches.shape[0])], True)
+    data = df1.append(df2, ignore_index=True).dropna()
+    return data
+
+def proj_goals_dataset_creation(matches_path):
+    matches = pd.read_csv(matches_path)
+    pl_matches = matches[matches['league_id']==2411]
+    df1 = pl_matches[['spi1', 'spi2']]
+    df2 = df1.rename(columns={'spi1': 'spi2', 'spi2': 'spi1'})
+    df2 = df2[['spi1', 'spi2']]
+    df2.insert(2, 'was_home', [False]*df2.shape[0], True)
+    df1.insert(2, 'was_home', [True]*df1.shape[0], True)
+    df1.insert(3, 'proj_goals', [pl_matches['proj_score1'].iloc[x] for x in range(pl_matches.shape[0])], True)
+    df2.insert(3, 'proj_goals', [pl_matches['proj_score2'].iloc[x] for x in range(pl_matches.shape[0])], True)
+    data = df1.append(df2, ignore_index=True).dropna()
+    return data
