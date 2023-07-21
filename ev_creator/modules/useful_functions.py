@@ -395,7 +395,7 @@ xpens_2022 = {
 xpens_2022 = {
       'Arsenal': [(19, 0), (8, 0), (6, 0)], #saka, jesus, havertz
       'Aston Villa': [(60, 0), (38, 0), (34, 0)], #watkins, coutinho, bailey
-      'Brentford': [(117, 0), (108, 0), (119, 0)], #toney, mbeumo, wissa
+      'Brentford': [(108, 0), (119, 0), (117, 0)], #mbeumo, wissa, toney
       'Brighton': [(134, 0), (154, 0), (132, 0)], #gross, welbeck, ferguson
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
       'Chelsea':  [(216, 0), (206, 0), (195, 0)], # sterling, james, chilwell       add nkunku 2nd/1st
