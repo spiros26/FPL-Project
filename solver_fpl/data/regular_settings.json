@@ -3,7 +3,7 @@
     "ft_value": 1.5,
     "itb_value": 0.05,
     "decay_base": 0.85,
-    "no_future_transfer": false,
+    "no_future_transfer": true,
     "no_transfer_last_gws": 0,
     "randomized": false,
     "xmin_lb": 20,

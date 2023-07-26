@@ -359,7 +359,7 @@ def dataset_initialization(PATH):
     # Team Stats 2023/24
     season = '2023-24'
     loop = asyncio.get_event_loop()
-
+    '''
     if loop.run_until_complete(team_understat_file('Arsenal', int(season[:4]))).shape[0] == loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])-1)).shape[0]:
         team_stats_dict_2023 = {
         'Arsenal': pd.DataFrame(),
@@ -384,28 +384,29 @@ def dataset_initialization(PATH):
         'Wolves': pd.DataFrame()
     }
     else:
-        Arsenal_stats_df = loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])))
-        Aston_Villa_stats_df = loop.run_until_complete(team_understat_file('Aston Villa', int(season[:4])))
-        Brentford_stats_df = loop.run_until_complete(team_understat_file('Brentford', int(season[:4])))
-        Brighton_stats_df = loop.run_until_complete(team_understat_file('Brighton', int(season[:4])))
-        Bournemouth_stats_df = loop.run_until_complete(team_understat_file('Bournemouth', int(season[:4])))
-        Chelsea_stats_df = loop.run_until_complete(team_understat_file('Chelsea', int(season[:4])))
-        Crystal_Palace_stats_df = loop.run_until_complete(team_understat_file('Crystal Palace', int(season[:4])))
-        Everton_stats_df = loop.run_until_complete(team_understat_file('Everton', int(season[:4])))
-        Sheffield_United_stats_df = loop.run_until_complete(team_understat_file('Sheffield United', int(season[:4])))
-        Luton_stats_df = loop.run_until_complete(team_understat_file('Luton', int(season[:4])))
-        Liverpool_stats_df = loop.run_until_complete(team_understat_file('Liverpool', int(season[:4])))
-        Manchester_City_stats_df = loop.run_until_complete(team_understat_file('Manchester City', int(season[:4])))
-        Manchester_United_stats_df = loop.run_until_complete(team_understat_file('Manchester United', int(season[:4])))
-        Newcastle_United_stats_df = loop.run_until_complete(team_understat_file('Newcastle United', int(season[:4])))
-        Fulham_stats_df = loop.run_until_complete(team_understat_file('Fulham', int(season[:4])))
-        Burnley_stats_df = loop.run_until_complete(team_understat_file('Burnley', int(season[:4])))
-        Tottenham_stats_df = loop.run_until_complete(team_understat_file('Tottenham', int(season[:4])))
-        Nottingham_Forest_stats_df = loop.run_until_complete(team_understat_file('Nottingham Forest', int(season[:4])))
-        West_Ham_stats_df = loop.run_until_complete(team_understat_file('West Ham', int(season[:4])))
-        Wolverhampton_Wanderers_stats_df = loop.run_until_complete(team_understat_file('Wolverhampton Wanderers', int(season[:4])))
+    '''
+    Arsenal_stats_df = loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])))
+    Aston_Villa_stats_df = loop.run_until_complete(team_understat_file('Aston Villa', int(season[:4])))
+    Brentford_stats_df = loop.run_until_complete(team_understat_file('Brentford', int(season[:4])))
+    Brighton_stats_df = loop.run_until_complete(team_understat_file('Brighton', int(season[:4])))
+    Bournemouth_stats_df = loop.run_until_complete(team_understat_file('Bournemouth', int(season[:4])))
+    Chelsea_stats_df = loop.run_until_complete(team_understat_file('Chelsea', int(season[:4])))
+    Crystal_Palace_stats_df = loop.run_until_complete(team_understat_file('Crystal Palace', int(season[:4])))
+    Everton_stats_df = loop.run_until_complete(team_understat_file('Everton', int(season[:4])))
+    Sheffield_United_stats_df = loop.run_until_complete(team_understat_file('Sheffield United', int(season[:4])))
+    Luton_stats_df = loop.run_until_complete(team_understat_file('Luton', int(season[:4])))
+    Liverpool_stats_df = loop.run_until_complete(team_understat_file('Liverpool', int(season[:4])))
+    Manchester_City_stats_df = loop.run_until_complete(team_understat_file('Manchester City', int(season[:4])))
+    Manchester_United_stats_df = loop.run_until_complete(team_understat_file('Manchester United', int(season[:4])))
+    Newcastle_United_stats_df = loop.run_until_complete(team_understat_file('Newcastle United', int(season[:4])))
+    Fulham_stats_df = loop.run_until_complete(team_understat_file('Fulham', int(season[:4])))
+    Burnley_stats_df = loop.run_until_complete(team_understat_file('Burnley', int(season[:4])))
+    Tottenham_stats_df = loop.run_until_complete(team_understat_file('Tottenham', int(season[:4])))
+    Nottingham_Forest_stats_df = loop.run_until_complete(team_understat_file('Nottingham Forest', int(season[:4])))
+    West_Ham_stats_df = loop.run_until_complete(team_understat_file('West Ham', int(season[:4])))
+    Wolverhampton_Wanderers_stats_df = loop.run_until_complete(team_understat_file('Wolverhampton Wanderers', int(season[:4])))
 
-        team_stats_dict_2023 = {
+    team_stats_dict_2023 = {
             'Arsenal': Arsenal_stats_df,
             'Aston Villa': Aston_Villa_stats_df,
             'Brentford': Brentford_stats_df,
@@ -426,7 +427,7 @@ def dataset_initialization(PATH):
             'Nott\'m Forest': Nottingham_Forest_stats_df,
             'West Ham': West_Ham_stats_df,
             'Wolves': Wolverhampton_Wanderers_stats_df
-        }
+    }
 
 
     team_stats_dict = {
