@@ -48,17 +48,17 @@ expected_minutes = {
     38: [7.0], # Coutinho
     39: [0.0], # Davis
     40: [13.0], # Dendoncker
-    41: [77.0], # Diego Carlos
+    41: [57.0], # Diego Carlos
     42: [14.0], # Digne 
     43: [69.0], # Douglas Luiz
     44: [13.0], # Duran
     45: [8.0], # Hause 
     46: [3.0], # Iroegbunam
     47: [3.0], # Kamara
-    48: [75.0], # Konsa
+    48: [77.0], # Konsa
     49: [89.0], # Martinez
     50: [77.0], # McGinn
-    51: [24.0], # Mings
+    51: [54.0], # Mings
     52: [8.0], # Nakamba
     53: [1.0], # Olsen
     54: [0.0], # Philogene-Bidace
@@ -196,7 +196,7 @@ expected_minutes = {
     182: [72.0],    # Vitinho
     183: [55.0],    # Weghorst
     184: [0.0],    # Zaroury
-    185: [76.0],    # Ampadu
+    185: [0.0],    # Ampadu
     186: [0.0],    # Andrey Santos
 # Chelsea
     187: [89.0],    # Arrizabalaga
@@ -352,7 +352,7 @@ expected_minutes = {
     332: [0.0],    # Pereira
     333: [65.0],    # Potts
     334: [0.0],    # Rea
-    335: [0.0],    # Shes
+    335: [89.0],    # Shea
     336: [0.0],    # Taylor
     337: [0.0],    # Thorpe
     338: [0.0],    # Walton
@@ -469,7 +469,7 @@ expected_minutes = {
     445: [0.0],    # Felipe
     446: [24.0],    # Freuler
     447: [80.0],    # Gibbs-White
-    448: [89.0],    # Hennessey
+    448: [1.0],    # Hennessey
     449: [89.0],    # Horvath
     450: [77.0],    # Johnson
     451: [76.0],    # Kouyate
@@ -676,10 +676,11 @@ def produce_player_dfs(season, master_path, players_raw, teams, fixtures, horizo
     short_teams = []
     positions = []
     prices = []
-    fix = [[], [], [], [], [], []]
-    xmins = [[], [], [], [], [], []]
-    dmins = [[], [], [], [], [], []]
-    likelihood = [[], [], [], [], [], []]
+    N = 10
+    fix = [ [] for _ in range(N) ]
+    xmins = [ [] for _ in range(N) ]
+    dmins = [ [] for _ in range(N) ]
+    likelihood = [ [] for _ in range(N) ]
 
     for row in range(master.shape[0]):
         try:
