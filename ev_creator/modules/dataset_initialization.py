@@ -359,32 +359,7 @@ def dataset_initialization(PATH):
     # Team Stats 2023/24
     season = '2023-24'
     loop = asyncio.get_event_loop()
-    '''
-    if loop.run_until_complete(team_understat_file('Arsenal', int(season[:4]))).shape[0] == loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])-1)).shape[0]:
-        team_stats_dict_2023 = {
-        'Arsenal': pd.DataFrame(),
-        'Aston Villa': pd.DataFrame(),
-        'Brentford': pd.DataFrame(),
-        'Brighton': pd.DataFrame(),
-        'Bournemouth': pd.DataFrame(),
-        'Chelsea': pd.DataFrame(),
-        'Crystal Palace': pd.DataFrame(),
-        'Everton': pd.DataFrame(),
-        'Sheffield Utd': pd.DataFrame(),
-        'Luton': pd.DataFrame(),
-        'Liverpool': pd.DataFrame(),
-        'Man City': pd.DataFrame(),
-        'Man Utd': pd.DataFrame(),
-        'Newcastle': pd.DataFrame(),
-        'Fulham': pd.DataFrame(),
-        'Burnley': pd.DataFrame(),
-        'Spurs': pd.DataFrame(),
-        'Nott\'m Forest': pd.DataFrame(),
-        'West Ham': pd.DataFrame(),
-        'Wolves': pd.DataFrame()
-    }
-    else:
-    '''
+
     Arsenal_stats_df = loop.run_until_complete(team_understat_file('Arsenal', int(season[:4])))
     Aston_Villa_stats_df = loop.run_until_complete(team_understat_file('Aston Villa', int(season[:4])))
     Brentford_stats_df = loop.run_until_complete(team_understat_file('Brentford', int(season[:4])))

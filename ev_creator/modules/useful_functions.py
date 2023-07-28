@@ -281,9 +281,9 @@ def fixture_info2(team, season, gw, fixtures, teams):
   filtered_df = df[(df['team_a']==team) | (df['team_h']==team)]
   for i in range(filtered_df.shape[0]):
     if filtered_df['team_a'].iloc[i] == team:
-      fix.append((teams[season].iloc[filtered_df['team_h'].iloc[i]-1, 5], False, filtered_df['kickoff_time'].iloc[i]))
+      fix.append((teams[season].iloc[filtered_df['team_h'].iloc[i]-1, 5], False, filtered_df['kickoff_time'].iloc[i], filtered_df['team_a_score'].iloc[i], filtered_df['team_h_score'].iloc[i]))
     else:
-      fix.append((teams[season].iloc[filtered_df['team_a'].iloc[i]-1, 5], True, filtered_df['kickoff_time'].iloc[i]))
+      fix.append((teams[season].iloc[filtered_df['team_a'].iloc[i]-1, 5], True, filtered_df['kickoff_time'].iloc[i], filtered_df['team_h_score'].iloc[i], filtered_df['team_a_score'].iloc[i]))
   return fix
 
 
@@ -395,7 +395,7 @@ xpens_2022 = {
 xpens_2022 = {
       'Arsenal': [(19, 0), (8, 0), (6, 0)], #saka, jesus, havertz
       'Aston Villa': [(60, 0), (38, 0), (34, 0)], #watkins, coutinho, bailey
-      'Brentford': [(108, 0), (119, 0), (117, 0)], #mbeumo, wissa, toney
+      'Brentford': [(117, 0), (108, 0), (119, 0)], #toney, mbeumo, wissa
       'Brighton': [(134, 0), (154, 0), (132, 0)], #gross, welbeck, ferguson
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
       'Chelsea':  [(216, 0), (206, 0), (195, 0)], # sterling, james, chilwell       add nkunku 2nd/1st

@@ -316,7 +316,7 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         points.insert(8, 'pen_miss_points', [0.0], True)
         points.insert(9, 'total', [0.0], True)
         return points
-
+        
 
 def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_horizon, gw, i, pid):
     if team == 'Luton':
