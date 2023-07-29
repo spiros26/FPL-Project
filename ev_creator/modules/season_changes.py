@@ -11,7 +11,7 @@ expected_minutes = {
     2: [0.0],  # Cedric
     3: [3.0],  # Elneny
     4: [15.0],  # Vieira
-    5: [85.0],  # Gabriel
+    5: [83.0],  # Gabriel
     6: [55.0],  # Havertz
     7: [4.0],  # Holding
     8: [77.0],  # Jesus
@@ -26,7 +26,7 @@ expected_minutes = {
     17: [89.0], # Ramsdale
     18: [0.0], # Runaarsson
     19: [84.0], # Saka
-    20: [85.0], # Saliba
+    20: [80.0], # Saliba
     21: [5.0], # Sambi
     22: [13.0], # Smith Rowe
     23: [2.0], # Tavares
@@ -361,13 +361,13 @@ expected_minutes = {
 # Man City
     341: [70.0],    # Akanji
     342: [67.0],    # Ake
-    343: [65.0],    # Alvarez
+    343: [55.0],    # Alvarez
     344: [70.0],    # Bernardo
     345: [0.0],    # Bobb
     346: [60.0],    # Cancelo
     347: [0.0],    # Carson
     348: [0.0],    # Charles
-    349: [0.0],    # De Bruyne
+    349: [70.0],    # De Bruyne
     350: [73.0],    # Dias
     351: [0.0],    # Doyle
     352: [88.0],    # Ederson

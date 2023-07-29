@@ -268,7 +268,6 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
                 xpen_goals = (mins/90)*pen_takers[x][1] * xpens* xg_pen * penalty_finishing_rate  # pen_takers[x][1] is the chance of the player being 1st choice pen taker
                 #miss_pen_points = -2*xpens*(1-xg_pen*penalty_finishing_rate)
         '''  
-
         xGoals = finishing_rate * npgoals.predict([[npg_ratel100, npxGp90l100, sh_ratel100, npg_rate, npxGp90, npxGp90l4, shp90, teamnpxGp90, oppnpxGAp90, spi_opp_team, spi_team, mins, home]])[0] + xpen_goals
         xAssists = assists.predict([[assist_ratel100, xAp90l100, kp_ratel100, assist_rate, xAp90, xAp90l4, kpp90, teamnpxGp90, oppnpxGp90, spi_opp_team, oppnpxGAp90, spi_team, mins, home]])[0]
         #xCS = clean_sheets(team_goals.predict([[oppnpxGp90, npxGAp90, home, oppnpxGp90l4, npxGAp90l4]])[0])
