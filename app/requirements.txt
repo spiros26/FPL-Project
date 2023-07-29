@@ -9,3 +9,4 @@ Requests==2.31.0
 streamlit==1.12.0
 streamlit_authenticator==0.1.5
 streamlit_option_menu==0.3.6
+altair<5
