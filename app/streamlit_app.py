@@ -10,6 +10,7 @@ import json
 import subprocess
 import pandas as pd
 import os
+from datetime import datetime
 from PIL import Image
 im = Image.open('COPILOT.png')
 
@@ -20,7 +21,7 @@ def hash_password(password):
 def convert_df(df):
    return df.to_csv(index=False).encode('utf-8')
 
-def generate_transfer_suggestions(team_data, horizon, iterations):
+def generate_transfer_suggestions(team_data, next_gw, horizon, iterations):
     # Update team data
     os.remove('../solver_fpl/data/team.json')
     with open('../solver_fpl/data/team.json', 'w') as outfile:
@@ -34,7 +35,6 @@ def generate_transfer_suggestions(team_data, horizon, iterations):
         f = os.path.join('../data/results/', filename)
         if os.path.isfile(f):
             plan = pd.read_csv(f)
-            next_gw = 35 # fixxxxxxxxxxx
             gws = [next_gw + x for x in range(horizon)]
             transfers = []
             transfer_breakdown = []
@@ -162,7 +162,17 @@ elif choice == "Login":
             #Suggest Transfers
             with open('team_data.json', 'r') as openfile:
                 team_data = json.load(openfile)
-
+            
+            # Get the next gameweek
+            now = datetime.now()
+            dt_string = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+            url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
+            df = pd.DataFrame(requests.get(url).json()['events'])
+            i=0
+            while dt_string > df['deadline_time'].iloc[i]:
+                i = i + 1
+            next_gw = df['id'].iloc[i]
+                
             if team_data:
                 st.sidebar.header('Solver Settings')
                 # Call function to generate transfer suggestions for the user's FPL team
@@ -177,6 +187,9 @@ elif choice == "Login":
                         st.write('Solver is running...Please wait...')
                     with open('../solver_fpl/data/regular_settings.json', 'r') as openfile:
                         settings_file = json.load(openfile)
+
+                    if next_gw == 1:
+                        settings_file['preseason'] = True
                     settings_file['horizon'] = horizon
                     settings_file['decay_base'] = decay
                     settings_file['ft_value'] = ft_value
@@ -185,7 +198,8 @@ elif choice == "Login":
                     os.remove('../solver_fpl/data/regular_settings.json')
                     with open("../solver_fpl/data/regular_settings.json", "w") as outfile:
                         json.dump(settings_file, outfile, indent=4)
-                    transfer_suggestions, score_table = generate_transfer_suggestions(team_data, horizon, iterations)
+
+                    transfer_suggestions, score_table = generate_transfer_suggestions(team_data, next_gw, horizon, iterations)
                     placeholder.empty()
                     with column1:
                         st.write(score_table)
@@ -194,8 +208,10 @@ elif choice == "Login":
             
             # Box
             st.subheader('Expected Points')
-            current_gw = 35
-            data = pd.read_csv('../Projections/ALEX/alex-GW' + str(current_gw) + '.csv')
+            try:
+                data = pd.read_csv('../Projections/ALEX-23/alex-GW' + str(next_gw) + '.csv')
+            except:
+                st.error('File not yet available. Try later.')
             st.write(data)
 
             # Download box
