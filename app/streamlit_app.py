@@ -188,7 +188,7 @@ elif choice == "Login":
                     settings_file['horizon'] = horizon
                     settings_file['decay_base'] = decay
                     settings_file['ft_value'] = ft_value
-                    settings_file['banned'] = banned
+                    settings_file['banned'] = banned + [100] # id 100 is dervisoglu
                     settings_file['locked'] = locked
                     settings_file['iteration'] = iterations
                     settings_file['no_transfer_last_gws'] = no_transfer_last_gws
