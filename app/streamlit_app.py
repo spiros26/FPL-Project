@@ -104,7 +104,6 @@ elif choice == "SignUp":
             st.info("Go to Login Menu to login")
 
 
-
 elif choice == "Login":
         # --- USER AUTHENTICATION ---
         users = db.fetch_all_users()
@@ -121,6 +120,17 @@ elif choice == "Login":
         if authentication_status == None:
             st.warning("Please enter your username and password")
         if authentication_status:
+
+             # Get the next gameweek
+            now = datetime.now()
+            dt_string = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+            url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
+            df = pd.DataFrame(requests.get(url).json()['events'])
+            i=0
+            while dt_string > df['deadline_time'].iloc[i]:
+                i = i + 1
+            next_gw = df['id'].iloc[i]
+
             placeholder_menu.empty()
             selected = option_menu(None, ["Copilot", "Autopilot", "About"], 
                 icons=['airplane', 'airplane-fill', "info-circle"], 
@@ -131,56 +141,40 @@ elif choice == "Login":
             # Main
             st.subheader('Suggested Transfers')
             st.sidebar.header('FPL Credentials')
-            fpl_email = st.sidebar.text_input("FPL Email")
-            fpl_password = st.sidebar.text_input("FPL Password",type='password')
-            if st.sidebar.button('Connect FPL'):
-                headers = {'User-Agent': 'Dalvik/2.1.0'}
-                data = {
-                    'password': fpl_password,
-                    'login': fpl_email,
-                    'redirect_uri': 'https://fantasy.premierleague.com/a/login',
-                    'app': 'plfpl-web'
-                }
+            team_id = st.sidebar.text_input("Team ID")
 
+            if st.sidebar.button('Get Team Data'):
                 with requests.Session() as session:
-                    login_url = 'https://users.premierleague.com/accounts/login/'
-                    r = session.post(login_url, headers=headers, data=data)
-                    if 'pl_profile' in session.cookies:
-                        player_data = session.get('https://fantasy.premierleague.com/api/me/')
-                        team_id = player_data.json()['player']['entry']
-                        data = session.get(f'https://fantasy.premierleague.com/api/my-team/{team_id}/')
+                    if next_gw == 1:
+                        st.success('Preseason Time! Select the solver settings and click on Suggest Transfers.')
+                    else:
+                        data = session.get(f'https://fantasy.premierleague.com/api/entry/{team_id}/event/{next_gw-1}/picks/')
                         team_data = data.json()
                         with open("team_data.json", "w") as outfile:
                             json.dump(team_data, outfile, indent=4)
                         st.write('Team ID:', team_id)
-                        #st.write('Team Data:', team_data)
-                    else:
-                        st.error("Username/password is incorrect")
             
             column1, column2 = st.columns(2)   
 
             #Suggest Transfers
             with open('team_data.json', 'r') as openfile:
                 team_data = json.load(openfile)
-            
-            # Get the next gameweek
-            now = datetime.now()
-            dt_string = now.strftime("%Y-%m-%dT%H:%M:%SZ")
-            url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
-            df = pd.DataFrame(requests.get(url).json()['events'])
-            i=0
-            while dt_string > df['deadline_time'].iloc[i]:
-                i = i + 1
-            next_gw = df['id'].iloc[i]
                 
             if team_data:
                 st.sidebar.header('Solver Settings')
                 # Call function to generate transfer suggestions for the user's FPL team
                 decay = st.sidebar.number_input('Decay', value=0.85)
                 iterations = st.sidebar.radio('Solver Iterations', options=[1,2,3,4,5], horizontal=True)
-                horizon = st.sidebar.radio('Horizon', options=[1,2,3,4,5], horizontal=True)
+                horizon = st.sidebar.radio('Horizon', options=[1,2,3,4,5,6,7,8], horizontal=True)
                 ft_value = st.sidebar.number_input('Free Transfer Value', min_value=0.0, max_value=3.0, value=1.5, step=0.1)
-                no_transfer_last_gws = st.sidebar.radio('No Transfers Planned for the Last How Many Gameweeks?', options=[0,1,2,3,4], horizontal=True)
+                no_transfer_last_gws = st.sidebar.radio('No Transfers Planned for the Last How Many Gameweeks?', options=list(range(horizon)), horizontal=True)
+                locked = st.sidebar.multiselect('Locked Players', options=list(range(1,607))) 
+                banned = st.sidebar.multiselect('Banned Players', options=list(range(1,607)))
+                st.sidebar.header('Chips')
+                use_wc = st.sidebar.radio('Wildcard', options=[None]+list(range(next_gw, next_gw+horizon)), horizontal=True) 
+                use_fh = st.sidebar.radio('Free Hit', options=[None]+list(range(next_gw, next_gw+horizon)), horizontal=True) 
+                use_bb = st.sidebar.radio('Bench Boost', options=[None]+list(range(next_gw, next_gw+horizon)), horizontal=True) 
+                
                 if st.sidebar.button('Suggest Transfers'):
                     placeholder = st.empty()
                     with placeholder.container():
@@ -188,13 +182,28 @@ elif choice == "Login":
                     with open('../solver_fpl/data/regular_settings.json', 'r') as openfile:
                         settings_file = json.load(openfile)
 
+                    settings_file['preseason'] = False
                     if next_gw == 1:
                         settings_file['preseason'] = True
                     settings_file['horizon'] = horizon
                     settings_file['decay_base'] = decay
                     settings_file['ft_value'] = ft_value
+                    settings_file['banned'] = banned
+                    settings_file['locked'] = locked
                     settings_file['iteration'] = iterations
                     settings_file['no_transfer_last_gws'] = no_transfer_last_gws
+                    settings_file['use_wc'] = use_wc
+                    settings_file['chip_limits']['wc'] = 0
+                    settings_file['chip_limits']['fh'] = 0
+                    settings_file['chip_limits']['bb'] = 0
+                    if use_wc != None:
+                        settings_file['chip_limits']['wc'] = 1
+                    settings_file['use_fh'] = use_fh
+                    if use_fh != None:
+                        settings_file['chip_limits']['fh'] = 1
+                    settings_file['use_bb'] = use_bb
+                    if use_bb != None:
+                        settings_file['chip_limits']['bb'] = 1
                     os.remove('../solver_fpl/data/regular_settings.json')
                     with open("../solver_fpl/data/regular_settings.json", "w") as outfile:
                         json.dump(settings_file, outfile, indent=4)
@@ -205,6 +214,15 @@ elif choice == "Login":
                         st.write(score_table)
                     with column2:
                         st.write(transfer_suggestions)
+                    
+                    columns = st.columns(iterations) 
+                    st.subheader('Detailed Plan')
+                    for x in range(iterations):
+                        with columns[x]:
+                            with open(f'../solver_fpl/run/plan{x}.txt') as f:
+                                plan = f.readlines()
+                                for i in range(len(plan)):
+                                    st.write(plan[i])
             
             # Box
             st.subheader('Expected Points')

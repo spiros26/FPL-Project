@@ -52,9 +52,12 @@ if __name__=="__main__":
     data = prep_data(my_data, options)
 
     response = solve_multi_period_fpl(data, options)
+    
     for result in response:
         iter = result['iter']
         print(result['summary'])
+        with open(f"plan{iter}.txt", "w", encoding="utf-8") as text_file:
+            text_file.write(result['summary'])
         time_now = datetime.datetime.now()
         stamp = time_now.strftime("%Y-%m-%d_%H-%M-%S")
         if not (os.path.exists("../data/results/")):
@@ -65,3 +68,4 @@ if __name__=="__main__":
     result_table.to_csv(f'../../app/results/table_{stamp}.csv')
     print(result_table[['iter', 'buy', 'sell', 'score']])
     print("--- %s seconds ---" % (time.time() - start_time))
+

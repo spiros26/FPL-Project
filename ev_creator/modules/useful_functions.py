@@ -393,12 +393,12 @@ xpens_2022 = {
   }
 '''
 xpens_2022 = {
-      'Arsenal': [(19, 0), (8, 0), (6, 0)], #saka, jesus, havertz
+      'Arsenal': [(19, 0), (8, 0), (12, 0)], #saka, jesus, martinelli
       'Aston Villa': [(60, 0), (38, 0), (34, 0)], #watkins, coutinho, bailey
       'Brentford': [(117, 0), (108, 0), (119, 0)], #toney, mbeumo, wissa
       'Brighton': [(134, 0), (154, 0), (132, 0)], #gross, welbeck, ferguson
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
-      'Chelsea':  [(216, 0), (206, 0), (195, 0)], # sterling, james, chilwell       add nkunku 2nd/1st
+      'Chelsea':  [(212, 0), (216, 0), (206, 0)], # nkunku, sterling, james       
       'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         add zaha 2nd
       'Everton': [(246, 0), (253, 0), (259, 0)], #dcl, gray, mcneil
       'Luton':  [(227, 0), (225, 0), (223, 0)], #Morris, Adebayo, Woodrow           #fix add luton players
