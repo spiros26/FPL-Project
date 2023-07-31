@@ -219,7 +219,7 @@ elif choice == "Login":
                     st.subheader('Detailed Plan')
                     for x in range(iterations):
                         with columns[x]:
-                            with open(f'../solver_fpl/run/plan{x}.txt') as f:
+                            with open(f'plan{x}.txt') as f:
                                 plan = f.readlines()
                                 for i in range(len(plan)):
                                     st.write(plan[i])
