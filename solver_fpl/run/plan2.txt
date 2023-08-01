@@ -1,0 +1,80 @@
+** GW 1:
+ITB=0, FT=1.0, PT=0, NT=0
+Buy 308 - Salah
+Buy 355 - Haaland
+Buy 19 - Saka
+Buy 353 - Foden
+Buy 212 - Nkunku
+Buy 108 - Mbeumo
+Buy 143 - Mitoma
+Buy 131 - Estupiñan
+Buy 5 - Gabriel
+Buy 230 - Johnstone
+Buy 148 - Steele
+Buy 20 - Saliba
+Buy 112 - Pinnock
+Buy 474 - Basham
+Buy 264 - Simms
+---
+Lineup: 
+	Steele (5.16)
+	Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
+	Mbeumo (5.13), Foden (5.4), Mitoma (5.53), Saka (5.98), Salah (6.45, V)
+	Nkunku (4.36), Haaland (6.91, C)
+Bench: 
+	Johnstone, Pinnock, Basham, Simms
+Lineup xPts: 67.95
+---
+
+** GW 2:
+ITB=0, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Steele (4.11)
+	Pinnock (3.62), Gabriel (3.71), Estupiñan (4.46)
+	Foden (4.53), Mbeumo (4.9), Mitoma (5.27), Saka (5.28, V), Salah (7.3, C)
+	Nkunku (4.91), Haaland (5.02)
+Bench: 
+	Johnstone, Saliba, Basham, Simms
+Lineup xPts: 60.42
+---
+
+** GW 3:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Steele (4.22)
+	Saliba (4.45), Estupiñan (4.53), Gabriel (4.64)
+	Mbeumo (5.08), Mitoma (5.18), Salah (5.38), Saka (5.77), Foden (6.2, V)
+	Nkunku (5.83), Haaland (7.69, C)
+Bench: 
+	Johnstone, Pinnock, Basham, Simms
+Lineup xPts: 66.63
+---
+
+** GW 4:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Johnstone (4.61)
+	Saliba (3.58), Gabriel (3.8), Pinnock (4.47)
+	Mitoma (4.36), Saka (5.19), Foden (5.34), Mbeumo (5.4), Salah (6.52, C)
+	Nkunku (5.1), Haaland (6.44, V)
+Bench: 
+	Steele, Estupiñan, Basham, Simms
+Lineup xPts: 61.32
+---
+
+** GW 5:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Johnstone (3.55)
+	Estupiñan (3.28), Saliba (3.85), Gabriel (4.04)
+	Mbeumo (4.14), Mitoma (4.61), Foden (5.17), Saka (5.49), Salah (7.1, C)
+	Nkunku (5.06), Haaland (6.22, V)
+Bench: 
+	Steele, Pinnock, Basham, Simms
+Lineup xPts: 59.61
+---
+

@@ -1,0 +1,28 @@
+** GW 1:
+ITB=0, FT=1.0, PT=0, NT=0
+Buy 355 - Haaland
+Buy 349 - De Bruyne
+Buy 373 - B.Fernandes
+Buy 396 - Rashford
+Buy 12 - Martinelli
+Buy 134 - Gross
+Buy 131 - Estupiñan
+Buy 5 - Gabriel
+Buy 230 - Johnstone
+Buy 398 - Shaw
+Buy 148 - Steele
+Buy 20 - Saliba
+Buy 112 - Pinnock
+Buy 477 - Brewster
+Buy 538 - Mubama
+---
+Lineup: 
+	Steele (5.16)
+	Shaw (4.89), Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
+	Gross (5.54), Martinelli (5.72), Rashford (5.8), De Bruyne (6.03), B.Fernandes (6.05, V)
+	Haaland (6.91, C)
+Bench: 
+	Johnstone, Pinnock, Brewster, Mubama
+Lineup xPts: 69.14
+---
+

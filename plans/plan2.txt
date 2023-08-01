@@ -1,57 +1,58 @@
 ** GW 1:
-ITB=0.5, FT=1.0, PT=0, NT=0
+ITB=0, FT=1.0, PT=0, NT=0
+Buy 308 - Salah
 Buy 355 - Haaland
 Buy 373 - B.Fernandes
-Buy 19 - Saka
-Buy 396 - Rashford
-Buy 353 - Foden
-Buy 212 - Nkunku
+Buy 108 - Mbeumo
 Buy 143 - Mitoma
+Buy 134 - Gross
 Buy 17 - Ramsdale
 Buy 131 - Estupiñan
 Buy 5 - Gabriel
 Buy 398 - Shaw
-Buy 129 - Dunk
-Buy 474 - Basham
-Buy 264 - Simms
-Buy 524 - Areola
+Buy 313 - Virgil
+Buy 20 - Saliba
+Buy 49 - Martinez
+Buy 538 - Mubama
+Buy 33 - Archer
 ---
 Lineup: 
 	Ramsdale (5.25)
-	Shaw (4.89), Dunk (4.93), Gabriel (5.34), Estupiñan (5.62)
-	Foden (5.4), Mitoma (5.53), Rashford (5.8), Saka (5.98), B.Fernandes (6.05, V)
+	Shaw (4.89), Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
+	Mbeumo (5.13), Mitoma (5.53), Gross (5.54), B.Fernandes (6.05), Salah (6.45, V)
 	Haaland (6.91, C)
 Bench: 
-	Areola, Nkunku, Basham, Simms
-Lineup xPts: 68.61
+	Martinez, Virgil, Mubama, Archer
+Lineup xPts: 68.78
 ---
 
 ** GW 2:
-CHIP FH
-ITB=0.5, FT=1.0, PT=0, NT=0
+ITB=0, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
 	Martinez (4.44)
-	Estupiñan (4.46), Robertson (5.61), Alexander-Arnold (6.02, V)
-	Gross (5.04), Mitoma (5.27), Rashford (5.31), B.Fernandes (5.37), Salah (7.3, C)
-	Awoniyi (4.84), Nkunku (4.91)
+	Gabriel (3.71), Shaw (3.77), Estupiñan (4.46), Virgil (5.26)
+	Mbeumo (4.9), Gross (5.04), Mitoma (5.27), B.Fernandes (5.37, V), Salah (7.3, C)
+	Haaland (5.02)
 Bench: 
-	Flekken, Alex Moreno, Pau, Mubama
-Lineup xPts: 65.87
+	Ramsdale, Saliba, Mubama, Archer
+Lineup xPts: 61.86
 ---
 
 ** GW 3:
-ITB=0, FT=1.0, PT=0, NT=1.0
-Buy 195 - Chilwell
-Sell 129 - Dunk
+ITB=2.0, FT=2.0, PT=0, NT=2.0
+Buy 353 - Foden
+Buy 212 - Nkunku
+Sell 308 - Salah
+Sell 33 - Archer
 ---
 Lineup: 
 	Ramsdale (4.72)
-	Gabriel (4.64), Shaw (5.05), Chilwell (5.25)
-	Mitoma (5.18), Saka (5.77), Rashford (5.84), Foden (6.2), B.Fernandes (6.21, V)
+	Estupiñan (4.53), Gabriel (4.64), Shaw (5.05)
+	Gross (5.02), Mbeumo (5.08), Mitoma (5.18), Foden (6.2), B.Fernandes (6.21, V)
 	Nkunku (5.83), Haaland (7.69, C)
 Bench: 
-	Areola, Estupiñan, Basham, Simms
-Lineup xPts: 70.04
+	Martinez, Saliba, Virgil, Mubama
+Lineup xPts: 67.81
 ---
 
