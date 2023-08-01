@@ -6,6 +6,10 @@ import numpy as np
 
 
 def read_data(options, source, weights=None):
+    if source == 'copilot':
+        data = pd.read_csv(options.get('data_path', '../data/fplcopilot.csv'))
+        data['review_id'] = data['ID']
+        return data
     if source == 'review':
         data = pd.read_csv(options.get('data_path', '../data/fplreview.csv'))
         data['review_id'] = data['ID']
