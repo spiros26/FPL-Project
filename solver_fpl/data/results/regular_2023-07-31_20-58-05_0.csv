@@ -1,0 +1,16 @@
+,week,name,pos,type,team,buy_price,sell_price,xP,xMin,squad,lineup,bench,captain,vicecaptain,transfer_in,transfer_out,multiplier,xp_cont
+10,1,Steele,GKP,1,Brighton,4.5,0,5.16,89.0,1,1,-1,0,0,1,0,1,5.165
+9,1,Shaw,DEF,2,Man Utd,5.5,0,4.89,84.0,1,1,-1,0,0,1,0,1,4.891
+11,1,Saliba,DEF,2,Arsenal,5.0,0,5.16,80.0,1,1,-1,0,0,1,0,1,5.157
+7,1,Gabriel,DEF,2,Arsenal,5.0,0,5.34,83.0,1,1,-1,0,0,1,0,1,5.338
+6,1,Estupiñan,DEF,2,Brighton,5.0,0,5.62,77.0,1,1,-1,0,0,1,0,1,5.615
+4,1,Rashford,MID,3,Man Utd,9.0,0,5.8,82.0,1,1,-1,0,0,1,0,1,5.803
+3,1,Saka,MID,3,Arsenal,8.5,0,5.98,84.0,1,1,-1,0,0,1,0,1,5.985
+1,1,De Bruyne,MID,3,Man City,10.5,0,6.03,70.0,1,1,-1,0,0,1,0,1,6.028
+2,1,B.Fernandes,MID,3,Man Utd,8.5,0,6.05,85.0,1,1,-1,0,1,1,0,1,6.053
+0,1,Salah,MID,3,Liverpool,12.5,0,6.45,82.0,1,1,-1,1,0,1,0,2,12.892
+5,1,Isak,FWD,4,Newcastle,7.5,0,4.48,70.0,1,1,-1,0,0,1,0,1,4.482
+8,1,Johnstone,GKP,1,Crystal Palace,4.5,0,4.33,88.0,1,0,0,0,0,1,0,0,0.0
+12,1,Webster,DEF,2,Brighton,4.5,0,4.76,82.0,1,0,1,0,0,1,0,0,0.0
+13,1,Brewster,FWD,4,Sheffield Utd,5.0,0,2.65,72.0,1,0,2,0,0,1,0,0,0.0
+14,1,Mubama,FWD,4,West Ham,4.5,0,0.92,15.0,1,0,3,0,0,1,0,0,0.0

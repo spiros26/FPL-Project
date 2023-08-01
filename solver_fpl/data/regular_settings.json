@@ -13,9 +13,11 @@
         "2": 0.06,
         "3": 0.003
     },
-    "banned": [],
+    "banned": [
+        100
+    ],
     "locked": [
-        12
+        500
     ],
     "delete_tmp": true,
     "secs": 300,

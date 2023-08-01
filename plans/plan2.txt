@@ -1,0 +1,41 @@
+** GW 1:
+ITB=0, FT=1.0, PT=0, NT=0
+Buy 308 - Salah
+Buy 373 - B.Fernandes
+Buy 19 - Saka
+Buy 212 - Nkunku
+Buy 108 - Mbeumo
+Buy 143 - Mitoma
+Buy 290 - Alexander-Arnold
+Buy 307 - Robertson
+Buy 131 - Estupiñan
+Buy 5 - Gabriel
+Buy 148 - Steele
+Buy 20 - Saliba
+Buy 437 - Awoniyi
+Buy 49 - Martinez
+Buy 264 - Simms
+---
+Lineup: 
+	Steele (5.16)
+	Alexander-Arnold (4.28), Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
+	Mbeumo (5.13), Mitoma (5.53), Saka (5.98), B.Fernandes (6.05, V), Salah (6.45, C)
+	Nkunku (4.36)
+Bench: 
+	Martinez, Robertson, Awoniyi, Simms
+Lineup xPts: 65.51
+---
+
+** GW 2:
+ITB=0, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Martinez (4.44)
+	Estupiñan (4.46), Robertson (5.61), Alexander-Arnold (6.02, V)
+	Mbeumo (4.9), Mitoma (5.27), Saka (5.28), B.Fernandes (5.37), Salah (7.3, C)
+	Awoniyi (4.84), Nkunku (4.91)
+Bench: 
+	Steele, Gabriel, Saliba, Simms
+Lineup xPts: 65.7
+---
+

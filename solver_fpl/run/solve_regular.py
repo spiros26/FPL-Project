@@ -56,7 +56,7 @@ if __name__=="__main__":
     for result in response:
         iter = result['iter']
         print(result['summary'])
-        with open(f"plan{iter}.txt", "w", encoding="utf-8") as text_file:
+        with open(f"../../plans/plan{iter}.txt", "w", encoding="utf-8") as text_file:
             text_file.write(result['summary'])
         time_now = datetime.datetime.now()
         stamp = time_now.strftime("%Y-%m-%d_%H-%M-%S")
@@ -65,7 +65,7 @@ if __name__=="__main__":
         result['picks'].to_csv(f"../data/results/regular_{stamp}_{iter}.csv")
 
     result_table = pd.DataFrame(response)
-    result_table.to_csv(f'../../app/results/table_{stamp}.csv')
+    result_table.to_csv(f'../../results/table_{stamp}.csv')
     print(result_table[['iter', 'buy', 'sell', 'score']])
     print("--- %s seconds ---" % (time.time() - start_time))
 

@@ -1,0 +1,28 @@
+** GW 1:
+ITB=0, FT=1.0, PT=0, NT=0
+Buy 355 - Haaland
+Buy 500 - Kane
+Buy 373 - B.Fernandes
+Buy 353 - Foden
+Buy 108 - Mbeumo
+Buy 143 - Mitoma
+Buy 134 - Gross
+Buy 17 - Ramsdale
+Buy 131 - Estupiñan
+Buy 5 - Gabriel
+Buy 230 - Johnstone
+Buy 20 - Saliba
+Buy 395 - R.Varane
+Buy 474 - Basham
+Buy 538 - Mubama
+---
+Lineup: 
+	Ramsdale (5.25)
+	Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
+	Mbeumo (5.13), Foden (5.4), Mitoma (5.53), Gross (5.54), B.Fernandes (6.05, V)
+	Kane (5.37), Haaland (6.91, C)
+Bench: 
+	Johnstone, R.Varane, Basham, Mubama
+Lineup xPts: 68.21
+---
+
