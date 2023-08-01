@@ -1,5 +1,5 @@
 {
-    "horizon": 1,
+    "horizon": 3,
     "ft_value": 1.5,
     "itb_value": 0.05,
     "decay_base": 0.85,
@@ -16,9 +16,7 @@
     "banned": [
         100
     ],
-    "locked": [
-        500
-    ],
+    "locked": [],
     "delete_tmp": true,
     "secs": 300,
     "use_cmd": false,
@@ -27,11 +25,11 @@
     "booked_transfers": [],
     "use_wc": null,
     "use_bb": null,
-    "use_fh": null,
+    "use_fh": 2,
     "chip_limits": {
         "bb": 0,
         "wc": 0,
-        "fh": 0,
+        "fh": 1,
         "tc": 0
     },
     "num_transfers": null,
@@ -45,7 +43,7 @@
         "M": "",
         "F": ""
     },
-    "iteration": 2,
+    "iteration": 3,
     "iteration_criteria": "this_gw_transfer_in_out",
     "datasource": "review",
     "data_weights": {
