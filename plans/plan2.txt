@@ -1,58 +1,67 @@
 ** GW 1:
 ITB=0, FT=1.0, PT=0, NT=0
-Buy 308 - Salah
 Buy 355 - Haaland
 Buy 373 - B.Fernandes
+Buy 19 - Saka
+Buy 353 - Foden
+Buy 212 - Nkunku
 Buy 108 - Mbeumo
 Buy 143 - Mitoma
-Buy 134 - Gross
-Buy 17 - Ramsdale
+Buy 195 - Chilwell
+Buy 307 - Robertson
 Buy 131 - Estupiñan
 Buy 5 - Gabriel
+Buy 230 - Johnstone
 Buy 398 - Shaw
-Buy 313 - Virgil
-Buy 20 - Saliba
-Buy 49 - Martinez
-Buy 538 - Mubama
-Buy 33 - Archer
+Buy 148 - Steele
+Buy 264 - Simms
 ---
 Lineup: 
-	Ramsdale (5.25)
-	Shaw (4.89), Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
-	Mbeumo (5.13), Mitoma (5.53), Gross (5.54), B.Fernandes (6.05), Salah (6.45, V)
-	Haaland (6.91, C)
+	Steele (5.16)
+	Shaw (4.89), Gabriel (5.34), Estupiñan (5.62)
+	Mbeumo (5.13), Foden (5.4), Mitoma (5.53), Saka (5.98), B.Fernandes (6.05, V)
+	Nkunku (4.36), Haaland (6.91, C)
 Bench: 
-	Martinez, Virgil, Mubama, Archer
-Lineup xPts: 68.78
+	Johnstone, Robertson, Chilwell, Simms
+Lineup xPts: 67.29
 ---
 
 ** GW 2:
 ITB=0, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Martinez (4.44)
-	Gabriel (3.71), Shaw (3.77), Estupiñan (4.46), Virgil (5.26)
-	Mbeumo (4.9), Gross (5.04), Mitoma (5.27), B.Fernandes (5.37, V), Salah (7.3, C)
-	Haaland (5.02)
+	Steele (4.11)
+	Chilwell (3.94), Estupiñan (4.46), Robertson (5.61, C)
+	Foden (4.53), Mbeumo (4.9), Mitoma (5.27), Saka (5.28), B.Fernandes (5.37, V)
+	Nkunku (4.91), Haaland (5.02)
 Bench: 
-	Ramsdale, Saliba, Mubama, Archer
-Lineup xPts: 61.86
+	Johnstone, Shaw, Gabriel, Simms
+Lineup xPts: 59.0
 ---
 
 ** GW 3:
-ITB=2.0, FT=2.0, PT=0, NT=2.0
-Buy 353 - Foden
-Buy 212 - Nkunku
-Sell 308 - Salah
-Sell 33 - Archer
+ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Ramsdale (4.72)
-	Estupiñan (4.53), Gabriel (4.64), Shaw (5.05)
-	Gross (5.02), Mbeumo (5.08), Mitoma (5.18), Foden (6.2), B.Fernandes (6.21, V)
+	Steele (4.22)
+	Gabriel (4.64), Shaw (5.05), Chilwell (5.25)
+	Mbeumo (5.08), Mitoma (5.18), Saka (5.77), Foden (6.2), B.Fernandes (6.21, V)
 	Nkunku (5.83), Haaland (7.69, C)
 Bench: 
-	Martinez, Saliba, Virgil, Mubama
-Lineup xPts: 67.81
+	Johnstone, Estupiñan, Robertson, Simms
+Lineup xPts: 68.78
+---
+
+** GW 4:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Johnstone (4.61)
+	Gabriel (3.8), Robertson (4.05), Chilwell (5.04)
+	Mitoma (4.36), B.Fernandes (4.76), Saka (5.19), Foden (5.34), Mbeumo (5.4, V)
+	Nkunku (5.1), Haaland (6.44, C)
+Bench: 
+	Steele, Estupiñan, Shaw, Simms
+Lineup xPts: 60.51
 ---
 

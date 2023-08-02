@@ -1,5 +1,5 @@
 {
-    "horizon": 3,
+    "horizon": 1,
     "ft_value": 1.5,
     "itb_value": 0.05,
     "decay_base": 0.85,
@@ -43,7 +43,7 @@
         "M": "",
         "F": ""
     },
-    "iteration": 3,
+    "iteration": 1,
     "iteration_criteria": "this_gw_transfer_in_out",
     "datasource": "copilot",
     "data_weights": {
@@ -52,7 +52,7 @@
         "mikkel": 0,
         "kiwi": 50
     },
-    "solver": "cbc",
-    "solver_path": "",
+    "solver": "highs",
+    "solver_path": "../../highs_solver/bin/highs",
     "export_data": "final.csv"
 }

@@ -1,58 +1,28 @@
 ** GW 1:
-ITB=0, FT=1.0, PT=0, NT=0
-Buy 308 - Salah
+ITB=0.0, FT=1, PT=0, NT=0
 Buy 355 - Haaland
+Buy 349 - De Bruyne
 Buy 373 - B.Fernandes
-Buy 108 - Mbeumo
-Buy 143 - Mitoma
+Buy 19 - Saka
+Buy 396 - Rashford
 Buy 134 - Gross
-Buy 17 - Ramsdale
 Buy 131 - Estupiñan
 Buy 5 - Gabriel
+Buy 230 - Johnstone
 Buy 398 - Shaw
-Buy 313 - Virgil
+Buy 148 - Steele
 Buy 20 - Saliba
-Buy 49 - Martinez
+Buy 112 - Pinnock
 Buy 538 - Mubama
 Buy 82 - Semenyo
 ---
 Lineup: 
-	Ramsdale (5.25)
+	Steele (5.16)
 	Shaw (4.89), Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
-	Mbeumo (5.13), Mitoma (5.53), Gross (5.54), B.Fernandes (6.05), Salah (6.45, V)
+	Gross (5.54), Rashford (5.8), Saka (5.98), De Bruyne (6.03), B.Fernandes (6.05, V)
 	Haaland (6.91, C)
 Bench: 
-	Martinez, Virgil, Mubama, Semenyo
-Lineup xPts: 68.78
----
-
-** GW 2:
-ITB=0, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Martinez (4.44)
-	Gabriel (3.71), Shaw (3.77), Estupiñan (4.46), Virgil (5.26)
-	Mbeumo (4.9), Gross (5.04), Mitoma (5.27), B.Fernandes (5.37, V), Salah (7.3, C)
-	Haaland (5.02)
-Bench: 
-	Ramsdale, Saliba, Mubama, Semenyo
-Lineup xPts: 61.86
----
-
-** GW 3:
-ITB=2.0, FT=2.0, PT=0, NT=2.0
-Buy 353 - Foden
-Buy 212 - Nkunku
-Sell 308 - Salah
-Sell 82 - Semenyo
----
-Lineup: 
-	Ramsdale (4.72)
-	Estupiñan (4.53), Gabriel (4.64), Shaw (5.05)
-	Gross (5.02), Mbeumo (5.08), Mitoma (5.18), Foden (6.2), B.Fernandes (6.21, V)
-	Nkunku (5.83), Haaland (7.69, C)
-Bench: 
-	Martinez, Saliba, Virgil, Mubama
-Lineup xPts: 67.81
+	Johnstone, Pinnock, Mubama, Semenyo
+Lineup xPts: 69.4
 ---
 
