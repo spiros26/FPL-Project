@@ -1,41 +1,53 @@
 Running HiGHS 1.4.2 [date: 1970-01-01, git hash: f797c1ab6]
 Copyright (c) 2022 ERGO-Code under MIT licence terms
-Number of PL entries in BOUNDS section is 1
-Number of BV entries in BOUNDS section is 4480
-MIP  mp_h1_od_d0.85_cpXyY_0 has 7535 rows; 4485 cols; 27296 nonzeros; 4483 integer variables
+Number of PL entries in BOUNDS section is 6
+Number of BV entries in BOUNDS section is 25015
+MIP  mp_h6_od_d0.85_vzYSo_0 has 43348 rows; 25035 cols; 166821 nonzeros; 25028 integer variables
 
 Presolve is switched off
 
 Solving MIP model with:
-   7535 rows
-   4485 cols (4480 binary, 3 integer, 0 implied int., 2 continuous)
-   27296 nonzeros
+   43348 rows
+   25035 cols (25015 binary, 13 integer, 0 implied int., 7 continuous)
+   166821 nonzeros
 
         Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
      Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
 
-         0       0         0   0.00%   -2202.419727    inf                  inf        0      0      0         0     0.0s
-         0       0         0   0.00%   -74.17469659    inf                  inf        0      0    316       750     0.1s
- R       0       0         0   0.00%   -73.80995689    -60.440112        22.12%      166      6    316       785     0.2s
- C       0       0         0   0.00%   -73.4856108     -61.047222        20.38%      495     24    316      1280     0.4s
- L       0       0         0   0.00%   -72.511042      -72.511042         0.00%     1621    133    316      3466     2.4s
- T       0       0         0   0.00%   -72.511042      -72.511042         0.00%     1621    133    316      3664     2.4s
+         0       0         0   0.00%   -inf            inf                  inf        0      0      0         0     0.2s
+         0       0         0   0.00%   -288.4357772    inf                  inf        0      0      4      5160     1.1s
+         0       0         0   0.00%   -286.4752234    inf                  inf     2277     65     34      6470     6.9s
+ R       0       0         0   0.00%   -286.2651324    -228.488139       25.29%     2391     73     34      6665     7.4s
+         0       0         0   0.00%   -284.9882291    -228.488139       24.73%     3847    216     34     10793    12.5s
+         0       0         0   0.00%   -284.2886567    -228.488139       24.42%     4728    263     34     15170    17.6s
+         0       0         0   0.00%   -284.0420043    -228.488139       24.31%     3471    306     34     19393    23.4s
+         0       0         0   0.00%   -283.9425963    -228.488139       24.27%     3509    336     34     22238    28.7s
+         0       0         0   0.00%   -283.8695107    -228.488139       24.24%     3471    340     34     24606    33.9s
+         0       0         0   0.00%   -283.8122232    -228.488139       24.21%     3345    351     34     27079    39.7s
+         0       0         0   0.00%   -283.7243067    -228.488139       24.17%     3276    352     34     28916    44.8s
+         0       0         0   0.00%   -283.6033874    -228.488139       24.12%     3284    380     34     31295    50.5s
+         0       0         0   0.00%   -283.4883059    -228.488139       24.07%     3283    392     34     33128    55.8s
+         0       0         0   0.00%   -283.4164545    -228.488139       24.04%     3098    413     34     34665    61.0s
+         0       0         0   0.00%   -283.3841719    -228.488139       24.03%     2665    418     34     35336    66.1s
+ L       0       0         0   0.00%   -283.3841719    -282.895388        0.17%     2665    418     34     35336    68.5s
+         0       0         0   0.00%   -283.3754242    -282.895388        0.17%     2459    424    129     40023    74.1s
+         1       0         0 100.00%   -282.9235998    -282.895388        0.01%     2015    398    383     49736    92.5s
 
 Solving report
   Status            Optimal
-  Primal bound      -72.511042
-  Dual bound        -72.511042
-  Gap               0% (tolerance: 0.01%)
+  Primal bound      -282.895388
+  Dual bound        -282.923599833
+  Gap               0.00997% (tolerance: 0.01%)
   Solution status   feasible
-                    -72.511042 (objective)
+                    -282.895388 (objective)
                     0 (bound viol.)
-                    2.22044604925e-14 (int. viol.)
+                    6.70574706874e-14 (int. viol.)
                     0 (row viol.)
-  Timing            2.44 (total)
-                    0.01 (presolve)
+  Timing            92.53 (total)
+                    0.04 (presolve)
                     0.00 (postsolve)
   Nodes             1
-  LP iterations     3664 (total)
-                    0 (strong br.)
-                    2716 (separation)
-                    198 (heuristics)
+  LP iterations     49736 (total)
+                    7967 (strong br.)
+                    30332 (separation)
+                    4537 (heuristics)
