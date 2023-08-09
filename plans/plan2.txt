@@ -1,55 +1,55 @@
 ** GW 1:
 ITB=0, FT=1.0, PT=0, NT=0
+Buy 308 - Salah
 Buy 355 - Haaland
-Buy 373 - B.Fernandes
-Buy 19 - Saka
-Buy 353 - Foden
-Buy 212 - Nkunku
+Buy 430 - Trippier
 Buy 108 - Mbeumo
 Buy 143 - Mitoma
-Buy 195 - Chilwell
-Buy 307 - Robertson
-Buy 131 - Estupiñan
+Buy 134 - Gross
+Buy 226 - Eze
+Buy 60 - Watkins
+Buy 17 - Ramsdale
 Buy 5 - Gabriel
+Buy 131 - Estupiñan
 Buy 230 - Johnstone
-Buy 398 - Shaw
-Buy 148 - Steele
+Buy 112 - Pinnock
+Buy 584 - Pau
 Buy 264 - Simms
 ---
 Lineup: 
-	Steele (5.16)
-	Shaw (4.89), Gabriel (5.34), Estupiñan (5.62)
-	Mbeumo (5.13), Foden (5.4), Mitoma (5.53), Saka (5.98), B.Fernandes (6.05, V)
-	Nkunku (4.36), Haaland (6.91, C)
+	Ramsdale (5.25)
+	Trippier (4.9), Gabriel (5.34), Estupiñan (5.62)
+	Eze (5.06), Mbeumo (5.13), Mitoma (5.48), Gross (5.53), Salah (6.45, V)
+	Watkins (3.92), Haaland (6.91, C)
 Bench: 
-	Johnstone, Robertson, Chilwell, Simms
-Lineup xPts: 67.29
+	Johnstone, Pinnock, Pau, Simms
+Lineup xPts: 66.49
 ---
 
 ** GW 2:
 ITB=0, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Steele (4.11)
-	Chilwell (3.94), Estupiñan (4.46), Robertson (5.61, C)
-	Foden (4.53), Mbeumo (4.9), Mitoma (5.27), Saka (5.28), B.Fernandes (5.37, V)
-	Nkunku (4.91), Haaland (5.02)
+	Ramsdale (3.85)
+	Gabriel (3.71), Pau (4.17), Estupiñan (4.46)
+	Eze (4.26), Mbeumo (4.9), Gross (5.03), Mitoma (5.23, V), Salah (7.3, C)
+	Watkins (4.86), Haaland (5.02)
 Bench: 
-	Johnstone, Shaw, Gabriel, Simms
-Lineup xPts: 59.0
+	Johnstone, Pinnock, Trippier, Simms
+Lineup xPts: 60.11
 ---
 
 ** GW 3:
 ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Steele (4.22)
-	Gabriel (4.64), Shaw (5.05), Chilwell (5.25)
-	Mbeumo (5.08), Mitoma (5.18), Saka (5.77), Foden (6.2), B.Fernandes (6.21, V)
-	Nkunku (5.83), Haaland (7.69, C)
+	Ramsdale (4.72)
+	Trippier (4.44), Estupiñan (4.53), Gabriel (4.64)
+	Eze (4.51), Gross (5.0), Mbeumo (5.08), Mitoma (5.14), Salah (5.38, V)
+	Watkins (4.95), Haaland (7.69, C)
 Bench: 
-	Johnstone, Estupiñan, Robertson, Simms
-Lineup xPts: 68.78
+	Johnstone, Pau, Pinnock, Simms
+Lineup xPts: 63.77
 ---
 
 ** GW 4:
@@ -57,11 +57,89 @@ ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
 	Johnstone (4.61)
-	Gabriel (3.8), Robertson (4.05), Chilwell (5.04)
-	Mitoma (4.36), B.Fernandes (4.76), Saka (5.19), Foden (5.34), Mbeumo (5.4, V)
-	Nkunku (5.1), Haaland (6.44, C)
+	Gabriel (3.8), Trippier (4.13), Pinnock (4.47)
+	Mitoma (4.33), Gross (4.36), Eze (5.24), Mbeumo (5.4), Salah (6.52, C)
+	Watkins (3.95), Haaland (6.44, V)
 Bench: 
-	Steele, Estupiñan, Shaw, Simms
-Lineup xPts: 60.51
+	Ramsdale, Estupiñan, Pau, Simms
+Lineup xPts: 59.75
+---
+
+** GW 5:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Ramsdale (4.1)
+	Pau (3.79), Gabriel (4.04), Trippier (5.28)
+	Mbeumo (4.14), Gross (4.23), Eze (4.55), Mitoma (4.59), Salah (7.1, C)
+	Watkins (4.65), Haaland (6.22, V)
+Bench: 
+	Johnstone, Estupiñan, Pinnock, Simms
+Lineup xPts: 59.79
+---
+
+** GW 6:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Ramsdale (4.52)
+	Gabriel (4.49), Estupiñan (5.18), Trippier (5.82)
+	Eze (5.04), Mbeumo (5.25), Gross (5.3), Mitoma (5.38), Salah (7.15, C)
+	Watkins (4.44), Haaland (7.04, V)
+Bench: 
+	Johnstone, Pinnock, Pau, Simms
+Lineup xPts: 66.74
+---
+
+** GW 7:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Ramsdale (4.22)
+	Pinnock (3.95), Gabriel (4.21), Trippier (6.53)
+	Eze (4.33), Gross (4.42), Mitoma (4.73), Mbeumo (5.21), Salah (6.58, V)
+	Watkins (4.09), Haaland (6.76, C)
+Bench: 
+	Johnstone, Estupiñan, Pau, Simms
+Lineup xPts: 61.79
+---
+
+** GW 8:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Johnstone (4.75)
+	Estupiñan (3.35), Pau (3.77), Trippier (5.11)
+	Mitoma (4.39), Mbeumo (4.45), Gross (4.48), Eze (5.27, V), Salah (5.57, C)
+	Haaland (4.84), Watkins (4.94)
+Bench: 
+	Ramsdale, Pinnock, Gabriel, Simms
+Lineup xPts: 56.48
+---
+
+** GW 9:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Ramsdale (3.74)
+	Pau (3.84), Pinnock (4.67), Trippier (5.63, V)
+	Gross (3.92), Mitoma (4.07), Eze (4.18), Mbeumo (5.51), Salah (7.19, C)
+	Watkins (4.82), Haaland (5.03)
+Bench: 
+	Johnstone, Gabriel, Estupiñan, Simms
+Lineup xPts: 59.8
+---
+
+** GW 10:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Ramsdale (5.51)
+	Pau (4.89), Trippier (5.48), Gabriel (5.6, V)
+	Mbeumo (4.67), Eze (4.84), Gross (5.06), Mitoma (5.18), Salah (7.37, C)
+	Haaland (5.36), Watkins (5.58)
+Bench: 
+	Johnstone, Estupiñan, Pinnock, Simms
+Lineup xPts: 66.91
 ---
 
