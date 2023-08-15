@@ -399,9 +399,9 @@ xpens_2022 = {
       'Brighton': [(135, 0), (134, 0), (154, 0)], # pedro, gross, welbeck
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
       'Chelsea':  [(212, 0), (216, 0), (206, 0)], # nkunku, sterling, james       
-      'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         add zaha 2nd
+      'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         
       'Everton': [(246, 0), (253, 0), (259, 0)], #dcl, gray, mcneil
-      'Luton':  [(227, 0), (225, 0), (223, 0)], #Morris, Adebayo, Woodrow           #fix add luton players
+      'Luton':  [(326, 0), (314, 0), (340, 0)], #Morris, Adebayo, Woodrow           
       'Burnley':  [(177, 0), (170, 0), (161, 0)], #rodriguez, gudmundsson, brownhill
       'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
       'Man City':  [(355, 0), (359, 0), (343, 0)], #haaland, mahrez, alvarez
@@ -409,7 +409,7 @@ xpens_2022 = {
       'Newcastle': [(433, 0), (415, 0), (416, 0)], #wilson, isak, joelinton
       'Nott\'m Forest':[(447, 0), (450, 0), (437, 0)], #gibbs-white, johnson, awoniyi                                                     
       'Sheffield Utd':  [(477, 0), (488, 0), (481, 0)], #brewster, norwood, fleck
-      'Spurs': [(500, 0), (516, 0), (504, 0)], #kane, son, maddison
+      'Spurs': [(516, 0), (509, 0), (504, 0)], #son, richarlison, maddison
       'Fulham': [(278, 0), (267, 0), (288, 0)], #mitro, andreas, wilson                                                   
       'West Ham': [(525, 0), (539, 0), (526, 0)], #benrahma, paqueta, bowen
       'Wolves': [(558, 0), (557, 0), (567, 0)], #jimenez, hwang, neto

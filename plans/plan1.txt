@@ -1,145 +1,99 @@
-** GW 1:
-ITB=0, FT=1.0, PT=0, NT=0
-Buy 500 - Kane
-Buy 373 - B.Fernandes
-Buy 19 - Saka
-Buy 12 - Martinelli
-Buy 430 - Trippier
-Buy 108 - Mbeumo
-Buy 143 - Mitoma
-Buy 290 - Alexander-Arnold
-Buy 5 - Gabriel
-Buy 131 - Estupiñan
-Buy 230 - Johnstone
-Buy 148 - Steele
-Buy 195 - Chilwell
-Buy 119 - Wissa
-Buy 82 - Semenyo
----
-Lineup: 
-	Steele (5.16)
-	Alexander-Arnold (4.28), Trippier (4.9), Gabriel (5.34), Estupiñan (5.62)
-	Mbeumo (5.13), Mitoma (5.48), Martinelli (5.75), Saka (5.99, V), B.Fernandes (6.05, C)
-	Kane (5.37)
-Bench: 
-	Johnstone, Wissa, Chilwell, Semenyo
-Lineup xPts: 65.13
----
-
 ** GW 2:
-ITB=0, FT=1.0, PT=0, NT=0
+ITB=0, FT=1.0, PT=0, NT=1.0
+Buy 206 - James
+Sell 5 - Gabriel
 ---
 Lineup: 
-	Steele (4.11)
-	Chilwell (3.94), Estupiñan (4.46), Alexander-Arnold (6.02, C)
-	Mbeumo (4.9), Martinelli (5.1), Mitoma (5.23), Saka (5.28), B.Fernandes (5.37, V)
-	Wissa (3.93), Kane (5.27)
+	Steele (4.13)
+	Pinnock (3.62), Shaw (3.69), James (4.06), Estupiñan (4.47)
+	Mbeumo (4.91), Mitoma (5.06), Saka (5.29), B.Fernandes (5.34, V), Salah (7.28, C)
+	Haaland (4.93)
 Bench: 
-	Johnstone, Gabriel, Trippier, Semenyo
-Lineup xPts: 59.63
+	Johnstone, Saliba, Mubama, Semenyo
+Lineup xPts: 60.05
 ---
 
 ** GW 3:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=0, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Steele (4.22)
-	Trippier (4.44), Estupiñan (4.53), Gabriel (4.64), Chilwell (5.25)
-	Mbeumo (5.08), Mitoma (5.14), Martinelli (5.49), Saka (5.77), B.Fernandes (6.21, C)
-	Kane (6.02, V)
+	Steele (4.27)
+	Saliba (4.33), Estupiñan (4.57), Shaw (4.91), James (5.35)
+	Mitoma (4.98), Mbeumo (5.04), Salah (5.39), Saka (5.79), B.Fernandes (6.22, V)
+	Haaland (7.61, C)
 Bench: 
-	Johnstone, Wissa, Alexander-Arnold, Semenyo
-Lineup xPts: 62.99
+	Johnstone, Pinnock, Mubama, Semenyo
+Lineup xPts: 66.06
 ---
 
 ** GW 4:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=1.0, FT=2.0, PT=0, NT=1.0
+Buy 197 - Colwill
+Sell 398 - Shaw
 ---
 Lineup: 
-	Johnstone (4.61)
-	Trippier (4.13), Alexander-Arnold (4.44), Chilwell (5.04)
-	Mitoma (4.33), B.Fernandes (4.76), Martinelli (4.9), Saka (5.19), Mbeumo (5.4, V)
-	Wissa (4.05), Kane (6.15, C)
+	Johnstone (4.58)
+	Saliba (3.52), Pinnock (4.46), Colwill (4.84), James (5.09)
+	Mitoma (4.2), B.Fernandes (4.77), Saka (5.22), Mbeumo (5.41), Salah (6.58, C)
+	Haaland (6.35, V)
 Bench: 
-	Steele, Gabriel, Estupiñan, Semenyo
-Lineup xPts: 59.15
+	Steele, Estupiñan, Mubama, Semenyo
+Lineup xPts: 61.59
 ---
 
 ** GW 5:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=0, FT=2.0, PT=0, NT=1.0
+Buy 430 - Trippier
+Sell 206 - James
 ---
 Lineup: 
-	Johnstone (3.55)
-	Gabriel (4.04), Chilwell (4.28), Alexander-Arnold (5.04), Trippier (5.28)
-	Mbeumo (4.14), Mitoma (4.59), B.Fernandes (5.08), Martinelli (5.33), Saka (5.49, V)
-	Kane (7.11, C)
+	Johnstone (3.61)
+	Estupiñan (3.32), Saliba (3.84), Colwill (4.1), Trippier (5.38)
+	Mbeumo (4.14), Mitoma (4.44), B.Fernandes (4.98), Saka (5.53), Salah (6.97, C)
+	Haaland (6.14, V)
 Bench: 
-	Steele, Wissa, Estupiñan, Semenyo
-Lineup xPts: 61.04
+	Steele, Pinnock, Mubama, Semenyo
+Lineup xPts: 59.44
 ---
 
 ** GW 6:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=0, FT=2.0, PT=0, NT=1.0
+Buy 427 - Schär
+Sell 20 - Saliba
 ---
 Lineup: 
-	Steele (4.73)
-	Gabriel (4.49), Estupiñan (5.18), Alexander-Arnold (5.33), Trippier (5.82, V)
-	Mbeumo (5.25), Martinelli (5.31), Mitoma (5.38), Saka (5.71), B.Fernandes (6.02, C)
-	Kane (4.85)
+	Steele (4.68)
+	Pinnock (4.24), Schär (4.34), Estupiñan (5.12), Trippier (5.89)
+	Mitoma (5.2), Mbeumo (5.26), Saka (5.58), B.Fernandes (6.05), Salah (7.14, C)
+	Haaland (6.95, V)
 Bench: 
-	Johnstone, Wissa, Chilwell, Semenyo
-Lineup xPts: 64.08
+	Johnstone, Colwill, Mubama, Semenyo
+Lineup xPts: 67.59
 ---
 
 ** GW 7:
 ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Steele (3.4)
-	Gabriel (4.21), Alexander-Arnold (4.6), Trippier (6.53, C)
-	Mitoma (4.73), Mbeumo (5.21), Martinelli (5.45), B.Fernandes (5.65), Saka (5.7, V)
-	Wissa (4.04), Kane (5.14)
+	Steele (3.54)
+	Colwill (3.86), Pinnock (3.93), Schär (5.11), Trippier (6.68, C)
+	Mitoma (4.61), Mbeumo (5.21), Saka (5.62), B.Fernandes (5.63), Salah (6.41)
+	Haaland (6.68, V)
 Bench: 
-	Johnstone, Chilwell, Estupiñan, Semenyo
-Lineup xPts: 61.19
+	Johnstone, Estupiñan, Mubama, Semenyo
+Lineup xPts: 63.96
 ---
 
 ** GW 8:
 ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Johnstone (4.75)
-	Alexander-Arnold (3.65), Chilwell (4.39), Trippier (5.11)
-	Martinelli (4.28), Mitoma (4.39), Saka (4.42), Mbeumo (4.45), B.Fernandes (5.48, V)
-	Wissa (3.63), Kane (7.06, C)
+	Johnstone (4.72)
+	Estupiñan (3.38), Schär (3.62), Colwill (4.25), Trippier (5.18)
+	Mitoma (4.26), Saka (4.45), Mbeumo (4.46), Salah (5.45, V), B.Fernandes (5.5, C)
+	Haaland (4.75)
 Bench: 
-	Steele, Estupiñan, Gabriel, Semenyo
-Lineup xPts: 58.66
----
-
-** GW 9:
-ITB=0, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Johnstone (3.16)
-	Gabriel (3.59), Trippier (5.63), Alexander-Arnold (5.7)
-	Mitoma (4.07), Martinelli (4.99), Saka (5.19), Mbeumo (5.51), B.Fernandes (6.05, C)
-	Wissa (4.08), Kane (5.95, V)
-Bench: 
-	Steele, Chilwell, Estupiñan, Semenyo
-Lineup xPts: 59.98
----
-
-** GW 10:
-ITB=0, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Steele (4.41)
-	Estupiñan (4.62), Trippier (5.48), Gabriel (5.6), Alexander-Arnold (6.19, V)
-	Mbeumo (4.67), B.Fernandes (4.77), Mitoma (5.18), Saka (6.18), Martinelli (6.67, C)
-	Kane (5.54)
-Bench: 
-	Johnstone, Chilwell, Wissa, Semenyo
-Lineup xPts: 65.98
+	Steele, Pinnock, Mubama, Semenyo
+Lineup xPts: 55.51
 ---
 

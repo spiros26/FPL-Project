@@ -141,6 +141,11 @@ elif choice == "Login":
             st.subheader('Suggested Transfers')
             st.sidebar.header('FPL Credentials')
             team_id = st.sidebar.text_input("Team ID")
+            # Team Data
+            team_data = st.text_input('Enter your team json file data. Copy paste the link [https://fantasy.premierleague.com/api/my-team/[TEAM_ID]/] to your browser (Replace [TEAM_ID] with your team id) and copy paste the text you see in the following box.', '{}')
+            team_data = json.loads(team_data)
+            with open("team_data.json", "w") as outfile:
+                json.dump(team_data, outfile, indent=4)
 
             if st.sidebar.button('Get Team Data'):
                 with requests.Session() as session:
@@ -148,9 +153,7 @@ elif choice == "Login":
                         st.success('Preseason Time! Select the solver settings and click on Suggest Transfers.')
                     else:
                         data = session.get(f'https://fantasy.premierleague.com/api/entry/{team_id}/event/{next_gw-1}/picks/')
-                        team_data = data.json()
-                        with open("team_data.json", "w") as outfile:
-                            json.dump(team_data, outfile, indent=4)
+                        #team_data = data.json()
                         st.write('Team ID:', team_id)
             
             column1, column2 = st.columns(2)   
@@ -226,7 +229,7 @@ elif choice == "Login":
             # Box
             st.subheader('Expected Points')
             try:
-                data = pd.read_csv('Projections/ALEX-23/alex-GW' + str(next_gw) + '.csv')
+                data = pd.read_csv('Projections/ALEX-23/alex-GW' + str(1) + '.csv')
             except:
                 st.error('File not yet available. Try later.')  
             st.write(data)
