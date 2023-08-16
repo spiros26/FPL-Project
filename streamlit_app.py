@@ -229,7 +229,7 @@ elif choice == "Login":
             # Box
             st.subheader('Expected Points')
             try:
-                data = pd.read_csv('Projections/ALEX-23/alex-GW' + str(1) + '.csv')
+                data = pd.read_csv('Projections/ALEX-23/alex-GW' + str(next_gw) + '.csv')
             except:
                 st.error('File not yet available. Try later.')  
             st.write(data)
