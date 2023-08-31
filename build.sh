@@ -1,7 +1,9 @@
+#!/bin/bash
+
 # exit on error
 #set -o errexit
 echo " cbc"
-STORAGE_DIR=/opt/render/project/src/solver
+STORAGE_DIR=.
 
 if [[ ! -d $STORAGE_DIR/cbc ]]; then
   echo "...Downloading cbc"
@@ -16,5 +18,5 @@ else
 fi
 
 # be sure to add Chromes location to the PATH as part of your Start Command
-export PATH="${PATH}:/opt/render/project/src/solver/cbc/"
+export PATH="${PATH}:cbc/"
 pip install -r requirements.txt

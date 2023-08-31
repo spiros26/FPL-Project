@@ -393,14 +393,14 @@ xpens_2022 = {
   }
 '''
 xpens_2022 = {
-      'Arsenal': [(19, 0), (8, 0), (12, 0)], #saka, jesus, martinelli
-      'Aston Villa': [(60, 0), (38, 0), (34, 0)], #watkins, coutinho, bailey
+      'Arsenal': [(19, 0), (14, 0), (12, 0)], #saka, odegaard, martinelli
+      'Aston Villa': [(43, 0), (60, 0), (34, 0)], #luiz, watkins, bailey
       'Brentford': [(117, 0), (108, 0), (119, 0)], #toney, mbeumo, wissa
       'Brighton': [(135, 0), (134, 0), (154, 0)], # pedro, gross, welbeck
       'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
-      'Chelsea':  [(212, 0), (216, 0), (206, 0)], # nkunku, sterling, james       
+      'Chelsea':  [(212, 0), (199, 0), (216, 0)], # nkunku, enzo, sterling       
       'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         
-      'Everton': [(246, 0), (253, 0), (259, 0)], #dcl, gray, mcneil
+      'Everton': [(246, 0), (258, 0), (601, 0)], #dcl, maupay, danjuma
       'Luton':  [(326, 0), (314, 0), (340, 0)], #Morris, Adebayo, Woodrow           
       'Burnley':  [(177, 0), (170, 0), (161, 0)], #rodriguez, gudmundsson, brownhill
       'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
@@ -411,7 +411,7 @@ xpens_2022 = {
       'Sheffield Utd':  [(477, 0), (488, 0), (481, 0)], #brewster, norwood, fleck
       'Spurs': [(516, 0), (509, 0), (504, 0)], #son, richarlison, maddison
       'Fulham': [(278, 0), (267, 0), (288, 0)], #mitro, andreas, wilson                                                   
-      'West Ham': [(525, 0), (539, 0), (526, 0)], #benrahma, paqueta, bowen
+      'West Ham': [(525, 0), (539, 0), (664, 0)], #benrahma, paqueta, ward-prowse
       'Wolves': [(558, 0), (557, 0), (567, 0)], #jimenez, hwang, neto
   }
   

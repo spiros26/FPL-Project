@@ -1,101 +1,133 @@
-** GW 2:
-ITB=0.5, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Steele (4.13)
-	Saliba (3.51), Pinnock (3.62), Shaw (3.69), Estupiñan (4.47)
-	Mbeumo (4.91), Mitoma (5.06), Saka (5.29), B.Fernandes (5.34, V), Salah (7.28, C)
-	Haaland (4.93)
-Bench: 
-	Johnstone, Gabriel, Mubama, Semenyo
-Lineup xPts: 59.49
----
-
-** GW 3:
-ITB=1.0, FT=2.0, PT=0, NT=1.0
-Buy 197 - Colwill
-Sell 5 - Gabriel
----
-Lineup: 
-	Steele (4.27)
-	Saliba (4.33), Estupiñan (4.57), Shaw (4.91), Colwill (5.09)
-	Mitoma (4.98), Mbeumo (5.04), Salah (5.39), Saka (5.79), B.Fernandes (6.22, V)
-	Haaland (7.61, C)
-Bench: 
-	Johnstone, Pinnock, Mubama, Semenyo
-Lineup xPts: 65.8
----
-
 ** GW 4:
-ITB=2.0, FT=2.0, PT=0, NT=1.0
+CHIP WC
+ITB=1.2, FT=1.0, PT=0, NT=9.0
+Buy 516 - Son
+Buy 430 - Trippier
+Buy 353 - Foden
+Buy 504 - Maddison
+Buy 226 - Eze
+Buy 415 - Isak
+Buy 424 - Pope
+Buy 350 - Rúben
 Buy 519 - Udogie
-Sell 398 - Shaw
+Sell 308 - Salah
+Sell 373 - B.Fernandes
+Sell 19 - Saka
+Sell 143 - Mitoma
+Sell 195 - Chilwell
+Sell 131 - Estupiñan
+Sell 20 - Saliba
+Sell 148 - Steele
+Sell 538 - Mubama
 ---
 Lineup: 
-	Johnstone (4.58)
-	Saliba (3.52), Udogie (4.11), Pinnock (4.46), Colwill (4.84)
-	Mitoma (4.2), B.Fernandes (4.77), Saka (5.22), Mbeumo (5.41), Salah (6.58, C)
-	Haaland (6.35, V)
+	Johnstone (4.56)
+	Udogie (4.37), Pinnock (4.49), Colwill (4.76), Rúben (4.87)
+	Eze (5.35), Mbeumo (5.43), Maddison (5.44), Foden (5.47), Son (6.1, V)
+	Haaland (6.46, C)
 Bench: 
-	Steele, Estupiñan, Mubama, Semenyo
-Lineup xPts: 60.62
+	Pope, Trippier, Isak, Semenyo
+Lineup xPts: 63.77
 ---
 
 ** GW 5:
-ITB=0, FT=2.0, PT=0, NT=1.0
-Buy 430 - Trippier
-Sell 112 - Pinnock
+ITB=1.2, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Johnstone (3.61)
-	Saliba (3.84), Colwill (4.1), Udogie (4.9), Trippier (5.38)
-	Mbeumo (4.14), Mitoma (4.44), B.Fernandes (4.98), Saka (5.53), Salah (6.97, C)
-	Haaland (6.14, V)
+	Pope (4.14)
+	Colwill (4.12), Udogie (5.09), Trippier (5.14)
+	Mbeumo (4.16), Eze (4.63), Foden (5.14), Maddison (5.68), Son (6.41, C)
+	Isak (4.64), Haaland (6.05, V)
 Bench: 
-	Steele, Estupiñan, Mubama, Semenyo
-Lineup xPts: 61.01
+	Johnstone, Rúben, Pinnock, Semenyo
+Lineup xPts: 61.61
 ---
 
 ** GW 6:
-ITB=0, FT=2.0, PT=0, NT=2.0
-Buy 427 - Schär
-Buy 405 - Botman
-Sell 519 - Udogie
-Sell 20 - Saliba
+ITB=0.4, FT=2.0, PT=0, NT=1.0
+Buy 373 - B.Fernandes
+Sell 504 - Maddison
 ---
 Lineup: 
-	Steele (4.68)
-	Botman (4.21), Schär (4.34), Estupiñan (5.12), Trippier (5.89)
-	Mitoma (5.2), Mbeumo (5.26), Saka (5.58), B.Fernandes (6.05), Salah (7.14, C)
-	Haaland (6.95, V)
+	Pope (4.64)
+	Pinnock (4.33), Rúben (5.21), Trippier (5.86)
+	Son (4.81), Eze (5.15), Mbeumo (5.33), Foden (5.62), B.Fernandes (6.01, V)
+	Isak (5.62), Haaland (6.78, C)
 Bench: 
-	Johnstone, Colwill, Mubama, Semenyo
-Lineup xPts: 67.56
+	Johnstone, Colwill, Udogie, Semenyo
+Lineup xPts: 66.14
 ---
 
 ** GW 7:
-ITB=0, FT=1.0, PT=0, NT=0
+ITB=1.4, FT=2.0, PT=0, NT=1.0
+Buy 42 - Digne
+Sell 350 - Rúben
 ---
 Lineup: 
-	Steele (3.54)
-	Colwill (3.86), Botman (4.98), Schär (5.11), Trippier (6.68, C)
-	Mitoma (4.61), Mbeumo (5.21), Saka (5.62), B.Fernandes (5.63), Salah (6.41)
-	Haaland (6.68, V)
+	Pope (5.47)
+	Pinnock (3.88), Colwill (3.91), Trippier (6.76, C)
+	Eze (4.4), Son (5.02), Mbeumo (5.24), Foden (5.4), B.Fernandes (5.54)
+	Isak (5.0), Haaland (6.67, V)
 Bench: 
-	Johnstone, Estupiñan, Mubama, Semenyo
-Lineup xPts: 65.01
+	Johnstone, Udogie, Digne, Semenyo
+Lineup xPts: 64.06
 ---
 
 ** GW 8:
+ITB=8.3, FT=2.0, PT=0, NT=1.0
+Buy 211 - N.Jackson
+Sell 355 - Haaland
+---
+Lineup: 
+	Johnstone (4.58)
+	Colwill (4.31), Udogie (4.45), Trippier (5.14)
+	Foden (4.47), Mbeumo (4.47), Eze (5.32), B.Fernandes (5.46, V), Son (6.23, C)
+	Isak (4.64), N.Jackson (4.81)
+Bench: 
+	Pope, Digne, Pinnock, Semenyo
+Lineup xPts: 60.1
+---
+
+** GW 9:
+ITB=0, FT=2.0, PT=0, NT=2.0
+Buy 308 - Salah
+Buy 290 - Alexander-Arnold
+Sell 353 - Foden
+Sell 197 - Colwill
+---
+Lineup: 
+	Pope (4.45)
+	Udogie (4.46), Pinnock (4.74), Trippier (5.53), Alexander-Arnold (5.77)
+	Eze (4.28), Mbeumo (5.67), B.Fernandes (6.03), Son (6.06, V), Salah (6.6, C)
+	Isak (4.7)
+Bench: 
+	Johnstone, Digne, N.Jackson, Semenyo
+Lineup xPts: 64.88
+---
+
+** GW 10:
+ITB=0, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Pope (4.34)
+	Digne (5.13), Trippier (5.51), Alexander-Arnold (6.08, V)
+	Mbeumo (4.69), B.Fernandes (4.77), Eze (4.95), Son (5.54), Salah (6.73, C)
+	N.Jackson (4.33), Isak (4.82)
+Bench: 
+	Johnstone, Udogie, Pinnock, Semenyo
+Lineup xPts: 63.63
+---
+
+** GW 11:
 ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Johnstone (4.72)
-	Botman (3.53), Schär (3.62), Colwill (4.25), Trippier (5.18)
-	Mitoma (4.26), Saka (4.45), Mbeumo (4.46), Salah (5.45, V), B.Fernandes (5.5, C)
-	Haaland (4.75)
+	Johnstone (4.23)
+	Digne (4.1), Trippier (4.44), Alexander-Arnold (5.39)
+	Mbeumo (5.18), Eze (5.21), Son (5.67), B.Fernandes (5.68, V), Salah (7.66, C)
+	Isak (4.24), N.Jackson (4.37)
 Bench: 
-	Steele, Estupiñan, Mubama, Semenyo
-Lineup xPts: 55.66
+	Pope, Pinnock, Udogie, Semenyo
+Lineup xPts: 63.84
 ---
 
