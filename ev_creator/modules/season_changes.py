@@ -14,7 +14,7 @@ expected_minutes = {
     5: [75.0],  # Gabriel
     6: [63.0],  # Havertz
     7: [3.0],  # Holding
-    8: [70.0],  # Jesus
+    8: [65.0],  # Jesus
     9: [10.0],  # Jorginho
     10: [12.0], # Kiwior
     11: [0.0], # Marquinhos
@@ -30,7 +30,7 @@ expected_minutes = {
     20: [82.0], # Saliba
     21: [5.0], # Sambi
     22: [13.0], # Smith Rowe
-    23: [2.0], # Tavares
+    23: [12.0], # Tavares
     24: [0.0], # Tierney
     25: [0.0], # Tomiyasu
     26: [35.0], # Trossard

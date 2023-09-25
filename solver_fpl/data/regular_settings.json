@@ -13,10 +13,7 @@
         "2": 0.06,
         "3": 0.003
     },
-    "banned": [
-        44,
-        161
-    ],
+    "banned": [],
     "locked": [],
     "delete_tmp": true,
     "secs": 72000,
@@ -44,7 +41,7 @@
         "M": "",
         "F": ""
     },
-    "iteration": 5,
+    "iteration": 1,
     "iteration_criteria": "this_gw_transfer_in_out",
     "datasource": "copilot",
     "data_weights": {
