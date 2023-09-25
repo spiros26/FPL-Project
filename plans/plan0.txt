@@ -1,15 +1,30 @@
 ** GW 7:
-ITB=0.8, FT=1.0, PT=0, NT=1.0
-Buy 316 - Bell
-Sell 519 - Udogie
+ITB=1.0, FT=1.0, PT=0, NT=1.0
+Buy 161 - Brownhill
+Sell 365 - Rodrigo
 ---
 Lineup: 
 	Leno (4.06)
-	Pinnock (3.8), Estupiñan (4.42), Burke (6.4), Bell (7.0, V)
-	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39)
-	Wilson (5.3), Haaland (7.51, C)
+	Pinnock (3.8), Estupiñan (4.42), Burke (6.4)
+	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39), Brownhill (8.11, C)
+	Wilson (5.3), Haaland (7.51, V)
 Bench: 
-	Johnstone, Colwill, Mubama, Rodrigo
-Lineup xPts: 69.3
+	Johnstone, Colwill, Udogie, Mubama
+Lineup xPts: 71.01
+---
+
+** GW 8:
+ITB=0.4, FT=1.0, PT=0, NT=1.0
+Buy 516 - Son
+Sell 19 - Saka
+---
+Lineup: 
+	Leno (5.16)
+	Colwill (3.89), Estupiñan (4.15), Udogie (4.49)
+	Brownhill (3.46), Mbeumo (5.04), B.Fernandes (5.05), Salah (5.71, V), Son (7.54, C)
+	Wilson (4.28), Haaland (5.55)
+Bench: 
+	Johnstone, Pinnock, Burke, Mubama
+Lineup xPts: 61.87
 ---
 

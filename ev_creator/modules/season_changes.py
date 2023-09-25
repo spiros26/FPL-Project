@@ -276,7 +276,7 @@ expected_minutes = {
     222: [72.0],    # Clyne
     223: [65.0],    # C.Doucoure
     224: [0.0],    # Ebiowei
-    225: [75.0],    # Edouard
+    225: [0.0],    # Edouard                    FIXXXXXX
     226: [85.0],    # Eze
     227: [1.0],    # Guaita
     228: [85.0],    # Guehi
@@ -284,7 +284,7 @@ expected_minutes = {
     230: [75.0],    # Johnstone
     385: [15.0],    # Henderson
     231: [34.0],    # Lerma
-    232: [48.0],    # Mateta
+    232: [70.0],    # Mateta                    FIXXXXXXX
     233: [0.0],    # Matthews
     234: [77.0],    # Mitchell
     235: [0.0],    # O'Brien

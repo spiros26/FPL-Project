@@ -606,8 +606,8 @@ def solve_multi_period_fpl(data, options):
             for type in [1,2,3,4]:
                 type_players = lineup_players[lineup_players['type'] == type]
                 entries = type_players.apply(get_display, axis=1)
-                summary_of_actions += '\t' + ', '.join(entries.tolist()) + "\n"
-            summary_of_actions += "Bench: \n\t" + ', '.join(bench_players['name'].tolist()) + "\n"
+                summary_of_actions += '\t' + ', '.join(entries.to_list()) + "\n"
+            summary_of_actions += "Bench: \n\t" + ', '.join(bench_players['name'].to_list()) + "\n"
             summary_of_actions += "Lineup xPts: " + str(round(lineup_players['xp_cont'].sum(),2)) + "\n---\n\n"
             cumulative_xpts = cumulative_xpts + round(lineup_players['xp_cont'].sum(),2)
         print("Cumulative xPts: " + str(round(cumulative_xpts,2)) + "\n---\n\n")
