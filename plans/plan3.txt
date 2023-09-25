@@ -1,67 +1,15 @@
-** GW 1:
-ITB=0.5, FT=1.0, PT=0, NT=0
-Buy 355 - Haaland
-Buy 373 - B.Fernandes
-Buy 19 - Saka
-Buy 353 - Foden
-Buy 212 - Nkunku
-Buy 108 - Mbeumo
-Buy 143 - Mitoma
-Buy 195 - Chilwell
-Buy 307 - Robertson
-Buy 131 - Estupiñan
-Buy 5 - Gabriel
-Buy 230 - Johnstone
-Buy 148 - Steele
-Buy 20 - Saliba
-Buy 538 - Mubama
+** GW 7:
+ITB=0.1, FT=1.0, PT=0, NT=1.0
+Buy 614 - Kaminski
+Sell 230 - Johnstone
 ---
 Lineup: 
-	Steele (5.16)
-	Saliba (5.16), Gabriel (5.34), Estupiñan (5.62)
-	Mbeumo (5.13), Foden (5.4), Mitoma (5.53), Saka (5.98), B.Fernandes (6.05, V)
-	Nkunku (4.36), Haaland (6.91, C)
+	Kaminski (7.3, V)
+	Colwill (3.45), Pinnock (3.8), Estupiñan (4.42), Burke (6.4)
+	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39)
+	Wilson (5.3), Haaland (7.51, C)
 Bench: 
-	Johnstone, Robertson, Chilwell, Mubama
-Lineup xPts: 67.56
----
-
-** GW 2:
-ITB=0.5, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Steele (4.11)
-	Chilwell (3.94), Estupiñan (4.46), Robertson (5.61, C)
-	Foden (4.53), Mbeumo (4.9), Mitoma (5.27), Saka (5.28), B.Fernandes (5.37, V)
-	Nkunku (4.91), Haaland (5.02)
-Bench: 
-	Johnstone, Gabriel, Saliba, Mubama
-Lineup xPts: 59.0
----
-
-** GW 3:
-ITB=0.5, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Steele (4.22)
-	Estupiñan (4.53), Gabriel (4.64), Chilwell (5.25)
-	Mbeumo (5.08), Mitoma (5.18), Saka (5.77), Foden (6.2), B.Fernandes (6.21, V)
-	Nkunku (5.83), Haaland (7.69, C)
-Bench: 
-	Johnstone, Saliba, Robertson, Mubama
-Lineup xPts: 68.26
----
-
-** GW 4:
-ITB=0.5, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Johnstone (4.61)
-	Gabriel (3.8), Robertson (4.05), Chilwell (5.04)
-	Mitoma (4.36), B.Fernandes (4.76), Saka (5.19), Foden (5.34), Mbeumo (5.4, V)
-	Nkunku (5.1), Haaland (6.44, C)
-Bench: 
-	Steele, Saliba, Estupiñan, Mubama
-Lineup xPts: 60.51
+	Leno, Udogie, Mubama, Rodrigo
+Lineup xPts: 68.99
 ---
 

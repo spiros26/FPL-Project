@@ -167,7 +167,7 @@ elif choice == "Login":
                 # Call function to generate transfer suggestions for the user's FPL team
                 decay = st.sidebar.number_input('Decay', value=0.85)
                 iterations = st.sidebar.radio('Solver Iterations', options=[1,2,3,4,5], horizontal=True)
-                horizon = st.sidebar.radio('Horizon', options=[1,2,3,4,5,6,7,8,9,10,11,12], horizontal=True)
+                horizon = st.sidebar.radio('Horizon', options=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21], horizontal=True)
                 ft_value = st.sidebar.number_input('Free Transfer Value', min_value=0.0, max_value=3.0, value=1.5, step=0.1)
                 no_transfer_last_gws = st.sidebar.radio('No Transfers Planned for the Last How Many Gameweeks?', options=list(range(horizon)), horizontal=True)
                 locked = st.sidebar.multiselect('Locked Players', options=list(range(2,607))) 

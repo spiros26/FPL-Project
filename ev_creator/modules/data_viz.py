@@ -8,7 +8,7 @@ def best_options(ev_df, next_gw, horizon, num):
     horizon_pts = [sum([ev_df[str(next_gw+q)+'_Pts'].iloc[x] for q in range(horizon)]) for x in range(ev_df.shape[0])]
     ev_df.insert(3, 'horizon_pts', horizon_pts)
     ev_df.insert(3, 'horizon_value', [round(ev_df['horizon_pts'].iloc[x]/ev_df['BV'].iloc[x],2) for x in range(ev_df.shape[0])])
-    df = ev_df[ev_df['BV']<99].sort_values(by='horizon_pts',ascending=False)[:num]
+    df = ev_df[ev_df['BV']<1499].sort_values(by='horizon_pts',ascending=False)[:num]
     ev_df.drop(['horizon_pts', 'horizon_value'], axis=1, inplace=True)
     sns.scatterplot(x=df['BV'], y=df['horizon_pts'], size=df['horizon_value'], legend=False, sizes=(100, 1000))
     ax = plt.gca()

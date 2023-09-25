@@ -1,71 +1,17 @@
-** GW 4:
-ITB=1.2, FT=1.0, PT=0, NT=1.0
-Buy 519 - Udogie
-Sell 20 - Saliba
----
-Lineup: 
-	Johnstone (4.66)
-	Udogie (4.37), Pinnock (4.49), Colwill (4.76), Chilwell (4.88)
-	Mitoma (4.25), B.Fernandes (4.76), Saka (5.22), Mbeumo (5.43), Salah (6.57, C)
-	Haaland (6.46, V)
-Bench: 
-	Steele, Estupiñan, Semenyo, Mubama
-Lineup xPts: 62.42
----
-
-** GW 5:
-ITB=1.2, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Johnstone (3.65)
-	Estupiñan (3.41), Colwill (4.12), Chilwell (4.27), Udogie (5.09)
-	Mbeumo (4.16), Mitoma (4.51), B.Fernandes (5.08), Saka (5.53), Salah (6.96, C)
-	Haaland (6.05, V)
-Bench: 
-	Steele, Pinnock, Semenyo, Mubama
-Lineup xPts: 59.77
----
-
-** GW 6:
-ITB=0, FT=2.0, PT=0, NT=2.0
-Buy 430 - Trippier
-Buy 427 - Schär
-Sell 195 - Chilwell
-Sell 519 - Udogie
----
-Lineup: 
-	Johnstone (4.54)
-	Schär (4.31), Pinnock (4.33), Estupiñan (5.28), Trippier (5.86)
-	Mitoma (5.3), Mbeumo (5.33), Saka (5.57), B.Fernandes (6.01), Salah (7.06, C)
-	Haaland (6.78, V)
-Bench: 
-	Steele, Colwill, Semenyo, Mubama
-Lineup xPts: 67.44
----
-
 ** GW 7:
-ITB=0, FT=1.0, PT=0, NT=0
+ITB=0.1, FT=1.0, PT=1.0, NT=2.0
+Buy 326 - Morris
+Buy 316 - Bell
+Sell 131 - Estupiñan
+Sell 538 - Mubama
 ---
 Lineup: 
-	Johnstone (3.47)
-	Pinnock (3.88), Colwill (3.91), Schär (5.19), Trippier (6.76, C)
-	Mitoma (4.67), Mbeumo (5.24), B.Fernandes (5.54), Saka (5.64), Salah (6.38)
-	Haaland (6.67, V)
+	Leno (4.06)
+	Pinnock (3.8), Burke (6.4), Bell (7.0)
+	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39)
+	Wilson (5.3), Haaland (7.51, V), Morris (7.87, C)
 Bench: 
-	Steele, Estupiñan, Semenyo, Mubama
-Lineup xPts: 64.11
----
-
-** GW 8:
-ITB=0, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Johnstone (4.68)
-	Estupiñan (3.44), Schär (3.58), Colwill (4.31), Trippier (5.14)
-	Mitoma (4.31), Saka (4.44), Mbeumo (4.47), B.Fernandes (5.46, V), Salah (5.57, C)
-	Haaland (4.74)
-Bench: 
-	Steele, Pinnock, Semenyo, Mubama
-Lineup xPts: 55.71
+	Johnstone, Colwill, Udogie, Rodrigo
+Lineup xPts: 73.1
 ---
 

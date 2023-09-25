@@ -1,0 +1,15 @@
+** GW 7:
+ITB=0.2, FT=1.0, PT=0, NT=1.0
+Buy 614 - Kaminski
+Sell 275 - Leno
+---
+Lineup: 
+	Kaminski (7.3, V)
+	Colwill (3.45), Pinnock (3.8), Estupiñan (4.42), Burke (6.4)
+	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39)
+	Wilson (5.3), Haaland (7.51, C)
+Bench: 
+	Johnstone, Udogie, Mubama, Rodrigo
+Lineup xPts: 68.99
+---
+

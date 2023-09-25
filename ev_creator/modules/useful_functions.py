@@ -68,6 +68,7 @@ def npxGAp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
   for x in range(team_stats_dict[season][team].shape[0]):
     if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
       break
+
   if x < gw_no_lim:
     if season != first_season:
       try:
@@ -83,6 +84,7 @@ def opp_npxGp90(team, kickoff_time, season, team_stats_dict, gw_no_lim):
   for x in range(team_stats_dict[season][team].shape[0]):
     if team_stats_dict[season][team]['date'][x] >= convert_date(kickoff_time):
       break
+
   if x < gw_no_lim:
     if season != first_season:
       try:
@@ -145,6 +147,7 @@ def npxGp90(df, season, kickoff_time, gw_no_lim):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
         x=x-1
         break
+
     if x < gw_no_lim:
       #get last season's data
       return float(90*df[df['season']==season-1][['npxG']].sum()/float(df[df['season']==season-1][['time']].sum()))
@@ -160,6 +163,7 @@ def xAp90(df, season, kickoff_time, gw_no_lim):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
         x=x-1
         break
+
     if x < gw_no_lim:
       #get last season's data
       return float(90*df[df['season']==season-1][['xA']].sum()/float(df[df['season']==season-1][['time']].sum()))
@@ -175,6 +179,7 @@ def shp90(df, season, kickoff_time, gw_no_lim):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
         x=x-1
         break
+
     if x < gw_no_lim:
       #get last season's data
       return float(90*df[df['season']==season-1][['shots']].sum()/float(df[df['season']==season-1][['time']].sum()))
@@ -190,6 +195,7 @@ def kpp90(df, season, kickoff_time, gw_no_lim):
       if df[df['season']==season][::-1]['date'].iloc[x] >= convert_date(kickoff_time):
         x=x-1
         break
+
     if x < gw_no_lim:
       #get last season's data
       return float(90*df[df['season']==season-1][['key_passes']].sum()/float(df[df['season']==season-1][['time']].sum()))
@@ -402,12 +408,12 @@ xpens_2022 = {
       'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         
       'Everton': [(246, 0), (258, 0), (601, 0)], #dcl, maupay, danjuma
       'Luton':  [(326, 0), (314, 0), (340, 0)], #Morris, Adebayo, Woodrow           
-      'Burnley':  [(177, 0), (170, 0), (161, 0)], #rodriguez, gudmundsson, brownhill
+      'Burnley':  [(177, 0), (170, 0), (594, 0)], #rodriguez, gudmundsson, amdouni
       'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
       'Man City':  [(355, 0), (359, 0), (343, 0)], #haaland, mahrez, alvarez
       'Man Utd': [(373, 0), (396, 0), (390, 0)], #bruno, rashford, martial
       'Newcastle': [(433, 0), (415, 0), (416, 0)], #wilson, isak, joelinton
-      'Nott\'m Forest':[(447, 0), (450, 0), (437, 0)], #gibbs-white, johnson, awoniyi                                                     
+      'Nott\'m Forest':[(447, 0), (437, 0), (378, 0)], #gibbs-white, awoniyi, elanga                                                     
       'Sheffield Utd':  [(477, 0), (488, 0), (481, 0)], #brewster, norwood, fleck
       'Spurs': [(516, 0), (509, 0), (504, 0)], #son, richarlison, maddison
       'Fulham': [(278, 0), (267, 0), (288, 0)], #mitro, andreas, wilson                                                   
