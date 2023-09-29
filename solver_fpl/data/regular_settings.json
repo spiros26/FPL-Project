@@ -1,10 +1,10 @@
 {
-    "horizon": 10,
+    "horizon": 5,
     "ft_value": 1.5,
     "itb_value": 0.05,
     "decay_base": 0.85,
     "no_future_transfer": false,
-    "no_transfer_last_gws": 5,
+    "no_transfer_last_gws": 3,
     "randomized": false,
     "xmin_lb": 20,
     "bench_weights": {
@@ -13,9 +13,7 @@
         "2": 0.06,
         "3": 0.003
     },
-    "banned": [
-        44
-    ],
+    "banned": [],
     "locked": [],
     "delete_tmp": true,
     "secs": 72000,

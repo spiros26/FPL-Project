@@ -1,21 +1,19 @@
 ** GW 7:
-ITB=0.9, FT=1.0, PT=0, NT=1.0
-Buy 161 - Brownhill
-Sell 365 - Rodrigo
+ITB=0.7, FT=0, PT=0, NT=0
 ---
 Lineup: 
 	Leno (4.06)
-	Pinnock (3.8), Estupiñan (4.42), Burke (6.4)
-	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39), Brownhill (7.68, C)
-	Wilson (4.55), Haaland (7.51, V)
+	Pinnock (3.8), Estupiñan (4.42), Burke (6.4, V)
+	B.Fernandes (5.06), Koleosho (5.47), Mbeumo (5.54), Salah (6.31), Saka (6.39)
+	Wilson (4.55), Haaland (7.51, C)
 Bench: 
 	Johnstone, Colwill, Udogie, Mubama
-Lineup xPts: 69.4
+Lineup xPts: 67.04
 ---
 
 ** GW 8:
 CHIP WC
-ITB=0.8, FT=1.0, PT=0, NT=9.0
+ITB=0.1, FT=1.0, PT=0, NT=10.0
 Buy 516 - Son
 Buy 504 - Maddison
 Buy 599 - Diaby
@@ -24,16 +22,18 @@ Buy 281 - Ream
 Buy 511 - Romero
 Buy 113 - Raya
 Buy 220 - Andersen
+Buy 44 - Duran
 Buy 33 - Archer
 Sell 19 - Saka
 Sell 373 - B.Fernandes
-Sell 161 - Brownhill
 Sell 519 - Udogie
 Sell 433 - Wilson
 Sell 197 - Colwill
 Sell 230 - Johnstone
 Sell 112 - Pinnock
+Sell 605 - Koleosho
 Sell 318 - Burke
+Sell 538 - Mubama
 ---
 Lineup: 
 	Leno (5.16)
@@ -41,117 +41,46 @@ Lineup:
 	Diaby (4.96), Mbeumo (5.04), Salah (5.71), Maddison (6.73, V), Son (7.54, C)
 	Haaland (5.55)
 Bench: 
-	Raya, Estupiñan, Archer, Mubama
+	Raya, Estupiñan, Archer, Duran
 Lineup xPts: 68.66
 ---
 
 ** GW 9:
-ITB=0.8, FT=1.0, PT=0, NT=0
+ITB=0.1, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
 	Leno (3.9)
 	Ream (3.91), Romero (4.58), Cash (4.62)
 	Diaby (4.75), Maddison (5.8), Son (6.36), Mbeumo (6.76, V), Salah (7.16, C)
-	Archer (3.37), Haaland (6.56)
+	Duran (3.88), Haaland (6.56)
 Bench: 
-	Raya, Estupiñan, Andersen, Mubama
-Lineup xPts: 64.92
+	Raya, Archer, Estupiñan, Andersen
+Lineup xPts: 65.43
 ---
 
 ** GW 10:
-ITB=0, FT=2.0, PT=0, NT=1.0
-Buy 19 - Saka
-Sell 504 - Maddison
+ITB=0.1, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
 	Raya (5.26)
-	Romero (3.54), Andersen (4.13), Estupiñan (5.55), Cash (6.66)
-	Mbeumo (4.72), Son (5.57), Diaby (6.0), Saka (6.83, V), Salah (7.47, C)
-	Haaland (6.14)
+	Andersen (4.13), Estupiñan (5.55), Cash (6.66, V)
+	Mbeumo (4.72), Maddison (5.06), Son (5.57), Diaby (6.0), Salah (7.47, C)
+	Duran (4.57), Haaland (6.14)
 Bench: 
-	Leno, Archer, Ream, Mubama
-Lineup xPts: 69.35
+	Leno, Romero, Archer, Ream
+Lineup xPts: 68.62
 ---
 
 ** GW 11:
-ITB=0.2, FT=2.0, PT=0, NT=2.0
-Buy 664 - Ward-Prowse
-Buy 395 - R.Varane
-Sell 599 - Diaby
-Sell 511 - Romero
+ITB=0.1, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
 	Leno (4.16)
-	R.Varane (4.2), Andersen (4.58), Cash (4.78), Estupiñan (4.82)
-	Ward-Prowse (4.37), Saka (4.93), Mbeumo (5.39), Son (5.57), Salah (8.44, V)
+	Ream (4.03), Andersen (4.58), Cash (4.78), Estupiñan (4.82)
+	Diaby (4.95), Maddison (5.03), Mbeumo (5.39), Son (5.57), Salah (8.44, V)
 	Haaland (8.68, C)
 Bench: 
-	Raya, Ream, Archer, Mubama
-Lineup xPts: 68.61
----
-
-** GW 12:
-ITB=0.2, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Raya (5.25)
-	Andersen (4.57), Cash (5.02), R.Varane (5.43), Estupiñan (6.43)
-	Mbeumo (4.47), Ward-Prowse (5.08), Son (6.21), Salah (6.54, V), Saka (6.67, C)
-	Haaland (5.92)
-Bench: 
-	Leno, Ream, Archer, Mubama
-Lineup xPts: 68.25
----
-
-** GW 13:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Leno (4.78)
-	Cash (4.14), Andersen (4.68), Ream (4.84), Estupiñan (5.13)
-	Mbeumo (4.77), Salah (5.31), Saka (5.35), Son (5.64), Ward-Prowse (6.01, V)
-	Haaland (6.51, C)
-Bench: 
-	Raya, R.Varane, Archer, Mubama
-Lineup xPts: 63.68
----
-
-** GW 14:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Raya (4.65)
-	Andersen (3.92), Estupiñan (4.28), Cash (4.7)
-	Ward-Prowse (4.51), Son (4.75), Saka (6.61), Mbeumo (6.9), Salah (7.47, C)
-	Archer (4.28), Haaland (7.23, V)
-Bench: 
-	Leno, R.Varane, Ream, Mubama
-Lineup xPts: 66.78
----
-
-** GW 15:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Leno (4.78)
-	R.Varane (4.08), Andersen (4.81), Estupiñan (4.88), Ream (4.9)
-	Mbeumo (4.39), Ward-Prowse (4.45), Son (5.92), Saka (6.53, V), Salah (8.49, C)
-	Haaland (6.0)
-Bench: 
-	Raya, Archer, Cash, Mubama
-Lineup xPts: 67.73
----
-
-** GW 16:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Leno (4.46)
-	Cash (3.8), Ream (4.44), R.Varane (4.86), Estupiñan (6.39)
-	Ward-Prowse (4.88), Son (5.24), Saka (5.64), Salah (6.19), Mbeumo (6.54, V)
-	Haaland (8.33, C)
-Bench: 
-	Raya, Archer, Andersen, Mubama
-Lineup xPts: 69.09
+	Raya, Romero, Archer, Duran
+Lineup xPts: 69.12
 ---
 
