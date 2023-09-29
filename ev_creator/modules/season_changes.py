@@ -18,7 +18,7 @@ expected_minutes = {
     9: [10.0],  # Jorginho
     10: [12.0], # Kiwior
     11: [0.0], # Marquinhos
-    12: [50.0], # Martinelli        FIXXXXX
+    12: [30.0], # Martinelli        FIXXXXX
     13: [65.0], # Nketiah
     14: [82.0], # Odegaard
     15: [0.0], # Partey
@@ -26,7 +26,7 @@ expected_minutes = {
     17: [15.0], # Ramsdale
     113: [75.0],    # Raya
     18: [0.0], # Runaarsson
-    19: [60.0], # Saka                  FIXXXX
+    19: [45.0], # Saka                  FIXXXX
     20: [82.0], # Saliba
     21: [5.0], # Sambi
     22: [13.0], # Smith Rowe
@@ -39,7 +39,7 @@ expected_minutes = {
     30: [0.0], # Xhaka
     31: [75.0], # Zinchenko
     578: [11.0],    # Nelson
-    540: [60.0],    # Rice                  FIXXXXX
+    540: [40.0],    # Rice                  FIXXXXX
     585: [0.0],    # J.Timber
     646: [0.0],    # Hein
 # Aston Villa
