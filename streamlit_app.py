@@ -40,6 +40,7 @@ def generate_transfer_suggestions(team_data, next_gw, horizon, iterations):
             for gw in gws:
                 players_in = []
                 players_out = []
+                print(plan)
                 players_in += plan[(plan['week']==gw) & (plan['transfer_in']==1)]['name'].to_list()
                 players_out += plan[(plan['week']==gw) & (plan['transfer_out']==1)]['name'].to_list()
                 transfers.append((players_in, players_out))
