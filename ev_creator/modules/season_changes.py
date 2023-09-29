@@ -238,7 +238,7 @@ expected_minutes = {
     192: [0.0],    # Bettinelli
     193: [3.0],    # Broja
     194: [0.0],    # Chalobah
-    195: [45.0],    # Chilwell
+    195: [0.0],    # Chilwell               FIXXX
     362: [22.0],    # Palmer
     196: [0.0],    # Chukwuemeka
     197: [79.0],    # Colwill
@@ -488,7 +488,7 @@ expected_minutes = {
     388: [0.0],    # Mainoo
     389: [23.0],    # Malacia
     390: [65.0],    # Martial
-    391: [80.0],    # Martinez
+    391: [0.0],    # Martinez
     392: [22.0],    # McTominay
     393: [0.0],    # Mengi
     394: [64.0],    # Pellistri
@@ -497,7 +497,7 @@ expected_minutes = {
     709: [45.0],     # Amrabat
     397: [0.0],    # Sancho
     398: [0.0],    # Shaw
-    508: [74.0],    # Reguillon
+    508: [0.0],    # Reguillon       FIXXXX
     399: [0.0],    # Shoretire
     400: [0.0],    # Van de Beek
     401: [0.0],    # Wan-Bissaka
