@@ -1,32 +1,86 @@
 ** GW 7:
-ITB=1.5, FT=1.0, PT=1.0, NT=2.0
-Buy 161 - Brownhill
-Buy 316 - Bell
-Sell 112 - Pinnock
-Sell 365 - Rodrigo
+ITB=0.4, FT=1.0, PT=0, NT=1.0
+Buy 664 - Ward-Prowse
+Sell 26 - Trossard
 ---
 Lineup: 
-	Leno (4.06)
-	Estupiñan (4.42), Burke (6.4), Bell (7.0)
-	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39), Brownhill (8.11, C)
-	Wilson (5.3), Haaland (7.51, V)
+	Kaminski (7.3, V)
+	Estupiñan (4.42), Andersen (4.96), Botman (5.83), Kaboré (6.31)
+	Son (5.17), Mbeumo (5.54), Ward-Prowse (6.21), Salah (6.31), Saka (6.35)
+	Haaland (7.51, C)
 Bench: 
-	Johnstone, Colwill, Udogie, Mubama
-Lineup xPts: 74.2
+	Leno, Saliba, Archer, Edouard
+Lineup xPts: 73.43
 ---
 
 ** GW 8:
-ITB=0.9, FT=1.0, PT=0, NT=1.0
-Buy 516 - Son
-Sell 19 - Saka
+ITB=0.8, FT=1.0, PT=0, NT=1.0
+Buy 36 - Cash
+Sell 20 - Saliba
 ---
 Lineup: 
 	Leno (5.16)
-	Colwill (3.89), Estupiñan (4.15), Udogie (4.49)
-	Brownhill (3.46), Mbeumo (5.04), B.Fernandes (5.05), Salah (5.71, V), Son (7.54, C)
-	Wilson (4.28), Haaland (5.55)
+	Botman (3.99), Estupiñan (4.15), Cash (4.57)
+	Ward-Prowse (4.16), Saka (4.74), Mbeumo (5.04), Salah (5.71, V), Son (7.54, C)
+	Archer (3.56), Haaland (5.55)
 Bench: 
-	Johnstone, Bell, Burke, Mubama
-Lineup xPts: 61.87
+	Kaminski, Kaboré, Andersen, Edouard
+Lineup xPts: 61.72
+---
+
+** GW 9:
+ITB=0.8, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (3.9)
+	Estupiñan (3.09), Botman (4.25), Cash (4.5)
+	Ward-Prowse (4.31), Saka (5.19), Son (6.36), Mbeumo (6.76, V), Salah (7.16, C)
+	Archer (3.37), Haaland (6.56)
+Bench: 
+	Kaminski, Kaboré, Andersen, Edouard
+Lineup xPts: 62.6
+---
+
+** GW 10:
+ITB=0, FT=2.0, PT=0, NT=2.0
+Buy 134 - Gross
+Buy 343 - J.Alvarez
+Sell 108 - Mbeumo
+Sell 225 - Edouard
+---
+Lineup: 
+	Leno (3.38)
+	Botman (4.35), Estupiñan (5.55), Cash (6.49)
+	Ward-Prowse (4.93), Gross (5.37), Son (5.57), Saka (6.79, V), Salah (7.47, C)
+	J.Alvarez (4.96), Haaland (6.14)
+Bench: 
+	Kaminski, Archer, Kaboré, Andersen
+Lineup xPts: 68.48
+---
+
+** GW 11:
+ITB=0, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.16)
+	Botman (3.57), Cash (4.65), Estupiñan (4.82)
+	Ward-Prowse (4.37), Gross (4.82), Saka (4.9), Son (5.57), Salah (8.44, V)
+	J.Alvarez (5.54), Haaland (8.68, C)
+Bench: 
+	Kaminski, Archer, Kaboré, Andersen
+Lineup xPts: 68.2
+---
+
+** GW 12:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.03)
+	Botman (4.34), Cash (4.88), Estupiñan (6.43)
+	Ward-Prowse (5.08), Gross (5.77), Son (6.21), Salah (6.54, V), Saka (6.63, C)
+	J.Alvarez (4.69), Haaland (5.92)
+Bench: 
+	Kaminski, Archer, Kaboré, Andersen
+Lineup xPts: 67.15
 ---
 

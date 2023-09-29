@@ -14,19 +14,19 @@ expected_minutes = {
     5: [75.0],  # Gabriel
     6: [63.0],  # Havertz
     7: [3.0],  # Holding
-    8: [65.0],  # Jesus
+    8: [75.0],  # Jesus
     9: [10.0],  # Jorginho
     10: [12.0], # Kiwior
     11: [0.0], # Marquinhos
-    12: [62.0], # Martinelli
+    12: [50.0], # Martinelli        FIXXXXX
     13: [65.0], # Nketiah
     14: [82.0], # Odegaard
     15: [0.0], # Partey
     16: [3.0], # Pepe
-    17: [5.0], # Ramsdale
-    113: [85.0],    # Raya
+    17: [15.0], # Ramsdale
+    113: [75.0],    # Raya
     18: [0.0], # Runaarsson
-    19: [85.0], # Saka
+    19: [60.0], # Saka                  FIXXXX
     20: [82.0], # Saliba
     21: [5.0], # Sambi
     22: [13.0], # Smith Rowe
@@ -39,16 +39,16 @@ expected_minutes = {
     30: [0.0], # Xhaka
     31: [75.0], # Zinchenko
     578: [11.0],    # Nelson
-    540: [85.0],    # Rice
+    540: [60.0],    # Rice                  FIXXXXX
     585: [0.0],    # J.Timber
     646: [0.0],    # Hein
 # Aston Villa
     686: [0.0], # Zych
     699: [5.0], # Lenglet
     32: [35.0], # Alex Moreno
-    34: [57.0], # Bailey
+    34: [27.0], # Bailey                            FIXXXXX
     35: [55.0], # Buendia
-    36: [74.0], # Cash
+    36: [77.0], # Cash
     37: [4.0], # Chambers
     38: [15.0], # Coutinho
     39: [0.0], # Davis
@@ -56,7 +56,7 @@ expected_minutes = {
     41: [0.0], # Diego Carlos
     42: [70.0], # Digne 
     43: [80.0], # Douglas Luiz
-    44: [13.0], # Duran
+    44: [10.0], # Duran
     45: [8.0], # Hause 
     46: [3.0], # Iroegbunam
     47: [35.0], # Kamara
@@ -140,7 +140,7 @@ expected_minutes = {
     111: [12.0],    # Onyeka
     112: [85.0],    # Pinnock
     114: [0.0],    # Roerslev
-    115: [65.0],    # Schade
+    115: [0.0],    # Schade
     116: [0.0],    # Strakosha
     117: [0.0],    # Toney
     118: [0.0],    # Trevitt
@@ -160,8 +160,8 @@ expected_minutes = {
     130: [0.0],    # Enciso
     131: [75.0],    # Estupinan
     132: [57.0],    # Ferguson
-    133: [58.0],    # Gilmour
-    134: [75.0],    # Gross
+    133: [64.0],    # Gilmour
+    134: [0.0],    # Gross                  FIXXXX
     135: [52.0],    # Joao Pedro
     136: [0.0],    # Karbownik
     137: [0.0],    # Kozlowski
@@ -169,7 +169,7 @@ expected_minutes = {
     139: [0.0],    # Lamptey
     140: [63.0],    # March
     141: [0.0],    # McGill
-    142: [50.0],    # Milner
+    142: [0.0],    # Milner                    FIXXXXXXX
     143: [73.0],    # Mitoma
     144: [0.0],    # Moder
     146: [12.0],    # Sarmiento
@@ -192,16 +192,16 @@ expected_minutes = {
     675: [62.0],     # Ramsey
     157: [80.0],    # Al-Dakhil
     158: [0.0],    # Bastien
-    159: [15.0],    # Benson
+    159: [0.0],    # Benson         FIXXXX
     160: [69.0],    # Beyer
-    161: [76.0],    # Brownhill
+    161: [73.0],    # Brownhill
     162: [0.0],    # Churlinov
     163: [15.0],    # Cork
     164: [0.0],    # Costelloe
     165: [85.0],    # Cullen
     166: [0.0],    # Egan-Riley    
     167: [0.0],    # Ekdal
-    168: [0.0],    # Foster
+    168: [45.0],    # Foster        FIXXX
     169: [0.0],    # Franchi    
     170: [60.0],    # Gudmundsson
     171: [0.0],    # McNally
@@ -238,20 +238,20 @@ expected_minutes = {
     192: [0.0],    # Bettinelli
     193: [3.0],    # Broja
     194: [0.0],    # Chalobah
-    195: [55.0],    # Chilwell
+    195: [45.0],    # Chilwell
     362: [22.0],    # Palmer
     196: [0.0],    # Chukwuemeka
-    197: [75.0],    # Colwill
+    197: [79.0],    # Colwill
     198: [0.0],    # Cucurella
     199: [85.0],    # Enzo
     200: [0.0],    # D.D.Fofana
     201: [0.0],    # W.Fofana
     202: [77.0],    # Gallagher
-    203: [74.0],    # Gusto
+    203: [0.0],    # Gusto                  FIXXXX
     205: [0.0],    # Hudson-Odoi
     206: [0.0],    # James
     207: [0.0],    # Lukaku
-    208: [20.0],    # Madueke
+    208: [0.0],    # Madueke
     210: [62.0],    # Mudryk
     211: [78.0],    # N.Jackson
     212: [0.0],    # Nkunku
@@ -302,7 +302,7 @@ expected_minutes = {
 # Everton
     244: [24.0],    # Andre Gomes
     245: [34.0],    # Branthwaite
-    246: [34.0],    # Calvert-Lewin
+    246: [44.0],    # Calvert-Lewin
     247: [73.0],    # Coleman
     248: [0.0],    # Dele
     249: [83.0],    # A.Doucoure
@@ -354,9 +354,9 @@ expected_minutes = {
     283: [75.0],    # Robinson
     284: [1.0],     # Rodak
     285: [75.0],    # Tete
-    286: [12.0],    # Tosin
+    286: [0.0],    # Tosin      FIXXX
     287: [40.0],    # Vinicius
-    288: [64.0],    # Wilson
+    288: [70.0],    # Wilson
     558: [63.0],    # Jimenez
     591: [53.0],    # Willian
     610: [0.0],    # Bassey
@@ -366,9 +366,9 @@ expected_minutes = {
     662: [0.0],    # Adama Traore
 # Liverpool
     289: [0.0],     # Adrian
-    290: [0.0],    # Alexander-Arnold
+    290: [70.0],    # Alexander-Arnold      FIXXXX
     291: [89.0],    # Alisson
-    292: [15.0],    # Bajcetic
+    292: [0.0],    # Bajcetic      
     708: [15.0],     # Gravenberch
     293: [55.0],    # Darwin
     294: [55.0],    # Diogo Jota
@@ -438,7 +438,7 @@ expected_minutes = {
 # Man City
     341: [65.0],    # Akanji
     342: [60.0],    # Ake
-    343: [77.0],    # Alvarez
+    343: [68.0],    # Alvarez
     344: [0.0],    # Bernardo
     345: [0.0],    # Bobb
     346: [0.0],    # Cancelo
@@ -449,9 +449,9 @@ expected_minutes = {
     351: [0.0],    # Doyle
     352: [88.0],    # Ederson
     353: [72.0],    # Foden
-    354: [0.0],    # Grealish
+    354: [50.0],    # Grealish
     355: [86.0],    # Haaland
-    678: [65.0],     # Doku
+    678: [60.0],     # Doku
     356: [0.0],    # Kovacic
     357: [0.0],    # Laporte
     358: [14.0],    # Lewis
@@ -464,7 +464,7 @@ expected_minutes = {
     366: [10.0],    # Sergio Gomez
     367: [0.0],    # Steffen
     368: [0.0],    # Stones
-    369: [74.0],    # Walker
+    369: [76.0],    # Walker
     616: [65.0],    # Gvardiol
 # Man United
     370: [12.0],    # Telles
@@ -475,7 +475,7 @@ expected_minutes = {
     374: [0.0],    # B.Williams
     375: [0.0],    # Bailly
     376: [82.0],    # Casemiro
-    377: [72.0],    # Dalot
+    377: [77.0],    # Dalot
     379: [63.0],    # Eriksen
     380: [0.0],    # Alvaro Fernandez
     381: [45.0],    # Fred
@@ -509,9 +509,9 @@ expected_minutes = {
     402: [68.0],    # Almiron
     403: [45.0],    # Anderson
     404: [0.0],    # Ashby
-    405: [82.0],    # Botman
+    405: [85.0],    # Botman                        
     406: [85.0],    # Bruno Guimaraes
-    407: [82.0],    # Burn
+    407: [80.0],    # Burn
     204: [60.0],    # Hall
     408: [0.0],    # Darlow
     409: [1.0],    # Dubravka
@@ -520,7 +520,7 @@ expected_minutes = {
     412: [72.0],    # Gordon
     413: [0.0],    # Hayden
     414: [0.0],    # Hendrick
-    415: [45.0],    # Isak
+    415: [50.0],    # Isak
     416: [75.0],    # Joelinton
     417: [0.0],    # Krafth
     418: [0.0],    # Kuol
@@ -603,7 +603,7 @@ expected_minutes = {
     482: [89.0],    # Foderingham
     483: [0.0],    # Jebbison
     484: [62.0],    # Lowe
-    485: [0.0],    # McBurnie
+    485: [70.0],    # McBurnie
     486: [55.0],    # Ndiaye
     487: [0.0],    # Norrington-Davies
     488: [74.0],    # Norwood
@@ -636,11 +636,11 @@ expected_minutes = {
     504: [85.0],    # Maddison
     450: [55.0],    # Johnson
     505: [0.0],    # Ndombele
-    506: [72.0],    # Pedro Porro
+    506: [76.0],    # Pedro Porro
     507: [0.0],    # Perisic  
     509: [50.0],    # Richarlison
     510: [0.0],    # Rodon
-    511: [82.0],    # Romero
+    511: [80.0],    # Romero
     512: [0.0],    # Sanchez
     513: [72.0],    # Sarr
     514: [0.0],    # R.Sessegnon
@@ -731,23 +731,23 @@ expected_minutes = {
     593: [0.0],    # T.Benie
 
     690: [0.0],     # Baleba
-    603: [55.0],    # Barnes
+    603: [0.0],    # Barnes
     604: [69.0]    # Aina
     
  }
 
 
 def add_extra_players(master, players_raw):
-    n = 32
-    master_extra = pd.DataFrame({'code': [222683, 118342, 168090, 578614, 189776, 183751, 250735, 435973, 482609, 517052, 213198, 424876, 432422, 201440, 233821, 487053, 184254, 244954, 202641, 243557, 487702, 223434, 174310, 208904, 165183, 82738, 244262, 156700, 229164, 91046, 54738, 476369], 
-                                'first_name': ['Justin', 'Mark', 'Mahmoud', 'Enock', 'Samuel', 'Manuel Benson', 'Darko', 'Lyle', 'Malo', 'Nicolas', 'Christopher', 'Dominik', 'Sandro', 'Hwang', 'Anel', 'Destiny', 'Guglielmo', 'Pau', 'André', 'Moussa', 'Luca', 'Igor Julio', 'Elijah', 'Mads Juel', 'Amari\'i', 'Luke', 'Alfie', 'Carlton', 'Chiedozie', 'Cauley', 'Thomas', 'Issa'], 
-                                'second_name': ['Kluivert', 'Flekken', 'Dahoud', 'Agyei', 'Bastien', 'Hedilazio', 'Churlinov', 'Foster', 'Gusto', 'Jackson', 'Nkunku', 'Szoboszlai', 'Tonali', 'Ui-jo', 'Ahmedhodžić', 'Udogie', 'Vicario', 'Torres', 'Onana', 'Diaby', 'Koleosho', 'dos Santos de Paulo', 'Adebayo', 'Andersen', 'Bell', 'Berry', 'Doughty', 'Morris', 'Ogbene', 'Woodrow', 'Kaminski', 'Kabore'], 
-                                'web_name': ['Kluivert', 'Flekken', 'Dahoud', 'Agyei', 'Bastien', 'Benson', 'Churlinov', 'Foster', 'Gusto', 'N.Jackson', 'Nkunku', 'Szoboszlai', 'Tonali', 'Ui-jo', 'Ahmedhodžić', 'Udogie', 'Vicario', 'Pau', 'Onana', 'Diaby', 'Koleosho', 'Igor', 'Adebayo', 'Andersen', 'Bell', 'Berry', 'Doughty', 'Morris', 'Ogbene', 'Woodrow', 'Kaminski', 'Kabore'], 
+    n = 33
+    master_extra = pd.DataFrame({'code': [492831, 222683, 118342, 168090, 578614, 189776, 183751, 250735, 435973, 482609, 517052, 213198, 424876, 432422, 201440, 233821, 487053, 184254, 244954, 202641, 243557, 487702, 223434, 174310, 208904, 165183, 82738, 244262, 156700, 229164, 91046, 54738, 476369], 
+                                'first_name': ['Zeki', 'Justin', 'Mark', 'Mahmoud', 'Enock', 'Samuel', 'Manuel Benson', 'Darko', 'Lyle', 'Malo', 'Nicolas', 'Christopher', 'Dominik', 'Sandro', 'Hwang', 'Anel', 'Destiny', 'Guglielmo', 'Pau', 'André', 'Moussa', 'Luca', 'Igor Julio', 'Elijah', 'Mads Juel', 'Amari\'i', 'Luke', 'Alfie', 'Carlton', 'Chiedozie', 'Cauley', 'Thomas', 'Issa'], 
+                                'second_name': ['Amdouni', 'Kluivert', 'Flekken', 'Dahoud', 'Agyei', 'Bastien', 'Hedilazio', 'Churlinov', 'Foster', 'Gusto', 'Jackson', 'Nkunku', 'Szoboszlai', 'Tonali', 'Ui-jo', 'Ahmedhodžić', 'Udogie', 'Vicario', 'Torres', 'Onana', 'Diaby', 'Koleosho', 'dos Santos de Paulo', 'Adebayo', 'Andersen', 'Bell', 'Berry', 'Doughty', 'Morris', 'Ogbene', 'Woodrow', 'Kaminski', 'Kabore'], 
+                                'web_name': ['Amdouni', 'Kluivert', 'Flekken', 'Dahoud', 'Agyei', 'Bastien', 'Benson', 'Churlinov', 'Foster', 'Gusto', 'N.Jackson', 'Nkunku', 'Szoboszlai', 'Tonali', 'Ui-jo', 'Ahmedhodžić', 'Udogie', 'Vicario', 'Pau', 'Onana', 'Diaby', 'Koleosho', 'Igor', 'Adebayo', 'Andersen', 'Bell', 'Berry', 'Doughty', 'Morris', 'Ogbene', 'Woodrow', 'Kaminski', 'Kabore'], 
                                 '16-17': [np.NaN]*n, '17-18': [np.NaN]*n, '18-19': [np.NaN]*n, '19-20': [np.NaN]*n, '20-21': [np.NaN]*n, '21-22': [np.NaN]*n, '22-23': [np.NaN]*n,
                                 'fbref': [np.NaN]*n,
-                                'understat': [6963.0, 7047.0, 205.0, 5563.0, 1343.0, 7383.0, 7790.0, 7498.0, 9017.0, 10048.0, 3300.0, 9788.0, 7958.0, 7746.0, 10386.0, 8831.0, 8858.0, 6221.0, 10913.0, 6556.0, 10620.0, 7943.0, 11718.0, 11715.0, 11713.0, 11722.0, 11723.0, 11717.0, 11719.0, 11721.0, 11712.0, 9619.0],
+                                'understat': [11701.0, 6963.0, 7047.0, 205.0, 5563.0, 1343.0, 7383.0, 7790.0, 7498.0, 9017.0, 10048.0, 3300.0, 9788.0, 7958.0, 7746.0, 10386.0, 8831.0, 8858.0, 6221.0, 10913.0, 6556.0, 10620.0, 7943.0, 11718.0, 11715.0, 11713.0, 11722.0, 11723.0, 11717.0, 11719.0, 11721.0, 11712.0, 9619.0],
                                 'transfermarkt': [np.NaN]*n,
-                                '23-24': [72.0, 101.0, 128.0, 156.0, 158.0, 159.0, 162.0, 168.0, 203.0, 211.0, 212.0, 309.0, 429.0, 466.0, 471.0, 519.0, 520.0, 584.0, 597.0, 599.0, 605.0, 606.0, 314.0, 315.0, 316.0, 317.0, 321.0, 326.0, 328.0, 340.0, 614.0, 602.0]})
+                                '23-24': [594.0, 72.0, 101.0, 128.0, 156.0, 158.0, 159.0, 162.0, 168.0, 203.0, 211.0, 212.0, 309.0, 429.0, 466.0, 471.0, 519.0, 520.0, 584.0, 597.0, 599.0, 605.0, 606.0, 314.0, 315.0, 316.0, 317.0, 321.0, 326.0, 328.0, 340.0, 614.0, 602.0]})
     master = master.append(master_extra, ignore_index=True)
 
     new_players = pd.read_csv('new_players_after6.csv')

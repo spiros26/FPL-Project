@@ -408,7 +408,7 @@ xpens_2022 = {
       'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         
       'Everton': [(246, 0), (258, 0), (601, 0)], #dcl, maupay, danjuma
       'Luton':  [(326, 0), (314, 0), (340, 0)], #Morris, Adebayo, Woodrow           
-      'Burnley':  [(177, 0), (170, 0), (675, 0)], #rodriguez, gudmundsson, brownhill
+      'Burnley':  [(177, 0), (170, 0), (594, 0)], #rodriguez, gudmundsson, amdouni
       'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
       'Man City':  [(355, 0), (359, 0), (343, 0)], #haaland, mahrez, alvarez
       'Man Utd': [(373, 0), (396, 0), (390, 0)], #bruno, rashford, martial

@@ -75,7 +75,7 @@
         {
             "element": 365,
             "position": 9,
-            "selling_price": 57,
+            "selling_price": 56,
             "multiplier": 1,
             "purchase_price": 57,
             "is_captain": false,
@@ -129,7 +129,7 @@
         {
             "element": 538,
             "position": 15,
-            "selling_price": 44,
+            "selling_price": 43,
             "multiplier": 0,
             "purchase_price": 45,
             "is_captain": false,
@@ -180,6 +180,6 @@
         "limit": 1,
         "made": 0,
         "bank": 1,
-        "value": 1007
+        "value": 1006
     }
 }
