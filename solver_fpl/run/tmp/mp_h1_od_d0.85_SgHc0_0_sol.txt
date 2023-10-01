@@ -1,3 +1,0 @@
-Optimal - objective value -0.08000000
-   4460 itb[6]                                        1.6                      0
-   4461 itb[7]                                        1.6                      0
