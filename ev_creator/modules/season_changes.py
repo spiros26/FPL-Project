@@ -26,53 +26,53 @@ expected_minutes = {
     17: [15.0], # Ramsdale
     113: [75.0],    # Raya
     18: [0.0], # Runaarsson
-    19: [45.0], # Saka                  FIXXXX
-    20: [82.0], # Saliba
+    19: [85.0], # Saka                
+    20: [85.0], # Saliba                
     21: [5.0], # Sambi
     22: [13.0], # Smith Rowe
     23: [12.0], # Tavares
     24: [0.0], # Tierney
     25: [0.0], # Tomiyasu
-    26: [35.0], # Trossard
+    26: [25.0], # Trossard
     27: [0.0],  # Trusty
     29: [84.0], # White
     30: [0.0], # Xhaka
     31: [75.0], # Zinchenko
     578: [11.0],    # Nelson
-    540: [40.0],    # Rice                  FIXXXXX
+    540: [85.0],    # Rice                  
     585: [0.0],    # J.Timber
     646: [0.0],    # Hein
 # Aston Villa
     686: [0.0], # Zych
     699: [5.0], # Lenglet
-    32: [35.0], # Alex Moreno
-    34: [27.0], # Bailey                            FIXXXXX
-    35: [55.0], # Buendia
+    32: [15.0], # Alex Moreno
+    34: [0.0], # Bailey                            FIXXXXX
+    35: [15.0], # Buendia
     36: [77.0], # Cash
     37: [4.0], # Chambers
     38: [15.0], # Coutinho
     39: [0.0], # Davis
-    40: [13.0], # Dendoncker
+    40: [0.0], # Dendoncker
     41: [0.0], # Diego Carlos
-    42: [70.0], # Digne 
+    42: [75.0], # Digne 
     43: [80.0], # Douglas Luiz
     44: [10.0], # Duran
     45: [8.0], # Hause 
-    46: [3.0], # Iroegbunam
-    47: [35.0], # Kamara
+    46: [0.0], # Iroegbunam
+    47: [70.0], # Kamara
     48: [77.0], # Konsa
     49: [89.0], # Martinez
-    50: [76.0], # McGinn
+    50: [78.0], # McGinn
     51: [0.0], # Mings
     53: [1.0], # Olsen
     54: [0.0], # Philogene-Bidace
-    55: [5.0], # Ramsey
-    56: [8.0], # Sanson
+    55: [15.0], # Ramsey
+    56: [0.0], # Sanson
     57: [0.0], # Sinisalo
-    58: [16.0], # Tielemans
-    59: [15.0], # Traore
+    58: [10.0], # Tielemans
+    59: [10.0], # Traore
     60: [80.0], # Watkins
-    61: [1.0], # Wesley
+    61: [0.0], # Wesley
     584: [78.0],    # Pau Torres
     599: [77.0],    # Diaby
     618: [0.0],    # Kellyman
@@ -88,9 +88,9 @@ expected_minutes = {
     67: [12.0], # Dembele
     68: [4.0], # Fredericks
     69: [0.0], # Hill
-    70: [75.0], # Kelly
+    70: [0.0], # Kelly              FIXXXX
     71: [0.0], # Kilkenny
-    72: [50.0], # Kluivert
+    72: [60.0], # Kluivert
     73: [0.0], # Lowe
     74: [0.0], # Marcondes
     75: [0.0], # Mepham
@@ -103,8 +103,8 @@ expected_minutes = {
     82: [10.0], # Semenyo
     83: [22.0], # Senesi
     84: [12.0], # Smith
-    85: [85.0], # Solanke
-    86: [68.0], # Tavernier
+    85: [85.0], # Solanke           
+    86: [72.0], # Tavernier
     87: [12.0], # H.Traore
     88: [0.0], # Travers
     89: [78.0], # Zabarnyi
@@ -159,13 +159,13 @@ expected_minutes = {
     129: [84.0],    # Dunk
     130: [0.0],    # Enciso
     131: [75.0],    # Estupinan
-    132: [57.0],    # Ferguson
+    132: [60.0],    # Ferguson
     133: [64.0],    # Gilmour
     134: [0.0],    # Gross                  FIXXXX
     135: [52.0],    # Joao Pedro
     136: [0.0],    # Karbownik
     137: [0.0],    # Kozlowski
-    138: [50.0],    # Lallana
+    138: [0.0],    # Lallana                FIXXXX
     139: [0.0],    # Lamptey
     140: [63.0],    # March
     141: [0.0],    # McGill
@@ -176,7 +176,7 @@ expected_minutes = {
     147: [0.0],    # Scherpen
     148: [30.0],    # Steele
     149: [0.0],    # Undav
-    150: [63.0],    # Van Hecke
+    150: [60.0],    # Van Hecke
     151: [60.0],    # Veltman
     152: [60.0],    # Verbruggen
     153: [52.0],    # Webster
@@ -281,8 +281,8 @@ expected_minutes = {
     227: [1.0],    # Guaita
     228: [85.0],    # Guehi
     229: [45.0],    # Hughes
-    230: [75.0],    # Johnstone
-    385: [15.0],    # Henderson
+    230: [85.0],    # Johnstone
+    385: [0.0],    # Henderson
     231: [34.0],    # Lerma
     232: [70.0],    # Mateta                    FIXXXXXXX
     233: [0.0],    # Matthews
@@ -302,7 +302,7 @@ expected_minutes = {
 # Everton
     244: [24.0],    # Andre Gomes
     245: [34.0],    # Branthwaite
-    246: [44.0],    # Calvert-Lewin
+    246: [72.0],    # Calvert-Lewin
     247: [73.0],    # Coleman
     248: [0.0],    # Dele
     249: [83.0],    # A.Doucoure
@@ -310,7 +310,7 @@ expected_minutes = {
     251: [0.0],    # Gbamin
     252: [22.0],    # Godfrey
     253: [0.0],    # Gray
-    691: [50.0],     # Beto
+    691: [20.0],     # Beto
     254: [74.0],    # Gueye
     255: [13.0],    # Holgate
     257: [80.0],    # Keane
@@ -399,20 +399,20 @@ expected_minutes = {
 # Luton
     52: [84.0],     # Nakamba
     314: [55.0],    # Adebayo
-    315: [50.0],    # Andersen
+    315: [5.0],    # Andersen
     316: [84.0],    # Bell
-    317: [10.0],    # Burry
+    317: [0.0],    # Burry
     318: [77.0],    # Burke
     319: [75.0],    # Campbell
-    320: [78.0],    # Clark
+    320: [0.0],    # Clark          FIXXXX
     321: [55.0],    # Doughty
     322: [0.0],    # Freeman
     323: [0.0],    # Macey
     324: [0.0],    # McAtee
     325: [0.0],    # Mendes
     326: [80.0],    # Morris
-    582: [57.0],    # Mpanzu
-    586: [60.0],    # Chong
+    582: [37.0],    # Mpanzu
+    586: [55.0],    # Chong
     602: [73.0],    # Kabore
     327: [0.0],    # Muskwe
     328: [55.0],    # Ogbene
@@ -450,17 +450,18 @@ expected_minutes = {
     352: [88.0],    # Ederson
     353: [72.0],    # Foden
     354: [50.0],    # Grealish
+    566: [70.0],    # Matheus Nunes
     355: [86.0],    # Haaland
     678: [60.0],     # Doku
-    356: [0.0],    # Kovacic
+    356: [60.0],    # Kovacic
     357: [0.0],    # Laporte
     358: [14.0],    # Lewis
     359: [0.0],    # Mahrez
     360: [4.0],    # McAtee
     361: [2.0],    # Ortega
     363: [0.0],    # Perrone
-    364: [64.0],    # Phillips
-    365: [0.0],    # Rodri
+    364: [5.0],    # Phillips              
+    365: [0.0],    # Rodri                  FIXXXXXX
     366: [10.0],    # Sergio Gomez
     367: [0.0],    # Steffen
     368: [0.0],    # Stones
@@ -509,7 +510,7 @@ expected_minutes = {
     402: [68.0],    # Almiron
     403: [45.0],    # Anderson
     404: [0.0],    # Ashby
-    405: [85.0],    # Botman                        
+    405: [25.0],    # Botman                   FIXXXX                      
     406: [85.0],    # Bruno Guimaraes
     407: [80.0],    # Burn
     204: [60.0],    # Hall
@@ -520,11 +521,11 @@ expected_minutes = {
     412: [72.0],    # Gordon
     413: [0.0],    # Hayden
     414: [0.0],    # Hendrick
-    415: [50.0],    # Isak
+    415: [70.0],    # Isak              FIXXXXX
     416: [75.0],    # Joelinton
     417: [0.0],    # Krafth
     418: [0.0],    # Kuol
-    419: [0.0],    # Lascelles
+    419: [70.0],    # Lascelles         FIXXXXX
     420: [0.0],    # Lewis
     421: [60.0],    # S.Longstaff
     422: [0.0],    # Manquillo
@@ -538,7 +539,7 @@ expected_minutes = {
     430: [87.0],    # Trippier
     431: [0.0],    # Watts
     432: [25.0],    # Willock    
-    433: [65.0],    # Wilson
+    433: [25.0],    # Wilson            FIXXX
     633: [15.0],    # Livramento
     634: [0.0],    # Alex Murphy
     635: [0.0],    # Miley
@@ -704,7 +705,6 @@ expected_minutes = {
     563: [83.0],    # Kilman
     564: [0.0],    # King
     565: [74.0],    # Lemina
-    566: [80.0],    # Matheus Nunes
     567: [79.0],    # Neto
     568: [0.0],    # Podence
     569: [89.0],    # Sa
