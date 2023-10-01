@@ -462,7 +462,7 @@ def solve_multi_period_fpl(data, options):
                 gap = options.get('gap', 0)
                 secs = options.get('secs', 20*60)
 
-                command = f'../../bin/cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio {gap} sec {secs} solve solu tmp/{problem_name}_{problem_id}_{iter}_sol.txt'
+                command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio {gap} sec {secs} solve solu tmp/{problem_name}_{problem_id}_{iter}_sol.txt'
                 if use_cmd:
                     os.system(command)
                 else:
@@ -470,15 +470,16 @@ def solve_multi_period_fpl(data, options):
                     process.wait()
 
             else:
-
-                command = f'../../bin/cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio 1 solve solu tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt'
+                import os
+                print(os.getcwd())
+                command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio 1 solve solu tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt'
                 if use_cmd:
                     os.system(command)
                 else:
                     process = Popen(command, shell=False)
                     process.wait()
                 secs = options.get('secs', 20*60)
-                command = f'../../bin/cbc tmp/{problem_name}_{problem_id}_{iter}.mps mips tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt cost column sec {secs} solve solu tmp/{problem_name}_{problem_id}_{iter}_sol.txt'
+                command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps mips tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt cost column sec {secs} solve solu tmp/{problem_name}_{problem_id}_{iter}_sol.txt'
                 if use_cmd:
                     os.system(command)
                 else:
