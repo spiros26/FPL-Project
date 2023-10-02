@@ -229,20 +229,20 @@ expected_minutes = {
     660: [0.0],    # Odobert
 # Chelsea
     145: [89.0],    # Sanchez
-    126: [75.0],    # Caicedo
+    126: [77.0],    # Caicedo
     187: [0.0],    # Arrizabalaga
     188: [0.0],    # Aubameyang
     189: [0.0],    # Azpilicueta
     190: [0.0],    # Baba Rahman
     191: [0.0],    # Badiashile
     192: [0.0],    # Bettinelli
-    193: [3.0],    # Broja
+    193: [23.0],    # Broja
     194: [0.0],    # Chalobah
     195: [0.0],    # Chilwell               FIXXX
-    362: [22.0],    # Palmer
+    362: [52.0],    # Palmer
     196: [0.0],    # Chukwuemeka
-    197: [79.0],    # Colwill
-    198: [0.0],    # Cucurella
+    197: [82.0],    # Colwill
+    198: [60.0],    # Cucurella
     199: [85.0],    # Enzo
     200: [0.0],    # D.D.Fofana
     201: [0.0],    # W.Fofana
@@ -252,19 +252,19 @@ expected_minutes = {
     206: [0.0],    # James
     207: [0.0],    # Lukaku
     208: [0.0],    # Madueke
-    210: [62.0],    # Mudryk
+    210: [60.0],    # Mudryk
     211: [78.0],    # N.Jackson
     212: [0.0],    # Nkunku
     213: [0.0],    # Pulisic
     214: [0.0],    # Sarr
     215: [0.0],    # Slonina
-    216: [82.0],    # Sterling
+    216: [65.0],    # Sterling
     217: [87.0],    # Thiago Silva
     218: [0.0],    # Ziyech
     589: [0.0],    # Angelo
     609: [5.0],    # Maatsen
     611: [82.0],    # Disasi 
-    613: [27.0],    # Ugochukwu
+    613: [17.0],    # Ugochukwu
     623: [2.0],    # Burtsow
     659: [0.0],    # Bergstrom
     667: [0.0],    # Lavia
@@ -353,7 +353,7 @@ expected_minutes = {
     282: [64.0],    # Reed
     283: [75.0],    # Robinson
     284: [1.0],     # Rodak
-    285: [75.0],    # Tete
+    285: [60.0],    # Tete
     286: [0.0],    # Tosin      FIXXX
     287: [40.0],    # Vinicius
     288: [70.0],    # Wilson

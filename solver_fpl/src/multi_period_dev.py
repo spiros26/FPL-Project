@@ -470,8 +470,7 @@ def solve_multi_period_fpl(data, options):
                     process.wait()
 
             else:
-                import os
-                print(os.getcwd())
+
                 command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio 1 solve solu tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt'
                 if use_cmd:
                     os.system(command)
