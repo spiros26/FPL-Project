@@ -41,7 +41,7 @@
         "M": "",
         "F": ""
     },
-    "iteration": 2,
+    "iteration": 1,
     "iteration_criteria": "this_gw_transfer_in_out",
     "datasource": "copilot",
     "data_weights": {
