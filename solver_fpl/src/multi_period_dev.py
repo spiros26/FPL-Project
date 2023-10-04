@@ -470,7 +470,12 @@ def solve_multi_period_fpl(data, options):
                     process.wait()
 
             else:
-                f = open(f'tmp/{problem_name}_{problem_id}_{iter}.mps', 'r')
+                #f = open(f'tmp/{problem_name}_{problem_id}_{iter}.mps', 'r')
+                from pathlib import Path
+
+                my_file = Path(f'tmp/{problem_name}_{problem_id}_{iter}.mps')
+                if my_file.is_file():
+                    print('.mps file exists')
                 command = 'cbc'
                 process = Popen(command, shell=False)
                 process.wait()    
