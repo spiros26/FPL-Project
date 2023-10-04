@@ -479,7 +479,7 @@ def solve_multi_period_fpl(data, options):
                 process = Popen(command, shell=False)
                 process.wait()    
                 file = open(f'tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt', 'w+')           
-                command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio 1 solve solu tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt'
+                command = f'cbc ./tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio 1 solve solu ./tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt'
                 if use_cmd:
                     os.system(command)
                 else:
