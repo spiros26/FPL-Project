@@ -11,7 +11,8 @@ import pandas as pd
 import os
 from datetime import datetime
 from PIL import Image
-im = Image.open('COPILOT.png')
+from zoneinfo import ZoneInfo
+im = Image.open('copilot.png')
 
 def hash_password(password):
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
@@ -121,7 +122,7 @@ elif choice == "Login":
         if authentication_status:
 
              # Get the next gameweek
-            now = datetime.now()
+            now = datetime.now(ZoneInfo('Europe/London'))
             dt_string = now.strftime("%Y-%m-%dT%H:%M:%SZ")
             url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
             df = pd.DataFrame(requests.get(url).json()['events'])
