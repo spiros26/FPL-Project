@@ -483,7 +483,7 @@ def solve_multi_period_fpl(data, options):
                 if use_cmd:
                     os.system(command)
                 else:
-                    process = Popen(command, shell=False)
+                    process = Popen(command, shell=True)
                     process.wait()
                 secs = options.get('secs', 20*60)
                 command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps mips tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt cost column sec {secs} solve solu tmp/{problem_name}_{problem_id}_{iter}_sol.txt'
