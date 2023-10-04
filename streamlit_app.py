@@ -10,9 +10,12 @@ import subprocess
 import pandas as pd
 import os
 from datetime import datetime
+from pathlib import Path
 from PIL import Image
 from zoneinfo import ZoneInfo
-im = Image.open('COPILOT.png')
+
+img_file = Path() / 'copilot.png'
+im = Image.open(img_file)
 
 def hash_password(password):
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
