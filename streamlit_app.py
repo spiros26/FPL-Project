@@ -13,7 +13,7 @@ from datetime import datetime
 from PIL import Image
 from zoneinfo import ZoneInfo
 
-im = Image.open('copilot_img.png')
+im = Image.open('copilot_img.jpg')
 
 def hash_password(password):
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
