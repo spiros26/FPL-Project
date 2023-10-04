@@ -466,20 +466,10 @@ def solve_multi_period_fpl(data, options):
                 if use_cmd:
                     os.system(command)
                 else:
-                    process = Popen(command, shell=False)
+                    process = Popen(command, shell=True)
                     process.wait()
 
-            else:
-                #f = open(f'tmp/{problem_name}_{problem_id}_{iter}.mps', 'r')
-                '''
-                my_file = Path(f'tmp/{problem_name}_{problem_id}_{iter}.mps')
-                if my_file.is_file():
-                    print('.mps file exists')
-                command = 'cbc'
-                process = Popen(command, shell=True)
-                process.wait()    
-                file = open(f'tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt', 'w+')  
-                '''         
+            else:     
                 command = f'cbc tmp/{problem_name}_{problem_id}_{iter}.mps cost column ratio 1 solve solu tmp/{problem_name}_{problem_id}_{iter}_sol_init.txt'
                 if use_cmd:
                     os.system(command)
@@ -491,7 +481,7 @@ def solve_multi_period_fpl(data, options):
                 if use_cmd:
                     os.system(command)
                 else:
-                    process = Popen(command, shell=False) # add 'stdout=DEVNULL' for disabling logs
+                    process = Popen(command, shell=True) # add 'stdout=DEVNULL' for disabling logs
                     process.wait()
 
             # Popen fix with split?
@@ -520,7 +510,7 @@ def solve_multi_period_fpl(data, options):
             if use_cmd:
                 os.system(command)
             else:
-                process = Popen(command, shell=False)
+                process = Popen(command, shell=True)
                 process.wait()
 
             # Parsing
