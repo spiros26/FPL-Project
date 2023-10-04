@@ -1,0 +1,25 @@
+,week,name,pos,type,team,buy_price,sell_price,xP,xMin,squad,lineup,bench,captain,vicecaptain,transfer_in,transfer_out,multiplier,xp_cont
+9,4,Ederson M.,GKP,1,Man City,0,0,5.03,88.0,1,1,-1,0,0,0,0,1,5.026
+15,4,Pinnock,DEF,2,Brentford,0,0,4.49,85.0,1,1,-1,0,0,0,0,1,4.494
+13,4,Colwill,DEF,2,Chelsea,0,0,4.76,84.0,1,1,-1,0,0,0,0,1,4.756
+10,4,Rúben,DEF,2,Man City,0,0,4.87,75.0,1,1,-1,0,0,0,0,1,4.872
+12,4,Chilwell,DEF,2,Chelsea,0,0,4.88,80.0,1,1,-1,0,0,0,0,1,4.885
+7,4,Eze,MID,3,Crystal Palace,0,0,5.35,85.0,1,1,-1,0,0,0,0,1,5.351
+6,4,Mbeumo,MID,3,Brentford,0,0,5.43,83.0,1,1,-1,0,0,0,0,1,5.428
+5,4,Maddison,MID,3,Spurs,0,0,5.44,81.0,1,1,-1,0,0,0,0,1,5.444
+2,4,Son,MID,3,Spurs,0,0,6.1,82.0,1,1,-1,0,0,0,0,1,6.099
+0,4,Salah,MID,3,Liverpool,0,0,6.57,87.0,1,1,-1,1,0,0,0,2,13.142
+1,4,Haaland,FWD,4,Man City,0,0,6.46,85.0,1,1,-1,0,1,0,0,1,6.464
+17,4,Areola,GKP,1,West Ham,0,0,3.92,89.0,1,0,0,0,0,0,0,0,0.0
+16,4,Gusto,DEF,2,Chelsea,0,0,4.36,74.0,1,0,1,0,0,0,0,0,0.0
+18,4,Edouard,FWD,4,Crystal Palace,0,0,3.27,68.0,1,0,2,0,0,0,0,0,0.0
+19,4,Osula,FWD,4,Sheffield Utd,0,0,2.42,75.0,1,0,3,0,0,0,0,0,0.0
+21,4,Steele,GKP,1,Brighton,0,0,1.29,45.0,0,0,-1,0,0,0,0,0,0.0
+11,4,Johnstone,GKP,1,Crystal Palace,0,0,4.66,80.0,0,0,-1,0,0,0,0,0,0.0
+22,4,Gabriel,DEF,2,Arsenal,0,0,0.74,15.0,0,0,-1,0,0,0,0,0,0.0
+14,4,Estupiñan,DEF,2,Brighton,0,0,3.39,80.0,0,0,-1,0,0,0,0,0,0.0
+8,4,Mitoma,MID,3,Brighton,0,0,4.25,80.0,0,0,-1,0,0,0,0,0,0.0
+3,4,B.Fernandes,MID,3,Man Utd,0,0,4.76,85.0,0,0,-1,0,0,0,0,0,0.0
+4,4,Saka,MID,3,Arsenal,0,0,5.22,85.0,0,0,-1,0,0,0,0,0,0.0
+23,4,Mubama,FWD,4,West Ham,0,0,0.39,3.0,0,0,-1,0,0,0,0,0,0.0
+20,4,Semenyo,FWD,4,Bournemouth,0,0,2.01,60.0,0,0,-1,0,0,0,0,0,0.0

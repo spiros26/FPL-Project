@@ -37,11 +37,11 @@
             "is_vice_captain": false
         },
         {
-            "element": 131,
+            "element": 407,
             "position": 5,
-            "selling_price": 51,
+            "selling_price": 45,
             "multiplier": 1,
-            "purchase_price": 50,
+            "purchase_price": 45,
             "is_captain": false,
             "is_vice_captain": false
         },
@@ -109,16 +109,16 @@
             "is_vice_captain": false
         },
         {
-            "element": 33,
+            "element": 131,
             "position": 13,
-            "selling_price": 45,
+            "selling_price": 51,
             "multiplier": 0,
-            "purchase_price": 45,
+            "purchase_price": 50,
             "is_captain": false,
             "is_vice_captain": false
         },
         {
-            "element": 407,
+            "element": 33,
             "position": 14,
             "selling_price": 45,
             "multiplier": 0,
@@ -182,6 +182,6 @@
         "limit": 1,
         "made": 0,
         "bank": 9,
-        "value": 997
+        "value": 999
     }
 }

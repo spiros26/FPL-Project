@@ -1,0 +1,27 @@
+,week,name,pos,type,team,buy_price,sell_price,xP,xMin,squad,lineup,bench,captain,vicecaptain,transfer_in,transfer_out,multiplier,xp_cont
+13,3,Ramsdale,GKP,1,Arsenal,0,0,4.89,85.0,1,1,-1,0,0,0,0,1,4.892
+19,3,Shaw,DEF,2,Man Utd,0,0,4.78,84.0,1,1,-1,0,0,0,0,1,4.777
+12,3,Colwill,DEF,2,Chelsea,0,0,5.07,79.0,1,1,-1,0,0,0,0,1,5.072
+11,3,Chilwell,DEF,2,Chelsea,0,0,5.23,79.0,1,1,-1,0,0,0,0,1,5.234
+2,3,Son,MID,3,Spurs,0,0,5.93,82.0,1,1,-1,0,0,0,0,1,5.934
+4,3,B.Fernandes,MID,3,Man Utd,0,0,6.05,85.0,1,1,-1,0,0,0,0,1,6.049
+3,3,Ødegaard,MID,3,Arsenal,0,0,6.28,85.0,1,1,-1,0,0,0,0,1,6.28
+5,3,Foden,MID,3,Man City,0,0,6.32,70.0,1,1,-1,0,1,0,0,1,6.323
+10,3,J.Alvarez,FWD,4,Man City,0,0,5.26,72.0,1,1,-1,0,0,0,0,1,5.258
+7,3,N.Jackson,FWD,4,Chelsea,0,0,5.69,78.0,1,1,-1,0,0,0,0,1,5.69
+0,3,Haaland,FWD,4,Man City,0,0,7.63,85.0,1,1,-1,1,0,0,0,2,15.266
+21,3,Areola,GKP,1,West Ham,0,0,2.95,89.0,1,0,0,0,0,0,0,0,0.0
+15,3,Estupiñan,DEF,2,Brighton,0,0,4.73,80.0,1,0,1,0,0,0,0,0,0.0
+20,3,Wan-Bissaka,DEF,2,Man Utd,0,0,4.35,75.0,1,0,2,0,0,0,0,0,0.0
+22,3,Sarr,MID,3,Spurs,0,0,2.54,75.0,1,0,3,0,0,0,0,0,0.0
+14,3,Johnstone,GKP,1,Crystal Palace,0,0,3.55,88.0,0,0,-1,0,0,0,0,0,0.0
+17,3,Steele,GKP,1,Brighton,0,0,4.32,89.0,0,0,-1,0,0,0,0,0,0.0
+24,3,Gabriel,DEF,2,Arsenal,0,0,1.75,50.0,0,0,-1,0,0,0,0,0,0.0
+18,3,Pinnock,DEF,2,Brentford,0,0,3.91,85.0,0,0,-1,0,0,0,0,0,0.0
+16,3,Saliba,DEF,2,Arsenal,0,0,4.65,82.0,0,0,-1,0,0,0,0,0,0.0
+9,3,Mitoma,MID,3,Brighton,0,0,5.08,80.0,0,0,-1,0,0,0,0,0,0.0
+6,3,Mbeumo,MID,3,Brentford,0,0,5.11,83.0,0,0,-1,0,0,0,0,0,0.0
+8,3,Saka,MID,3,Arsenal,0,0,5.22,85.0,0,0,-1,0,0,0,0,0,0.0
+1,3,Salah,MID,3,Liverpool,0,0,5.38,87.0,0,0,-1,0,0,0,0,0,0.0
+25,3,Mubama,FWD,4,West Ham,0,0,0.16,3.0,0,0,-1,0,0,0,0,0,0.0
+23,3,Semenyo,FWD,4,Bournemouth,0,0,2.15,60.0,0,0,-1,0,0,0,0,0,0.0

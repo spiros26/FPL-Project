@@ -399,26 +399,26 @@ xpens_2022 = {
   }
 '''
 xpens_2022 = {
-      'Arsenal': [(19, 0), (14, 0), (12, 0)], #saka, odegaard, martinelli
-      'Aston Villa': [(43, 0), (60, 0), (34, 0)], #luiz, watkins, bailey
-      'Brentford': [(117, 0), (108, 0), (119, 0)], #toney, mbeumo, wissa
-      'Brighton': [(135, 0), (134, 0), (154, 0)], # pedro, gross, welbeck
-      'Bournemouth':[(85, 0), (63, 0), (86, 0)], #solanke, billing, tavernier                                                       
-      'Chelsea':  [(212, 0), (199, 0), (216, 0)], # nkunku, enzo, sterling       
-      'Crystal Palace': [(226, 0), (225, 0), (232, 0)], #eze, edouard, mateta         
-      'Everton': [(246, 0), (258, 0), (601, 0)], #dcl, maupay, danjuma
-      'Luton':  [(326, 0), (314, 0), (340, 0)], #Morris, Adebayo, Woodrow           
-      'Burnley':  [(177, 0), (170, 0), (594, 0)], #rodriguez, gudmundsson, amdouni
-      'Liverpool': [(308, 0), (304, 0), (296, 0)], #salah, mac allister, fabinho
-      'Man City':  [(355, 0), (359, 0), (343, 0)], #haaland, mahrez, alvarez
-      'Man Utd': [(373, 0), (396, 0), (390, 0)], #bruno, rashford, martial
-      'Newcastle': [(433, 0), (415, 0), (416, 0)], #wilson, isak, joelinton
-      'Nott\'m Forest':[(447, 0), (437, 0), (378, 0)], #gibbs-white, awoniyi, elanga                                                     
-      'Sheffield Utd':  [(477, 0), (488, 0), (481, 0)], #brewster, norwood, fleck
-      'Spurs': [(516, 0), (509, 0), (504, 0)], #son, richarlison, maddison
-      'Fulham': [(278, 0), (267, 0), (288, 0)], #mitro, andreas, wilson                                                   
-      'West Ham': [(525, 0), (539, 0), (664, 0)], #benrahma, paqueta, ward-prowse
-      'Wolves': [(558, 0), (557, 0), (567, 0)], #jimenez, hwang, neto
+      'Arsenal': [(19, 0.67), (14, 0.3), (6, 0.03)], #saka, odegaard, havertz
+      'Aston Villa': [(43, 0.9), (60, 0.1), (34, 0)], #luiz, watkins, bailey
+      'Brentford': [(117, 0), (108, 0.98), (119, 0.02)], #toney, mbeumo, wissa
+      'Brighton': [(135, 0.9), (134, 0.1), (154, 0)], # pedro, gross, welbeck
+      'Bournemouth':[(85, 0.98), (63, 0.02), (86, 0)], #solanke, billing, tavernier                                                       
+      'Chelsea':  [(212, 0), (199, 0.9), (216, 0.1)], # nkunku, enzo, sterling       
+      'Crystal Palace': [(226, 0.9), (225, 0.1), (232, 0)], #eze, edouard, mateta         
+      'Everton': [(246, 0.6), (601, 0.3), (249, 0.1)], #dcl, danjuma, doucoure
+      'Luton':  [(326, 0.98), (314, 0.02), (340, 0)], #Morris, Adebayo, Woodrow           
+      'Burnley':  [(177, 0.6), (170, 0.2), (594, 0.2)], #rodriguez, gudmundsson, amdouni
+      'Liverpool': [(308, 0.98), (304, 0.02), (296, 0)], #salah, mac allister, fabinho
+      'Man City':  [(355, 0.98), (359, 0), (343, 0.02)], #haaland, mahrez, alvarez
+      'Man Utd': [(373, 0.95), (396, 0.05), (390, 0)], #bruno, rashford, martial
+      'Newcastle': [(433, 0.9), (415, 0.1), (416, 0)], #wilson, isak, joelinton
+      'Nott\'m Forest':[(447, 0.9), (437, 0.1), (378, 0)], #gibbs-white, awoniyi, elanga                                                     
+      'Sheffield Utd':  [(488, 0.7), (33, 0.25), (481, 0.05)], #norwood, archer, fleck
+      'Spurs': [(516, 0.9), (509, 0.05), (504, 0.05)], #son, richarlison, maddison
+      'Fulham': [(267, 0.9), (558, 0.1), (287, 0)], #andreas, jimenez, vinicious                                                   
+      'West Ham': [(525, 0.6), (539, 0.2), (664, 0.2)], #benrahma, paqueta, ward-prowse
+      'Wolves': [(557, 0.5), (590, 0.3), (567, 0.2)], #hwang, cunha, neto
   }
   
 def pens_per_game(fixtures, season, team_stats_dict, teams, team_id, gw_no_lim):

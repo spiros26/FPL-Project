@@ -3,6 +3,9 @@ import requests
 import numpy as np
 from modules.useful_functions import team_id, fixture_info2, avg
 import pickle
+from datetime import datetime
+from zoneinfo import ZoneInfo
+from modules.useful_functions import convert_date
 
 
 expected_minutes = {
@@ -11,7 +14,7 @@ expected_minutes = {
     2: [0.0],  # Cedric
     3: [3.0],  # Elneny
     4: [50.0],  # Vieira
-    5: [75.0],  # Gabriel
+    5: [77.0],  # Gabriel
     6: [63.0],  # Havertz
     7: [3.0],  # Holding
     8: [75.0],  # Jesus
@@ -26,7 +29,7 @@ expected_minutes = {
     17: [15.0], # Ramsdale
     113: [75.0],    # Raya
     18: [0.0], # Runaarsson
-    19: [85.0], # Saka                
+    19: [65.0], # Saka              FIXXXX              
     20: [85.0], # Saliba                
     21: [5.0], # Sambi
     22: [13.0], # Smith Rowe
@@ -258,7 +261,7 @@ expected_minutes = {
     213: [0.0],    # Pulisic
     214: [0.0],    # Sarr
     215: [0.0],    # Slonina
-    216: [65.0],    # Sterling
+    216: [75.0],    # Sterling
     217: [87.0],    # Thiago Silva
     218: [0.0],    # Ziyech
     589: [0.0],    # Angelo
@@ -277,7 +280,7 @@ expected_minutes = {
     223: [65.0],    # C.Doucoure
     224: [0.0],    # Ebiowei
     225: [0.0],    # Edouard                    FIXXXXXX
-    226: [85.0],    # Eze
+    226: [0.0],    # Eze
     227: [1.0],    # Guaita
     228: [85.0],    # Guehi
     229: [45.0],    # Hughes
@@ -349,7 +352,7 @@ expected_minutes = {
     278: [0.0],    # Mitrovic
     279: [0.0],     # Muniz
     280: [85.0],    # Palinha
-    281: [84.0],    # Ream
+    281: [72.0],    # Ream
     282: [64.0],    # Reed
     283: [75.0],    # Robinson
     284: [1.0],     # Rodak
@@ -359,14 +362,14 @@ expected_minutes = {
     288: [70.0],    # Wilson
     558: [63.0],    # Jimenez
     591: [53.0],    # Willian
-    610: [0.0],    # Bassey
+    610: [18.0],    # Bassey
     625: [0.0],    # De Fugerolles
     651: [0.0],    # Stansfield
     652: [0.0],    # Dibley-Dias
     662: [0.0],    # Adama Traore
 # Liverpool
     289: [0.0],     # Adrian
-    290: [70.0],    # Alexander-Arnold      FIXXXX
+    290: [85.0],    # Alexander-Arnold      FIXXXX
     291: [89.0],    # Alisson
     292: [0.0],    # Bajcetic      
     708: [15.0],     # Gravenberch
@@ -646,7 +649,7 @@ expected_minutes = {
     513: [72.0],    # Sarr
     514: [0.0],    # R.Sessegnon
     515: [60.0],    # Skipp
-    516: [82.0],    # Son
+    516: [75.0],    # Son
     517: [0.0],    # Spence
     518: [0.0],    # Tanganga
     519: [80.0],    # Udogie
@@ -674,7 +677,7 @@ expected_minutes = {
     535: [28.0],    # Ings
     536: [45.0],    # Johnson
     537: [23.0],    # Kehrer
-    538: [3.0],    # Mubama
+    538: [1.0],    # Mubama
     539: [86.0],    # Paqueta
     541: [5.0],    # Scamacca
     542: [77.0],    # Soucek
@@ -939,35 +942,65 @@ initial_spis2023 = {
     }
 
 
-def compute_new_spis(spi_model, teams, team_stats_dict, fixtures, season, next_gw):
+
+def compute_new_spis(spi_model, teams, team_stats_dict, fixtures, season, df, next_gw):
     if next_gw == 1:
         return initial_spis2023
-
+    
     with open('spis.pkl', 'rb') as f:
         old_spis = pickle.load(f)
-
+    if next_gw == 2:
+        old_spis = initial_spis2023
+    #old_spis = initial_spis2023
     t = teams[season]
-    new_spis = {}
+    spis = {}
+
     gws_left = 38 - next_gw + 1
 
     for team in t['name'].to_list():
         tid = t[t['name']==team]['id'].iloc[0]
-        last_gw_fixtures = fixture_info2(tid, season, next_gw-1, fixtures, teams)
-        # FIX IT - only takes account last game in double gameweeks
-        old_spis_list = old_spis[team][:next_gw-1]
-        new_spis[team] = old_spis_list + [old_spis_list[-1]]*gws_left
-        for i in range(len(last_gw_fixtures)):
+        #last_gw_fixtures = fixture_info2(tid, season, next_gw-1, fixtures, teams)
+        #old_spis_list = old_spis[team][:next_gw-1]
+        #new_spis[team] = old_spis_list + [old_spis_list[-1]]*gws_left
+        x = 0
+        xlist = []
+        team_und = team_stats_dict[season][team]
+        for x in range(team_und.shape[0]):
+            if team_und.loc[x]['date'] > convert_date(df['deadline_time'].iloc[next_gw-2]) and team_und.loc[x]['date'] < convert_date(df['deadline_time'].iloc[next_gw-1]):
+                 xlist.append(x)
+
+        spi_dif = []
+        for i in range(len(xlist)):
             opp_team, home, kickoff_time, score1, score2 = fixture_info2(tid, season, next_gw-1, fixtures, teams)[i]
             old_spi_team = old_spis[team][next_gw-2]
             old_spi_opp_team = old_spis[opp_team][next_gw-2]
-            df = team_stats_dict[season][team].loc[0]
-     
-            xg1 = df['xG']
-            xg2 = df['xGA']
+            #df = team_stats_dict[season][team].loc[next_gw-2]
+            xg1 = team_und.loc[xlist[i]]['xG']
+            xg2 = team_und.loc[xlist[i]]['xGA']
+
             new_spi = spi_model.predict([[old_spi_team, old_spi_opp_team, score1, score2, xg1, xg2, home]])[0]
-            new_spis[team] = old_spis_list + [new_spi]*gws_left
+            spi_dif.append(new_spi - old_spi_team)
+            spis[team] = old_spis[team][:next_gw-1] + [old_spi_team + sum(spi_dif)]*gws_left
+        
+        if len(xlist) == 0:
+            spis[team] = old_spis[team]
+
     with open('spis.pkl', 'wb') as f:
-        pickle.dump(new_spis, f)
+        pickle.dump(spis, f)
+    return spis
 
+def spis_from_season_beginning(strengths, teams, team_stats_dict, fixtures, season, df, next_gw):
+    for gw in range(2,next_gw+1):
+        spis = compute_new_spis(strengths, teams, team_stats_dict, fixtures, season, df, gw)
+    return spis
 
-
+def get_next_gw():
+    now = datetime.now(ZoneInfo('Europe/London'))
+    dt_string = now.strftime("%Y-%m-%dT%H:%M:%SZ")
+    url = 'https://fantasy.premierleague.com/api/bootstrap-static/'
+    df = pd.DataFrame(requests.get(url).json()['events'])
+    i=0
+    while dt_string > df['deadline_time'].iloc[i]:
+        i = i + 1
+    next_gw = df['id'].iloc[i]
+    return next_gw

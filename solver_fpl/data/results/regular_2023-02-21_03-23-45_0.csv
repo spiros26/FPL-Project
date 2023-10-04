@@ -1,0 +1,17 @@
+,week,name,pos,type,team,buy_price,sell_price,xP,xMin,squad,lineup,bench,captain,vicecaptain,transfer_in,transfer_out,multiplier,xp_cont
+5,25,Sá,GKP,1,Wolves,0.0,0.0,6.32,88,1,1,-1,0,0,0,0,1,6.319
+7,25,Kilman,DEF,2,Wolves,0.0,0.0,5.28,83,1,1,-1,0,0,0,0,1,5.275
+8,25,Tarkowski,DEF,2,Everton,0.0,0.0,5.3,81,1,1,-1,0,0,0,0,1,5.299
+4,25,Alexander-Arnold,DEF,2,Liverpool,0.0,0.0,9.86,82,1,1,-1,0,0,0,0,1,9.865
+6,25,Neves,MID,3,Wolves,5.4,0.0,6.6,84,1,1,-1,0,0,1,0,1,6.602
+3,25,Ødegaard,MID,3,Arsenal,0.0,0.0,9.54,80,1,1,-1,0,0,0,0,1,9.543
+2,25,Saka,MID,3,Arsenal,0.0,0.0,10.3,80,1,1,-1,0,1,0,0,1,10.305
+1,25,Salah,MID,3,Liverpool,0.0,0.0,11.94,80,1,1,-1,1,0,0,0,2,23.88
+11,25,Darwin,FWD,4,Liverpool,0.0,0.0,5.43,59,1,1,-1,0,0,0,0,1,5.429
+0,25,Haaland,FWD,4,Man City,0.0,0.0,7.03,75,1,1,-1,0,0,0,0,1,7.026
+10,25,Nketiah,FWD,4,Arsenal,0.0,0.0,7.45,74,1,1,-1,0,0,0,0,1,7.451
+9,25,Leno,GKP,1,Fulham,0.0,0.0,4.44,87,1,0,0,0,0,0,0,0,0.0
+13,25,McNeil,MID,3,Everton,0.0,0.0,5.21,69,1,0,1,0,0,0,0,0,0.0
+12,25,Coady,DEF,2,Everton,0.0,0.0,4.84,77,1,0,2,0,0,0,0,0,0.0
+14,25,Robinson,DEF,2,Fulham,0.0,0.0,3.53,78,1,0,3,0,0,0,0,0,0.0
+15,25,Sarabia,MID,3,Wolves,0.0,5.5,0.0,66,0,0,-1,0,0,0,1,0,0.0

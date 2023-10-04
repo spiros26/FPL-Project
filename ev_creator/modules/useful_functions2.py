@@ -318,8 +318,6 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         
 
 def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_horizon, gw, i, pid):
-    if team == 'Luton':
-        return 0
     gws = list(range(next_gw, next_gw + horizon))
     penmins = []
     for n in range(len(xpens_2022[team])):
@@ -334,11 +332,11 @@ def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_
                 penmins.append(xmins)
     sum = penmins[0][gw-next_gw][i]/90 + (1-penmins[0][gw-next_gw][i]/90)*penmins[1][gw-next_gw][i]/90 + (1-penmins[0][gw-next_gw][i]/90)*(1-penmins[1][gw-next_gw][i]/90)*penmins[2][gw-next_gw][i]/90
     if pid == xpens_2022[team][0][0]:
-        return (1/sum)*penmins[0][gw-next_gw][i]/90
+        return (1/sum) * (penmins[0][gw-next_gw][i]/90) * xpens_2022[team][0][1]
     elif pid == xpens_2022[team][1][0]:
-        return (1/sum)*(1-penmins[0][gw-next_gw][i]/90)*penmins[1][gw-next_gw][i]/90
+        return (1/sum) * (1-penmins[0][gw-next_gw][i]/90) * (penmins[1][gw-next_gw][i]/90) + (1/sum) * (penmins[0][gw-next_gw][i]/90) * xpens_2022[team][1][1]
     elif pid == xpens_2022[team][2][0]:
-        return (1/sum)*(1-penmins[0][gw-next_gw][i]/90)*(1-penmins[1][gw-next_gw][i]/90)*penmins[2][gw-next_gw][i]/90
+        return (1/sum)*(1-penmins[0][gw-next_gw][i]/90)*(1-penmins[1][gw-next_gw][i]/90)*penmins[2][gw-next_gw][i]/90 + (1/sum)*(penmins[0][gw-next_gw][i]/90)*xpens_2022[team][2][1]
     else:
         return 0
 
