@@ -14,7 +14,7 @@ from pathlib import Path
 from PIL import Image
 from zoneinfo import ZoneInfo
 
-img_file = Path() / 'copilot.png'
+img_file = Path() / 'copilot_img.png'
 im = Image.open(img_file)
 
 def hash_password(password):
