@@ -13,7 +13,7 @@ from datetime import datetime
 from PIL import Image
 from zoneinfo import ZoneInfo
 
-im = Image.open('copilot_img.jpg')
+#im = Image.open('copilot_img.jpg')
 
 def hash_password(password):
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
@@ -59,7 +59,7 @@ def generate_transfer_suggestions(team_data, next_gw, horizon, iterations):
 
 
 
-st.set_page_config(page_title="FPL Copilot", page_icon=im, layout="centered")
+st.set_page_config(page_title="FPL Copilot", layout="centered") #, page_icon=im, layout="centered")
 
 # ---- HIDE STREAMLIT STYLE ----
 hide_st_style = """
