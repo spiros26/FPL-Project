@@ -75,7 +75,7 @@
         {
             "element": 516,
             "position": 9,
-            "selling_price": 92,
+            "selling_price": 93,
             "multiplier": 2,
             "purchase_price": 92,
             "is_captain": true,
@@ -127,11 +127,11 @@
             "is_vice_captain": false
         },
         {
-            "element": 33,
+            "element": 538,
             "position": 15,
-            "selling_price": 45,
+            "selling_price": 43,
             "multiplier": 0,
-            "purchase_price": 45,
+            "purchase_price": 43,
             "is_captain": false,
             "is_vice_captain": false
         }
@@ -181,7 +181,7 @@
         "status": "cost",
         "limit": 1,
         "made": 0,
-        "bank": 0,
+        "bank": 2,
         "value": 1005
     }
 }

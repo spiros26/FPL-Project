@@ -1,11 +1,11 @@
 {
-    "horizon": 2,
+    "horizon": 8,
     "ft_value": 1.5,
     "itb_value": 0.05,
-    "decay_base": 0.85,
+    "decay_base": 0.9,
     "no_future_transfer": false,
-    "no_transfer_last_gws": 0,
-    "randomized": false,
+    "no_transfer_last_gws": 4,
+    "randomized": true,
     "xmin_lb": 20,
     "bench_weights": {
         "0": 0.03,
@@ -13,8 +13,11 @@
         "2": 0.06,
         "3": 0.003
     },
-    "banned": [],
-    "locked": [],
+    "banned": [
+        44
+    ],
+    "locked": [
+    ],
     "delete_tmp": true,
     "secs": 72000,
     "use_cmd": false,

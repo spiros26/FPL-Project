@@ -1,123 +1,119 @@
 ** GW 8:
 CHIP WC
-ITB=0.6, FT=1.0, PT=0, NT=6.0
-Buy 108 - Mbeumo
-Buy 395 - R.Varane
-Buy 113 - Raya
-Buy 584 - Pau
-Buy 112 - Pinnock
-Buy 232 - Mateta
-Sell 526 - Bowen
-Sell 131 - Estupiñan
-Sell 524 - Areola
-Sell 407 - Burn
-Sell 519 - Udogie
-Sell 33 - Archer
+ITB=0.3, FT=1.0, PT=0, NT=5.0
+Buy 168 - Foster
+Buy 293 - Darwin
+Buy 31 - Zinchenko
+Buy 506 - Pedro Porro
+Buy 281 - Ream
+Sell 307 - Robertson
+Sell 395 - R.Varane
+Sell 85 - Solanke
+Sell 220 - Andersen
+Sell 538 - Mubama
 ---
 Lineup: 
-	Leno (5.16)
-	R.Varane (4.43), Andersen (4.86), Cash (4.92)
-	Mbeumo (4.64), Diaby (4.88), Maddison (5.64), Salah (5.66, V), Son (7.86, C)
-	Mateta (3.83), Haaland (5.48)
+	Leno (5.04)
+	Trippier (4.91), Pedro Porro (5.03), Cash (5.16), Ream (5.23)
+	Mbeumo (4.2), B.Fernandes (5.03), Maddison (5.85), Salah (6.14, V), Son (8.99, C)
+	J.Alvarez (4.34)
 Bench: 
-	Raya, Pau, Pinnock, Mubama
-Lineup xPts: 65.22
+	Raya, Foster, Darwin, Zinchenko
+Lineup xPts: 68.91
 ---
 
 ** GW 9:
-ITB=0.6, FT=1.0, PT=0, NT=0
+ITB=0.3, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Leno (3.65)
-	Pau (3.89), Cash (4.98), R.Varane (4.99), Pinnock (5.03)
-	Diaby (4.8), Mbeumo (5.65), Maddison (5.66), Son (6.73, V), Salah (6.84, C)
-	Haaland (5.33)
+	Raya (3.91)
+	Cash (5.08), Pedro Porro (5.09), Trippier (5.61)
+	Maddison (5.42), Mbeumo (5.55), B.Fernandes (5.92), Salah (6.62, V), Son (7.58, C)
+	J.Alvarez (4.32), Darwin (4.61)
 Bench: 
-	Raya, Mateta, Andersen, Mubama
-Lineup xPts: 64.39
+	Leno, Foster, Zinchenko, Ream
+Lineup xPts: 67.3
 ---
 
 ** GW 10:
 ITB=0.1, FT=2.0, PT=0, NT=1.0
-Buy 29 - White
-Sell 395 - R.Varane
+Buy 19 - Saka
+Sell 373 - B.Fernandes
 ---
 Lineup: 
-	Raya (5.61)
-	Andersen (3.76), Pau (4.91), White (5.88), Cash (6.09)
-	Mbeumo (4.41), Maddison (5.08), Diaby (5.18), Son (6.1, V), Salah (7.51, C)
-	Haaland (6.07)
+	Raya (5.72)
+	Trippier (5.28), Cash (6.55), Zinchenko (7.01)
+	Mbeumo (4.58), Maddison (5.02), Son (5.7), Salah (7.35, V), Saka (7.98, C)
+	Darwin (5.09), J.Alvarez (5.32)
 Bench: 
-	Leno, Mateta, Pinnock, Mubama
-Lineup xPts: 68.11
+	Leno, Foster, Pedro Porro, Ream
+Lineup xPts: 73.56
 ---
 
 ** GW 11:
-ITB=0, FT=2.0, PT=0, NT=2.0
-Buy 526 - Bowen
-Buy 131 - Estupiñan
-Sell 504 - Maddison
-Sell 584 - Pau
+ITB=0.4, FT=2.0, PT=0, NT=1.0
+Buy 220 - Andersen
+Sell 506 - Pedro Porro
 ---
 Lineup: 
-	Leno (4.18)
-	Pinnock (4.23), Estupiñan (4.32), Andersen (4.41), Cash (5.01)
-	Diaby (4.87), Bowen (4.88), Mbeumo (5.26), Son (5.96), Salah (7.47, C)
-	Haaland (7.3, V)
+	Leno (4.07)
+	Andersen (4.17), Trippier (4.27), Cash (6.05)
+	Maddison (4.93), Mbeumo (5.18), Son (5.43), Saka (5.89), Salah (7.48, C)
+	J.Alvarez (6.0), Darwin (6.63, V)
 Bench: 
-	Raya, Mateta, White, Mubama
-Lineup xPts: 65.36
+	Raya, Foster, Ream, Zinchenko
+Lineup xPts: 67.57
 ---
 
 ** GW 12:
-ITB=0, FT=1.0, PT=0, NT=0
+ITB=0.4, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Raya (5.37)
-	Andersen (4.46), Cash (5.28), White (5.65), Estupiñan (5.92)
-	Mbeumo (4.21), Diaby (4.88), Bowen (5.61), Son (6.6, V), Salah (6.64, C)
-	Haaland (5.84)
+	Raya (5.64)
+	Zinchenko (4.25), Andersen (4.56), Cash (5.07), Trippier (5.11)
+	Mbeumo (4.54), Maddison (5.95), Son (6.07), Salah (6.55, V), Saka (6.56, C)
+	J.Alvarez (4.86)
 Bench: 
-	Leno, Mateta, Pinnock, Mubama
-Lineup xPts: 67.1
+	Leno, Darwin, Foster, Ream
+Lineup xPts: 65.72
 ---
 
 ** GW 13:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=0.4, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Leno (4.75)
-	Cash (4.04), Andersen (4.48), Estupiñan (4.65)
-	Diaby (4.3), Mbeumo (4.48), Salah (5.12), Bowen (5.69, V), Son (6.08, C)
-	Mateta (3.92), Haaland (5.24)
+	Leno (4.83)
+	Cash (4.19), Andersen (4.34), Trippier (4.72)
+	Mbeumo (4.61), Salah (5.16), Saka (5.32), Maddison (5.37, V), Son (6.44, C)
+	J.Alvarez (4.27), Foster (4.41)
 Bench: 
-	Raya, White, Pinnock, Mubama
-Lineup xPts: 58.84
+	Raya, Ream, Zinchenko, Darwin
+Lineup xPts: 60.1
 ---
 
 ** GW 14:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=0.4, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Raya (4.99)
-	Andersen (3.88), Cash (4.98), Pinnock (5.15), White (5.22)
-	Diaby (4.88), Bowen (5.16), Son (5.18), Mbeumo (5.83), Salah (7.06, C)
-	Haaland (5.88, V)
+	Raya (5.36)
+	Andersen (3.9), Cash (4.44), Trippier (5.11), Zinchenko (6.0)
+	Mbeumo (5.34), Son (5.66), Saka (6.6, V), Salah (6.68, C)
+	J.Alvarez (4.8), Foster (5.12)
 Bench: 
-	Leno, Mateta, Estupiñan, Mubama
-Lineup xPts: 65.27
+	Leno, Maddison, Darwin, Ream
+Lineup xPts: 65.69
 ---
 
 ** GW 15:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=0.4, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Leno (4.85)
-	Estupiñan (4.34), White (4.76), Andersen (4.92)
-	Diaby (4.02), Mbeumo (4.23), Bowen (4.68), Son (6.43, V), Salah (7.52, C)
-	Mateta (3.86), Haaland (5.91)
+	Raya (4.85)
+	Trippier (4.99), Andersen (5.01), Ream (5.05)
+	Mbeumo (4.4), Maddison (5.33), Saka (6.09), Son (6.8, V), Salah (7.9, C)
+	J.Alvarez (4.77), Darwin (5.13)
 Bench: 
-	Raya, Cash, Pinnock, Mubama
-Lineup xPts: 63.01
+	Leno, Foster, Zinchenko, Cash
+Lineup xPts: 68.23
 ---
 

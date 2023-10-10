@@ -399,16 +399,16 @@ xpens_2022 = {
   }
 '''
 xpens_2022 = {
-      'Arsenal': [(19, 0.67), (14, 0.3), (6, 0.03)], #saka, odegaard, havertz
+      'Arsenal': [(19, 0.6), (14, 0.3), (6, 0.03)], #saka, odegaard, havertz
       'Aston Villa': [(43, 0.9), (60, 0.1), (34, 0)], #luiz, watkins, bailey
       'Brentford': [(117, 0), (108, 0.98), (119, 0.02)], #toney, mbeumo, wissa
       'Brighton': [(135, 0.9), (134, 0.1), (154, 0)], # pedro, gross, welbeck
       'Bournemouth':[(85, 0.98), (63, 0.02), (86, 0)], #solanke, billing, tavernier                                                       
-      'Chelsea':  [(212, 0), (199, 0.9), (216, 0.1)], # nkunku, enzo, sterling       
+      'Chelsea':  [(362, 0.9), (199, 0.1), (216, 0)], # palmer, enzo, sterling       
       'Crystal Palace': [(226, 0.9), (225, 0.1), (232, 0)], #eze, edouard, mateta         
       'Everton': [(246, 0.6), (601, 0.3), (249, 0.1)], #dcl, danjuma, doucoure
-      'Luton':  [(326, 0.98), (314, 0.02), (340, 0)], #Morris, Adebayo, Woodrow           
-      'Burnley':  [(177, 0.6), (170, 0.2), (594, 0.2)], #rodriguez, gudmundsson, amdouni
+      'Luton':  [(326, 0.92), (314, 0.02), (340, 0)], #Morris, Adebayo, Woodrow           
+      'Burnley':  [(177, 0.7), (170, 0.2), (168, 0.1)], #rodriguez, gudmundsson, foster
       'Liverpool': [(308, 0.98), (304, 0.02), (296, 0)], #salah, mac allister, fabinho
       'Man City':  [(355, 0.98), (359, 0), (343, 0.02)], #haaland, mahrez, alvarez
       'Man Utd': [(373, 0.95), (396, 0.05), (390, 0)], #bruno, rashford, martial
@@ -418,7 +418,7 @@ xpens_2022 = {
       'Spurs': [(516, 0.9), (509, 0.05), (504, 0.05)], #son, richarlison, maddison
       'Fulham': [(267, 0.9), (558, 0.1), (287, 0)], #andreas, jimenez, vinicious                                                   
       'West Ham': [(525, 0.6), (539, 0.2), (664, 0.2)], #benrahma, paqueta, ward-prowse
-      'Wolves': [(557, 0.5), (590, 0.3), (567, 0.2)], #hwang, cunha, neto
+      'Wolves': [(590, 0.7), (557, 0.25), (567, 0.05)], #cunha, hwang, neto
   }
   
 def pens_per_game(fixtures, season, team_stats_dict, teams, team_id, gw_no_lim):
