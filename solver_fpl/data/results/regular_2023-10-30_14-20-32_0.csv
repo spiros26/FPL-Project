@@ -1,0 +1,27 @@
+,week,name,pos,type,team,buy_price,sell_price,xP,xMin,squad,lineup,bench,captain,vicecaptain,transfer_in,transfer_out,multiplier,xp_cont
+21,11,Ederson M.,GKP,1,Man City,0,0,5.09,89.0,1,1,-1,0,0,0,0,1,5.093
+13,11,Tsimikas,DEF,2,Liverpool,0,0,4.87,78.0,1,1,-1,0,0,0,0,1,4.868
+11,11,Virgil,DEF,2,Liverpool,0,0,5.04,85.0,1,1,-1,0,0,0,0,1,5.035
+17,11,Walker,DEF,2,Man City,0,0,5.33,76.0,1,1,-1,0,0,0,0,1,5.328
+9,11,Diaby,MID,3,Aston Villa,0,0,5.05,78.0,1,1,-1,0,0,0,0,1,5.047
+6,11,Mbeumo,MID,3,Brentford,0,0,5.75,83.0,1,1,-1,0,0,0,0,1,5.751
+7,11,Hee Chan,MID,3,Wolves,0,0,6.17,75.0,1,1,-1,0,0,0,0,1,6.173
+1,11,Son,MID,3,Spurs,0,0,6.69,77.0,1,1,-1,0,0,0,0,1,6.693
+0,11,Salah,MID,3,Liverpool,0,0,8.69,87.0,1,1,-1,1,0,0,0,2,17.372
+2,11,Wilson,FWD,4,Newcastle,0,0,5.76,77.0,1,1,-1,0,0,0,0,1,5.761
+3,11,Haaland,FWD,4,Man City,0,0,7.39,88.0,1,1,-1,0,1,0,0,1,7.386
+19,11,Areola,GKP,1,West Ham,0,0,3.22,89.0,1,0,0,0,0,0,0,0,0.0
+23,11,Basham,DEF,2,Sheffield Utd,0,0,3.64,80.0,1,0,1,0,0,0,0,0,0.0
+22,11,Lascelles,DEF,2,Newcastle,0,0,3.03,80.0,1,0,2,0,0,0,0,0,0.0
+25,11,Mubama,FWD,4,West Ham,0,0,0.09,1.0,1,0,3,0,0,0,0,0,0.0
+16,11,Raya,GKP,1,Arsenal,0,0,2.93,85.0,0,0,-1,0,0,0,0,0,0.0
+15,11,Leno,GKP,1,Fulham,0,0,4.09,89.0,0,0,-1,0,0,0,0,0,0.0
+24,11,R.Varane,DEF,2,Man Utd,0,0,1.66,45.0,0,0,-1,0,0,0,0,0,0.0
+12,11,White,DEF,2,Arsenal,0,0,3.02,84.0,0,0,-1,0,0,0,0,0,0.0
+18,11,Cash,DEF,2,Aston Villa,0,0,4.23,78.0,0,0,-1,0,0,0,0,0,0.0
+10,11,Trippier,DEF,2,Newcastle,0,0,4.3,87.0,0,0,-1,0,0,0,0,0,0.0
+20,11,Andersen,DEF,2,Crystal Palace,0,0,4.34,85.0,0,0,-1,0,0,0,0,0,0.0
+4,11,Saka,MID,3,Arsenal,0,0,5.18,84.0,0,0,-1,0,0,0,0,0,0.0
+5,11,Maddison,MID,3,Spurs,0,0,5.58,80.0,0,0,-1,0,0,0,0,0,0.0
+14,11,Solanke,FWD,4,Bournemouth,0,0,3.65,88.0,0,0,-1,0,0,0,0,0,0.0
+8,11,J.Alvarez,FWD,4,Man City,0,0,5.48,78.0,0,0,-1,0,0,0,0,0,0.0

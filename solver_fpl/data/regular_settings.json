@@ -1,11 +1,11 @@
 {
-    "horizon": 8,
+    "horizon": 7,
     "ft_value": 1.5,
     "itb_value": 0.05,
-    "decay_base": 0.9,
+    "decay_base": 0.85,
     "no_future_transfer": false,
-    "no_transfer_last_gws": 4,
-    "randomized": true,
+    "no_transfer_last_gws": 3,
+    "randomized": false,
     "xmin_lb": 20,
     "bench_weights": {
         "0": 0.03,
@@ -13,23 +13,20 @@
         "2": 0.06,
         "3": 0.003
     },
-    "banned": [
-        44
-    ],
-    "locked": [
-    ],
+    "banned": [],
+    "locked": [],
     "delete_tmp": true,
-    "secs": 72000,
+    "secs": 300,
     "use_cmd": false,
     "future_transfer_limit": null,
     "no_transfer_gws": [],
     "booked_transfers": [],
-    "use_wc": null,
+    "use_wc": 11,
     "use_bb": null,
     "use_fh": null,
     "chip_limits": {
         "bb": 0,
-        "wc": 0,
+        "wc": 1,
         "fh": 0,
         "tc": 0
     },

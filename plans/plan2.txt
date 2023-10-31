@@ -1,86 +1,101 @@
-** GW 7:
-ITB=0, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Kaminski (7.3, V)
-	Saliba (3.82), Estupiñan (4.42), Andersen (4.96), Botman (5.83), Kaboré (6.31)
-	Son (5.17), Mbeumo (5.54), Salah (6.31), Saka (6.35)
-	Haaland (7.51, C)
-Bench: 
-	Leno, Archer, Trossard, Edouard
-Lineup xPts: 71.04
----
-
-** GW 8:
-ITB=0.4, FT=2.0, PT=0, NT=2.0
-Buy 599 - Diaby
-Buy 36 - Cash
-Sell 20 - Saliba
-Sell 26 - Trossard
----
-Lineup: 
-	Leno (5.16)
-	Botman (3.99), Estupiñan (4.15), Cash (4.57)
-	Saka (4.74), Diaby (4.96), Mbeumo (5.04), Salah (5.71, V), Son (7.54, C)
-	Archer (3.56), Haaland (5.55)
-Bench: 
-	Kaminski, Kaboré, Andersen, Edouard
-Lineup xPts: 62.51
----
-
-** GW 9:
-ITB=0.4, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Leno (3.9)
-	Estupiñan (3.09), Botman (4.25), Cash (4.5)
-	Diaby (4.75), Saka (5.19), Son (6.36), Mbeumo (6.76, V), Salah (7.16, C)
-	Archer (3.37), Haaland (6.56)
-Bench: 
-	Kaminski, Kaboré, Andersen, Edouard
-Lineup xPts: 63.03
----
-
-** GW 10:
-ITB=0.7, FT=2.0, PT=0, NT=2.0
-Buy 113 - Raya
-Buy 44 - Duran
-Sell 614 - Kaminski
-Sell 225 - Edouard
----
-Lineup: 
-	Raya (5.26)
-	Botman (4.35), Estupiñan (5.55), Cash (6.49)
-	Mbeumo (4.72), Son (5.57), Diaby (6.0), Saka (6.79, V), Salah (7.47, C)
-	Duran (4.57), Haaland (6.14)
-Bench: 
-	Leno, Archer, Kaboré, Andersen
-Lineup xPts: 70.4
----
-
 ** GW 11:
-ITB=0.7, FT=1.0, PT=0, NT=0
+ITB=3.7, FT=1.0, PT=1.0, NT=2.0
+Buy 433 - Wilson
+Buy 343 - J.Alvarez
+Sell 355 - Haaland
+Sell 33 - Archer
 ---
 Lineup: 
-	Leno (4.16)
-	Botman (3.57), Cash (4.65), Estupiñan (4.82)
-	Saka (4.9), Diaby (4.95), Mbeumo (5.39), Son (5.57), Salah (8.44, V)
-	Archer (3.58), Haaland (8.68, C)
+	Leno (4.09)
+	Cash (4.23), Trippier (4.3), Tsimikas (4.87)
+	Saka (5.18), Mbeumo (5.75), Son (6.69, V), Salah (8.69, C)
+	Edouard (4.8), J.Alvarez (5.48), Wilson (5.76)
 Bench: 
-	Raya, Duran, Kaboré, Andersen
-Lineup xPts: 67.4
+	Kaminski, Brownhill, Kaboré, Andersen
+Lineup xPts: 68.52
 ---
 
 ** GW 12:
-ITB=0.7, FT=2.0, PT=0, NT=0
+ITB=1.1, FT=1.0, PT=0, NT=1.0
+Buy 526 - Bowen
+Sell 161 - Brownhill
 ---
 Lineup: 
-	Raya (5.25)
-	Botman (4.34), Cash (4.88), Estupiñan (6.43)
-	Mbeumo (4.47), Diaby (4.95), Son (6.21), Salah (6.54, V), Saka (6.63, C)
-	Duran (3.81), Haaland (5.92)
+	Leno (3.44)
+	Tsimikas (4.09), Cash (4.39), Trippier (5.13)
+	Mbeumo (4.86), Bowen (5.66), Saka (6.38), Salah (6.62), Son (7.37, C)
+	J.Alvarez (4.67), Wilson (7.01, V)
 Bench: 
-	Leno, Archer, Kaboré, Andersen
-Lineup xPts: 66.07
+	Kaminski, Edouard, Kaboré, Andersen
+Lineup xPts: 66.99
+---
+
+** GW 13:
+ITB=1.1, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.46)
+	Kaboré (2.71), Cash (3.16), Trippier (4.71)
+	Mbeumo (5.06), Saka (5.32), Salah (5.5), Bowen (6.41, V), Son (6.52, C)
+	Edouard (4.91), Wilson (6.0)
+Bench: 
+	Kaminski, J.Alvarez, Tsimikas, Andersen
+Lineup xPts: 61.26
+---
+
+** GW 14:
+ITB=0.1, FT=2.0, PT=0, NT=2.0
+Buy 313 - Virgil
+Buy 101 - Flekken
+Sell 36 - Cash
+Sell 614 - Kaminski
+---
+Lineup: 
+	Flekken (4.77)
+	Tsimikas (5.0), Trippier (5.1), Virgil (5.19)
+	Bowen (5.4), Son (5.67), Saka (6.19), Mbeumo (6.44, V), Salah (7.34, C)
+	J.Alvarez (4.71), Wilson (6.13)
+Bench: 
+	Leno, Edouard, Kaboré, Andersen
+Lineup xPts: 69.29
+---
+
+** GW 15:
+ITB=0.1, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.69)
+	Trippier (4.65), Tsimikas (4.9), Virgil (5.09)
+	Bowen (4.76), Mbeumo (4.86), Saka (6.37), Son (7.38, V), Salah (8.73, C)
+	J.Alvarez (4.7), Wilson (6.15)
+Bench: 
+	Flekken, Edouard, Kaboré, Andersen
+Lineup xPts: 71.01
+---
+
+** GW 16:
+ITB=0.1, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.3)
+	Trippier (3.96), Tsimikas (4.2), Virgil (4.41)
+	Saka (5.2), Bowen (5.35), Son (5.96), Mbeumo (6.19, V), Salah (6.98, C)
+	Wilson (5.75), J.Alvarez (6.06)
+Bench: 
+	Flekken, Edouard, Kaboré, Andersen
+Lineup xPts: 65.33
+---
+
+** GW 17:
+ITB=0.1, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Flekken (3.25)
+	Tsimikas (4.47), Virgil (4.67), Trippier (5.61)
+	Saka (5.21), Mbeumo (5.23), Bowen (5.56), Salah (6.95, V), Son (7.22, C)
+	J.Alvarez (5.28), Wilson (6.38)
+Bench: 
+	Leno, Edouard, Kaboré, Andersen
+Lineup xPts: 67.04
 ---
 

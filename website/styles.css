@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.pitch {
+    background-image: url('Football_pitch_empty.png'); /* Replace with your pitch image */
+    width: 30%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.squad {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.player {
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 10px;
+    width: 100px;
+}
+
+.transfer {
+    margin-top: 20px;
+}
+
+select, button {
+    font-size: 16px;
+}

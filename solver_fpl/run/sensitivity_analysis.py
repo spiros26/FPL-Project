@@ -52,8 +52,8 @@ def sensitivity_analysis(directory, next_gw, no_runs):
     print('\n'.join(fwds.to_string(index = False).split('\n')[1:]))
 
 
-next_gw = 8
-no_runs = 50
+next_gw = 10
+no_runs = 100
 directory = '../data/results/'
 
 sensitivity_analysis(directory, next_gw, no_runs)

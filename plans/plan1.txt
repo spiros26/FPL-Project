@@ -1,86 +1,101 @@
-** GW 7:
-ITB=0.4, FT=1.0, PT=0, NT=1.0
-Buy 664 - Ward-Prowse
-Sell 26 - Trossard
----
-Lineup: 
-	Kaminski (7.3, V)
-	Estupiñan (4.42), Andersen (4.96), Botman (5.83), Kaboré (6.31)
-	Son (5.17), Mbeumo (5.54), Ward-Prowse (6.21), Salah (6.31), Saka (6.35)
-	Haaland (7.51, C)
-Bench: 
-	Leno, Saliba, Archer, Edouard
-Lineup xPts: 73.43
----
-
-** GW 8:
-ITB=0.8, FT=1.0, PT=0, NT=1.0
-Buy 36 - Cash
-Sell 20 - Saliba
----
-Lineup: 
-	Leno (5.16)
-	Botman (3.99), Estupiñan (4.15), Cash (4.57)
-	Ward-Prowse (4.16), Saka (4.74), Mbeumo (5.04), Salah (5.71, V), Son (7.54, C)
-	Archer (3.56), Haaland (5.55)
-Bench: 
-	Kaminski, Kaboré, Andersen, Edouard
-Lineup xPts: 61.72
----
-
-** GW 9:
-ITB=0.8, FT=1.0, PT=0, NT=0
----
-Lineup: 
-	Leno (3.9)
-	Estupiñan (3.09), Botman (4.25), Cash (4.5)
-	Ward-Prowse (4.31), Saka (5.19), Son (6.36), Mbeumo (6.76, V), Salah (7.16, C)
-	Archer (3.37), Haaland (6.56)
-Bench: 
-	Kaminski, Kaboré, Andersen, Edouard
-Lineup xPts: 62.6
----
-
-** GW 10:
-ITB=0, FT=2.0, PT=0, NT=2.0
-Buy 134 - Gross
-Buy 343 - J.Alvarez
-Sell 108 - Mbeumo
-Sell 225 - Edouard
----
-Lineup: 
-	Leno (3.38)
-	Botman (4.35), Estupiñan (5.55), Cash (6.49)
-	Ward-Prowse (4.93), Gross (5.37), Son (5.57), Saka (6.79, V), Salah (7.47, C)
-	J.Alvarez (4.96), Haaland (6.14)
-Bench: 
-	Kaminski, Archer, Kaboré, Andersen
-Lineup xPts: 68.48
----
-
 ** GW 11:
-ITB=0, FT=1.0, PT=0, NT=0
+ITB=3.1, FT=1.0, PT=1.0, NT=2.0
+Buy 433 - Wilson
+Buy 504 - Maddison
+Sell 355 - Haaland
+Sell 161 - Brownhill
 ---
 Lineup: 
-	Leno (4.16)
-	Botman (3.57), Cash (4.65), Estupiñan (4.82)
-	Ward-Prowse (4.37), Gross (4.82), Saka (4.9), Son (5.57), Salah (8.44, V)
-	J.Alvarez (5.54), Haaland (8.68, C)
+	Leno (4.09)
+	Cash (4.23), Trippier (4.3), Tsimikas (4.87)
+	Saka (5.18), Maddison (5.58), Mbeumo (5.75), Son (6.69, V), Salah (8.69, C)
+	Edouard (4.8), Wilson (5.76)
 Bench: 
-	Kaminski, Archer, Kaboré, Andersen
-Lineup xPts: 68.2
+	Kaminski, Kaboré, Archer, Andersen
+Lineup xPts: 68.63
 ---
 
 ** GW 12:
-ITB=0, FT=2.0, PT=0, NT=0
+ITB=1.4, FT=1.0, PT=0, NT=1.0
+Buy 29 - White
+Sell 315 - Andersen
 ---
 Lineup: 
-	Leno (4.03)
-	Botman (4.34), Cash (4.88), Estupiñan (6.43)
-	Ward-Prowse (5.08), Gross (5.77), Son (6.21), Salah (6.54, V), Saka (6.63, C)
-	J.Alvarez (4.69), Haaland (5.92)
+	Leno (3.44)
+	Tsimikas (4.09), Cash (4.39), Trippier (5.13), White (5.81)
+	Mbeumo (4.86), Maddison (6.12), Saka (6.38), Salah (6.62), Son (7.37, C)
+	Wilson (7.01, V)
 Bench: 
-	Kaminski, Archer, Kaboré, Andersen
-Lineup xPts: 67.15
+	Kaminski, Edouard, Kaboré, Archer
+Lineup xPts: 68.59
+---
+
+** GW 13:
+ITB=1.4, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.46)
+	Cash (3.16), White (3.46), Trippier (4.71)
+	Mbeumo (5.06), Saka (5.32), Salah (5.5), Maddison (5.56), Son (6.52, C)
+	Edouard (4.91), Wilson (6.0, V)
+Bench: 
+	Kaminski, Kaboré, Tsimikas, Archer
+Lineup xPts: 61.16
+---
+
+** GW 14:
+ITB=0.3, FT=2.0, PT=0, NT=2.0
+Buy 343 - J.Alvarez
+Buy 112 - Pinnock
+Sell 225 - Edouard
+Sell 36 - Cash
+---
+Lineup: 
+	Leno (3.34)
+	Tsimikas (5.0), Trippier (5.1), White (5.27), Pinnock (5.38)
+	Maddison (4.75), Son (5.67), Saka (6.19), Mbeumo (6.44, V), Salah (7.34, C)
+	Wilson (6.13)
+Bench: 
+	Kaminski, J.Alvarez, Kaboré, Archer
+Lineup xPts: 67.96
+---
+
+** GW 15:
+ITB=0.3, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.69)
+	Trippier (4.65), White (4.9), Tsimikas (4.9)
+	Mbeumo (4.86), Maddison (6.12), Saka (6.37), Son (7.38, V), Salah (8.73, C)
+	J.Alvarez (4.7), Wilson (6.15)
+Bench: 
+	Kaminski, Pinnock, Kaboré, Archer
+Lineup xPts: 72.18
+---
+
+** GW 16:
+ITB=0.3, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.3)
+	Trippier (3.96), Tsimikas (4.2), Pinnock (4.46)
+	Maddison (4.96), Saka (5.2), Son (5.96), Mbeumo (6.19, V), Salah (6.98, C)
+	Wilson (5.75), J.Alvarez (6.06)
+Bench: 
+	Kaminski, White, Kaboré, Archer
+Lineup xPts: 65.0
+---
+
+** GW 17:
+ITB=0.3, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Kaminski (3.42)
+	White (3.73), Tsimikas (4.47), Trippier (5.61)
+	Saka (5.21), Mbeumo (5.23), Maddison (6.14), Salah (6.95, V), Son (7.22, C)
+	J.Alvarez (5.28), Wilson (6.38)
+Bench: 
+	Leno, Pinnock, Kaboré, Archer
+Lineup xPts: 66.86
 ---
 
