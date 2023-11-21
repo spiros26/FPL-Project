@@ -375,6 +375,7 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     #proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
     # Update fixture probabilities
     fixtures = adjust_fixtures(review_detailed, fixtures, teams, season, gws)
+    print(fixtures)
     master_df = pd.read_csv(master_path)
     #review_df = review_df[:5]      #for tests
     for player_id in tqdm(review_df['ID'].to_list()): 

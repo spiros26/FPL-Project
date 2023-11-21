@@ -287,9 +287,9 @@ def fixture_info2(team, season, gw, fixtures, teams):
   filtered_df = df[(df['team_a']==team) | (df['team_h']==team)]
   for i in range(filtered_df.shape[0]):
     if filtered_df['team_a'].iloc[i] == team:
-      fix.append((teams[season].iloc[filtered_df['team_h'].iloc[i]-1, 5], False, filtered_df['kickoff_time'].iloc[i], filtered_df['team_a_score'].iloc[i], filtered_df['team_h_score'].iloc[i]))
+      fix.append((teams[season].iloc[filtered_df['team_h'].iloc[i]-1, 5], False, filtered_df['kickoff_time'].iloc[i], filtered_df['team_a_score'].iloc[i], filtered_df['team_h_score'].iloc[i], 1))
     else:
-      fix.append((teams[season].iloc[filtered_df['team_a'].iloc[i]-1, 5], True, filtered_df['kickoff_time'].iloc[i], filtered_df['team_h_score'].iloc[i], filtered_df['team_a_score'].iloc[i]))
+      fix.append((teams[season].iloc[filtered_df['team_a'].iloc[i]-1, 5], True, filtered_df['kickoff_time'].iloc[i], filtered_df['team_h_score'].iloc[i], filtered_df['team_a_score'].iloc[i], 1))
   return fix
 
 
@@ -400,13 +400,13 @@ xpens_2022 = {
 '''
 xpens_2022 = {
       'Arsenal': [(19, 0.7), (14, 0.25), (6, 0.03)], #saka, odegaard, havertz
-      'Aston Villa': [(43, 0.9), (60, 0.1), (34, 0)], #luiz, watkins, bailey
+      'Aston Villa': [(43, 0.98), (60, 0.02), (34, 0)], #luiz, watkins, bailey
       'Brentford': [(117, 0), (108, 0.98), (119, 0.02)], #toney, mbeumo, wissa
       'Brighton': [(135, 0.98), (134, 0.02), (154, 0)], # pedro, gross, welbeck
       'Bournemouth':[(85, 0.98), (63, 0.02), (86, 0)], #solanke, billing, tavernier                                                       
-      'Chelsea':  [(362, 0.95), (216, 0.05), (199, 0)], # palmer, sterling, enzo      
-      'Crystal Palace': [(225, 0.33), (232, 0.33), (226, 0.0)], # edouard, mateta, eze    FIXXXXX        
-      'Everton': [(246, 0.6), (601, 0.3), (249, 0.1)], #dcl, danjuma, doucoure
+      'Chelsea':  [(362, 0.98), (216, 0.02), (211, 0)], # palmer, sterling, jackson      
+      'Crystal Palace': [(226, 0.98), (225, 0.02), (232, 0.0)], # eze, edouard, mateta        
+      'Everton': [(246, 0.95), (249, 0.05), (601, 0)], #dcl, doucoure, danjuma
       'Luton':  [(326, 0.98), (314, 0.02), (340, 0)], #Morris, Adebayo, Woodrow           
       'Burnley':  [(177, 0.7), (170, 0.2), (168, 0.1)], #rodriguez, gudmundsson, foster
       'Liverpool': [(308, 0.98), (304, 0.02), (296, 0)], #salah, mac allister, fabinho
@@ -414,8 +414,8 @@ xpens_2022 = {
       'Man Utd': [(373, 0.95), (396, 0.05), (390, 0)], #bruno, rashford, martial
       'Newcastle': [(433, 0.95), (415, 0.05), (416, 0)], #wilson, isak, joelinton
       'Nott\'m Forest':[(447, 0.95), (437, 0.05), (378, 0)], #gibbs-white, awoniyi, elanga                                                     
-      'Sheffield Utd':  [(485, 0.98), (33, 0.02), (488, 0)], #mcburnie, archer, norwood
-      'Spurs': [(516, 0.7), (504, 0.25), (509, 0.05)], #son, maddison, richarlison
+      'Sheffield Utd':  [(485, 0.98), (488, 0.02), (33, 0)], #mcburnie, norwood, archer
+      'Spurs': [(516, 0.8), (504, 0.2), (509, 0.0)], #son, maddison, richarlison
       'Fulham': [(267, 0.9), (558, 0.1), (287, 0)], #andreas, jimenez, vinicious                                                   
       'West Ham': [(525, 0.6), (539, 0.2), (664, 0.2)], #benrahma, paqueta, ward-prowse
       'Wolves': [(590, 0.7), (557, 0.25), (567, 0.05)], #cunha, hwang, neto

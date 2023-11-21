@@ -1,101 +1,148 @@
-** GW 11:
-ITB=3.1, FT=1.0, PT=1.0, NT=2.0
-Buy 433 - Wilson
-Buy 504 - Maddison
-Sell 355 - Haaland
-Sell 161 - Brownhill
----
-Lineup: 
-	Leno (4.09)
-	Cash (4.23), Trippier (4.3), Tsimikas (4.87)
-	Saka (5.18), Maddison (5.58), Mbeumo (5.75), Son (6.69, V), Salah (8.69, C)
-	Edouard (4.8), Wilson (5.76)
-Bench: 
-	Kaminski, Kaboré, Archer, Andersen
-Lineup xPts: 68.63
----
-
-** GW 12:
-ITB=1.4, FT=1.0, PT=0, NT=1.0
-Buy 29 - White
-Sell 315 - Andersen
----
-Lineup: 
-	Leno (3.44)
-	Tsimikas (4.09), Cash (4.39), Trippier (5.13), White (5.81)
-	Mbeumo (4.86), Maddison (6.12), Saka (6.38), Salah (6.62), Son (7.37, C)
-	Wilson (7.01, V)
-Bench: 
-	Kaminski, Edouard, Kaboré, Archer
-Lineup xPts: 68.59
----
-
 ** GW 13:
-ITB=1.4, FT=1.0, PT=0, NT=0
+ITB=1.7, FT=2.0, PT=0, NT=1.0
+Buy 112 - Pinnock
+Sell 395 - R.Varane
 ---
 Lineup: 
-	Leno (4.46)
-	Cash (3.16), White (3.46), Trippier (4.71)
-	Mbeumo (5.06), Saka (5.32), Salah (5.5), Maddison (5.56), Son (6.52, C)
-	Edouard (4.91), Wilson (6.0, V)
+	Leno (4.42)
+	Cash (3.58), Trippier (4.21), Andersen (4.23)
+	Saka (4.29), Bowen (4.45), Mbeumo (4.96), Salah (5.37, V), Son (6.16, C)
+	J.Alvarez (4.31), Solanke (4.32)
 Bench: 
-	Kaminski, Kaboré, Tsimikas, Archer
-Lineup xPts: 61.16
+	Raya, White, Pinnock, Mubama
+Lineup xPts: 56.46
 ---
 
 ** GW 14:
-ITB=0.3, FT=2.0, PT=0, NT=2.0
-Buy 343 - J.Alvarez
-Buy 112 - Pinnock
-Sell 225 - Edouard
-Sell 36 - Cash
+ITB=4.1, FT=2.0, PT=0, NT=1.0
+Buy 362 - Palmer
+Sell 526 - Bowen
 ---
 Lineup: 
-	Leno (3.34)
-	Tsimikas (5.0), Trippier (5.1), White (5.27), Pinnock (5.38)
-	Maddison (4.75), Son (5.67), Saka (6.19), Mbeumo (6.44, V), Salah (7.34, C)
-	Wilson (6.13)
+	Raya (4.65)
+	Cash (4.38), Trippier (5.08), Pinnock (5.16), White (5.18)
+	Palmer (4.71), Saka (4.87), Son (5.41), Mbeumo (6.49, V), Salah (7.28, C)
+	J.Alvarez (4.51)
 Bench: 
-	Kaminski, J.Alvarez, Kaboré, Archer
-Lineup xPts: 67.96
+	Leno, Solanke, Andersen, Mubama
+Lineup xPts: 65.02
 ---
 
 ** GW 15:
-ITB=0.3, FT=1.0, PT=0, NT=0
+ITB=7.2, FT=2.0, PT=0, NT=1.0
+Buy 557 - Hee Chan
+Sell 19 - Saka
 ---
 Lineup: 
-	Leno (4.69)
-	Trippier (4.65), White (4.9), Tsimikas (4.9)
-	Mbeumo (4.86), Maddison (6.12), Saka (6.37), Son (7.38, V), Salah (8.73, C)
-	J.Alvarez (4.7), Wilson (6.15)
+	Leno (4.63)
+	Andersen (4.5), Trippier (4.63), White (4.81)
+	Palmer (4.78), Mbeumo (4.84), Hee Chan (5.95), Son (6.93, V), Salah (8.44, C)
+	Solanke (4.15), J.Alvarez (4.47)
 Bench: 
-	Kaminski, Pinnock, Kaboré, Archer
-Lineup xPts: 72.18
+	Raya, Pinnock, Cash, Mubama
+Lineup xPts: 66.58
 ---
 
 ** GW 16:
-ITB=0.3, FT=2.0, PT=0, NT=0
+ITB=0.2, FT=2.0, PT=0, NT=1.0
+Buy 355 - Haaland
+Sell 343 - J.Alvarez
 ---
 Lineup: 
-	Leno (4.3)
-	Trippier (3.96), Tsimikas (4.2), Pinnock (4.46)
-	Maddison (4.96), Saka (5.2), Son (5.96), Mbeumo (6.19, V), Salah (6.98, C)
-	Wilson (5.75), J.Alvarez (6.06)
+	Leno (4.28)
+	Cash (3.51), Trippier (4.16), Pinnock (4.37)
+	Palmer (4.82), Hee Chan (4.98), Son (5.69), Mbeumo (6.25), Salah (6.99, V)
+	Solanke (4.05), Haaland (7.9, C)
 Bench: 
-	Kaminski, White, Kaboré, Archer
-Lineup xPts: 65.0
+	Raya, White, Andersen, Mubama
+Lineup xPts: 64.91
 ---
 
 ** GW 17:
-ITB=0.3, FT=2.0, PT=0, NT=0
+ITB=1.0, FT=2.0, PT=0, NT=1.0
+Buy 419 - Lascelles
+Sell 220 - Andersen
 ---
 Lineup: 
-	Kaminski (3.42)
-	White (3.73), Tsimikas (4.47), Trippier (5.61)
-	Saka (5.21), Mbeumo (5.23), Maddison (6.14), Salah (6.95, V), Son (7.22, C)
-	J.Alvarez (5.28), Wilson (6.38)
+	Raya (3.47)
+	White (3.71), Lascelles (4.44), Trippier (5.67)
+	Hee Chan (4.62), Mbeumo (5.23), Palmer (5.93), Salah (6.91, V), Son (6.96, C)
+	Solanke (4.39), Haaland (6.68)
 Bench: 
-	Leno, Pinnock, Kaboré, Archer
-Lineup xPts: 66.86
+	Leno, Pinnock, Cash, Mubama
+Lineup xPts: 64.99
+---
+
+** GW 18:
+ITB=7.6, FT=2.0, PT=0, NT=1.0
+Buy 415 - Isak
+Sell 355 - Haaland
+---
+Lineup: 
+	Leno (4.79)
+	White (3.09), Lascelles (4.2), Trippier (5.38), Cash (5.51)
+	Hee Chan (3.98), Palmer (5.13), Salah (6.05), Son (6.87, C)
+	Solanke (4.29), Isak (6.12, V)
+Bench: 
+	Raya, Mubama, Pinnock, Mbeumo
+Lineup xPts: 62.29
+---
+
+** GW 19:
+ITB=0, FT=2.0, PT=0, NT=1.0
+Buy 355 - Haaland
+Sell 85 - Solanke
+---
+Lineup: 
+	Raya (4.31)
+	Pinnock (4.6), White (4.83), Lascelles (4.89), Trippier (6.15)
+	Palmer (5.27), Mbeumo (5.9), Son (5.92), Salah (8.2, C)
+	Isak (5.33), Haaland (6.25, V)
+Bench: 
+	Leno, Hee Chan, Cash, Mubama
+Lineup xPts: 69.85
+---
+
+** GW 20:
+ITB=1.9, FT=2.0, PT=0, NT=2.0
+Buy 343 - J.Alvarez
+Buy 369 - Walker
+Sell 415 - Isak
+Sell 430 - Trippier
+---
+Lineup: 
+	Raya (3.82)
+	Cash (5.36), Pinnock (5.83), Walker (9.42, V)
+	Hee Chan (4.69), Palmer (5.76), Salah (5.87), Son (7.36), Mbeumo (8.44)
+	J.Alvarez (9.05), Haaland (15.13, C)
+Bench: 
+	Leno, White, Lascelles, Mubama
+Lineup xPts: 95.84
+---
+
+** GW 21:
+ITB=1.9, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Raya (4.28)
+	Cash (4.05), Pinnock (4.78), White (4.8)
+	Hee Chan (4.03), Palmer (5.28), Mbeumo (6.01), Son (6.28, V), Salah (7.61, C)
+	J.Alvarez (4.22), Haaland (5.07)
+Bench: 
+	Leno, Walker, Lascelles, Mubama
+Lineup xPts: 64.02
+---
+
+** GW 22:
+ITB=1.9, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.25)
+	Pinnock (3.41), White (4.46), Walker (5.54)
+	Palmer (4.31), Hee Chan (4.47), Mbeumo (5.07), Salah (6.09), Son (6.24, V)
+	J.Alvarez (5.03), Haaland (7.96, C)
+Bench: 
+	Raya, Cash, Lascelles, Mubama
+Lineup xPts: 64.79
 ---
 

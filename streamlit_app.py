@@ -112,6 +112,7 @@ elif choice == "Login":
         usernames = [user["key"] for user in users]
         names = [user["name"] for user in users]
         hashed_passwords = [user["password"] for user in users]
+
         authenticator = stauth.Authenticate(names, usernames, hashed_passwords,
             "cookie_name", "cookie_key", cookie_expiry_days=30)
         name, authentication_status, username = authenticator.login("Login", "main")
