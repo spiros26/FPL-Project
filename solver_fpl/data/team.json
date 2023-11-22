@@ -1,11 +1,11 @@
 {
     "picks": [
         {
-            "element": 524,
+            "element": 275,
             "position": 1,
-            "selling_price": 42,
+            "selling_price": 46,
             "multiplier": 1,
-            "purchase_price": 42,
+            "purchase_price": 46,
             "is_captain": false,
             "is_vice_captain": false
         },
@@ -40,19 +40,19 @@
             "element": 308,
             "position": 5,
             "selling_price": 127,
-            "multiplier": 2,
+            "multiplier": 1,
             "purchase_price": 125,
-            "is_captain": true,
-            "is_vice_captain": false
+            "is_captain": false,
+            "is_vice_captain": true
         },
         {
             "element": 516,
             "position": 6,
             "selling_price": 94,
-            "multiplier": 1,
+            "multiplier": 2,
             "purchase_price": 92,
-            "is_captain": false,
-            "is_vice_captain": true
+            "is_captain": true,
+            "is_vice_captain": false
         },
         {
             "element": 108,
@@ -100,29 +100,29 @@
             "is_vice_captain": false
         },
         {
-            "element": 275,
+            "element": 524,
             "position": 12,
-            "selling_price": 46,
+            "selling_price": 42,
             "multiplier": 0,
-            "purchase_price": 46,
-            "is_captain": false,
-            "is_vice_captain": false
-        },
-        {
-            "element": 31,
-            "position": 13,
-            "selling_price": 49,
-            "multiplier": 0,
-            "purchase_price": 49,
+            "purchase_price": 42,
             "is_captain": false,
             "is_vice_captain": false
         },
         {
             "element": 33,
-            "position": 14,
+            "position": 13,
             "selling_price": 45,
             "multiplier": 0,
             "purchase_price": 45,
+            "is_captain": false,
+            "is_vice_captain": false
+        },
+        {
+            "element": 31,
+            "position": 14,
+            "selling_price": 49,
+            "multiplier": 0,
+            "purchase_price": 49,
             "is_captain": false,
             "is_vice_captain": false
         },

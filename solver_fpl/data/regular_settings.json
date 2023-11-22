@@ -1,10 +1,10 @@
 {
-    "horizon": 10,
+    "horizon": 4,
     "ft_value": 1.5,
     "itb_value": 0.05,
     "decay_base": 0.85,
     "no_future_transfer": false,
-    "no_transfer_last_gws": 4,
+    "no_transfer_last_gws": 2,
     "randomized": false,
     "xmin_lb": 20,
     "bench_weights": {
@@ -21,12 +21,12 @@
     "future_transfer_limit": null,
     "no_transfer_gws": [],
     "booked_transfers": [],
-    "use_wc": 13,
+    "use_wc": null,
     "use_bb": null,
     "use_fh": null,
     "chip_limits": {
         "bb": 0,
-        "wc": 1,
+        "wc": 0,
         "fh": 0,
         "tc": 0
     },
@@ -41,7 +41,7 @@
         "M": "",
         "F": ""
     },
-    "iteration": 1,
+    "iteration": 3,
     "iteration_criteria": "this_gw_transfer_in_out",
     "datasource": "copilot",
     "data_weights": {

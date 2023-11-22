@@ -1,153 +1,56 @@
 ** GW 13:
-CHIP WC
-ITB=0.4, FT=1.0, PT=0, NT=7.0
-Buy 355 - Haaland
-Buy 362 - Palmer
-Buy 415 - Isak
-Buy 689 - Kudus
-Buy 145 - Sanchez
-Buy 112 - Pinnock
-Buy 419 - Lascelles
-Sell 343 - J.Alvarez
-Sell 60 - Watkins
-Sell 19 - Saka
-Sell 29 - White
-Sell 524 - Areola
-Sell 526 - Bowen
-Sell 31 - Zinchenko
+ITB=0.8, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
 	Leno (4.42)
-	Pinnock (3.34), Trippier (4.21), Andersen (4.23)
-	Palmer (4.2), Mbeumo (4.96), Salah (5.37), Kudus (5.71, V), Son (6.16, C)
-	Isak (4.62), Haaland (5.42)
+	Tsimikas (2.57), Trippier (4.21), Andersen (4.23)
+	Saka (4.29), Bowen (4.45), Mbeumo (4.96), Salah (5.37, V), Son (6.16, C)
+	Watkins (4.22), J.Alvarez (4.31)
 Bench: 
-	Sanchez, Archer, Lascelles, Tsimikas
-Lineup xPts: 58.8
+	Areola, Archer, Zinchenko, White
+Lineup xPts: 55.34
 ---
 
 ** GW 14:
-ITB=0.4, FT=1.0, PT=0, NT=0
+ITB=0.6, FT=2.0, PT=0, NT=2.0
+Buy 557 - Hee Chan
+Buy 290 - Alexander-Arnold
+Sell 526 - Bowen
+Sell 29 - White
 ---
 Lineup: 
-	Sanchez (3.46)
-	Tsimikas (4.87), Trippier (5.08), Pinnock (5.16)
-	Kudus (4.61), Palmer (4.71), Son (5.41), Mbeumo (6.49, V), Salah (7.28, C)
-	Isak (4.87), Haaland (6.15)
+	Areola (3.82)
+	Tsimikas (4.87), Trippier (5.08), Alexander-Arnold (5.38)
+	Hee Chan (3.97), Saka (4.87), Son (5.41), Mbeumo (6.49, V), Salah (7.28, C)
+	J.Alvarez (4.51), Watkins (4.67)
 Bench: 
-	Leno, Lascelles, Andersen, Archer
-Lineup xPts: 65.38
+	Leno, Andersen, Archer, Zinchenko
+Lineup xPts: 63.64
 ---
 
 ** GW 15:
-ITB=1.4, FT=2.0, PT=0, NT=1.0
-Buy 557 - Hee Chan
-Sell 689 - Kudus
+ITB=0.6, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
 	Leno (4.63)
-	Andersen (4.5), Trippier (4.63), Tsimikas (4.71)
-	Palmer (4.78), Mbeumo (4.84), Hee Chan (5.95), Son (6.93, V), Salah (8.44, C)
-	Isak (4.8), Haaland (5.74)
+	Andersen (4.5), Trippier (4.63), Tsimikas (4.71), Alexander-Arnold (5.2)
+	Mbeumo (4.84), Saka (5.28), Hee Chan (5.95), Son (6.93, V), Salah (8.44, C)
+	J.Alvarez (4.47)
 Bench: 
-	Sanchez, Lascelles, Archer, Pinnock
-Lineup xPts: 68.41
+	Areola, Watkins, Archer, Zinchenko
+Lineup xPts: 68.03
 ---
 
 ** GW 16:
-ITB=1.0, FT=2.0, PT=0, NT=1.0
-Buy 369 - Walker
-Sell 220 - Andersen
+ITB=0.6, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
 	Leno (4.28)
-	Trippier (4.16), Pinnock (4.37), Walker (4.66)
-	Palmer (4.82), Hee Chan (4.98), Son (5.69), Mbeumo (6.25), Salah (6.99, V)
-	Isak (4.59), Haaland (7.9, C)
+	Tsimikas (4.07), Trippier (4.16), Alexander-Arnold (4.45)
+	Saka (4.16), Hee Chan (4.98), Son (5.69), Mbeumo (6.25, V), Salah (6.99, C)
+	Watkins (4.2), J.Alvarez (4.98)
 Bench: 
-	Sanchez, Tsimikas, Archer, Lascelles
-Lineup xPts: 66.59
----
-
-** GW 17:
-ITB=1.0, FT=2.0, PT=0, NT=1.0
-Buy 584 - Pau
-Sell 112 - Pinnock
----
-Lineup: 
-	Sanchez (5.09)
-	Lascelles (4.44), Walker (5.06), Trippier (5.67)
-	Hee Chan (4.62), Mbeumo (5.23), Palmer (5.93), Salah (6.91, V), Son (6.96, C)
-	Isak (5.03), Haaland (6.68)
-Bench: 
-	Leno, Tsimikas, Pau, Archer
-Lineup xPts: 68.6
----
-
-** GW 18:
-ITB=0.2, FT=2.0, PT=0, NT=1.0
-Buy 134 - Gross
-Sell 557 - Hee Chan
----
-Lineup: 
-	Leno (4.79)
-	Tsimikas (3.45), Lascelles (4.2), Pau (5.29), Trippier (5.38)
-	Gross (4.68), Palmer (5.13), Salah (6.05), Son (6.87, C)
-	Archer (3.12), Isak (6.12, V)
-Bench: 
-	Sanchez, Mbeumo, Walker, Haaland
-Lineup xPts: 61.95
----
-
-** GW 19:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Leno (4.17)
-	Tsimikas (4.53), Lascelles (4.89), Trippier (6.15)
-	Gross (4.46), Palmer (5.27), Mbeumo (5.9), Son (5.92), Salah (8.2, C)
-	Isak (5.33), Haaland (6.25, V)
-Bench: 
-	Sanchez, Walker, Archer, Pau
-Lineup xPts: 69.27
----
-
-** GW 20:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Sanchez (4.24)
-	Trippier (3.52), Pau (5.13), Walker (9.42, V)
-	Gross (4.74), Palmer (5.76), Salah (5.87), Son (7.36), Mbeumo (8.44)
-	Isak (4.35), Haaland (15.13, C)
-Bench: 
-	Leno, Tsimikas, Archer, Lascelles
-Lineup xPts: 89.07
----
-
-** GW 21:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Sanchez (4.36)
-	Trippier (3.3), Pau (3.86), Tsimikas (4.41)
-	Gross (4.94), Palmer (5.28), Mbeumo (6.01), Son (6.28, V), Salah (7.61, C)
-	Isak (4.41), Haaland (5.07)
-Bench: 
-	Leno, Archer, Walker, Lascelles
-Lineup xPts: 63.15
----
-
-** GW 22:
-ITB=0.2, FT=2.0, PT=0, NT=0
----
-Lineup: 
-	Leno (4.25)
-	Tsimikas (3.52), Trippier (3.77), Walker (5.54)
-	Palmer (4.31), Gross (5.05), Mbeumo (5.07), Salah (6.09), Son (6.24, V)
-	Isak (4.5), Haaland (7.96, C)
-Bench: 
-	Sanchez, Archer, Pau, Lascelles
-Lineup xPts: 64.26
+	Areola, Archer, Andersen, Zinchenko
+Lineup xPts: 61.19
 ---
 
