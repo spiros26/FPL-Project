@@ -37,10 +37,16 @@ def add_fixture(fixtures, season, fix_prob, gw, idd, team_h, team_a):
     if ((adj_fix.team_h == team_h) & (adj_fix.team_a == team_a) & (adj_fix.event == gw)).any():
         i = adj_fix[((adj_fix.team_h == team_h) & (adj_fix.team_a == team_a) & (adj_fix.event == gw))].index
         adj_fix.at[i, 'fix_prob'] = fix_prob
+        adj_fix.at[i, 'event'] = gw
+        adj_fix.at[i, 'started'] = False
+        adj_fix.at[i, 'kickoff_time'] = adj_fix[adj_fix['event']==gw]['kickoff_time'].to_list()[-1]
         return fixtures
-
+    
+    # Rescheduled games (not already on the fix list)
     adj_fix.loc[len(adj_fix.index)] = [fix_prob, 0, gw, False, False, idd, '2024-05-28T15:00:00Z', 0, False, False, team_a, np.NaN, team_h, np.NaN, '[]', 0, 0, 0]
+    
     return fixtures
+
 
 def adjust_fixtures(review_detailed, fixtures, teams, season, gws):
     teams_df = teams[season]
@@ -58,22 +64,30 @@ def adjust_fixtures(review_detailed, fixtures, teams, season, gws):
     idd = 1000
 
     for i in range(20):
-        try:
+        #try:
             df = review_detailed.drop_duplicates(subset='Team', keep='first').iloc[i]
             for gw in gws:
                 f_info = df[str(gw)+'_fix'].split('(')
                 fp_info = str(df[str(gw)+'_likelihood']).split()
+                '''
+                if (gw==26):
+                    print(i)
+                    print(f_info)
+                    print(fp_info)
+                '''
                 for i in range(len(f_info)-1):
+
                     if is_home[f_info[i+1][0]]:
                         team_h = teams_df[teams_df['short_name']==df['Team']]['id'].iloc[0]
-                        team_a = teams_df[teams_df['short_name']==f_info[i+1][4:]]['id'].iloc[0]
+                        team_a = teams_df[teams_df['short_name']==f_info[i+1][4:7]]['id'].iloc[0]
                     else:
                         team_a = teams_df[teams_df['short_name']==df['Team']]['id'].iloc[0]
-                        team_h = teams_df[teams_df['short_name']==f_info[i+1][4:]]['id'].iloc[0]   
+                        team_h = teams_df[teams_df['short_name']==f_info[i+1][4:7]]['id'].iloc[0]  
+
                     fixtures = add_fixture(fixtures, season, float(fp_info[i]), gw, idd, team_h, team_a)
                     idd = idd + 1
-        except:
-            continue
+        #except:
+          #  print(gw)
     return fixtures
 
 teams538 = {
@@ -299,7 +313,12 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         # Checks
         if total < 0 or mins==0:
             total = 0
-        points.insert(9, 'total', [total], True)
+
+        # Haaland
+        if player_id == 355:
+            points.insert(9, 'total', [1.0*total], True)
+        else:
+            points.insert(9, 'total', [total], True)
 
         return points
         
@@ -315,7 +334,7 @@ def xPoints(df, npgoals, assists, team_goals, bonus, saves, pens, x):
         points.insert(8, 'pen_miss_points', [0.0], True)
         points.insert(9, 'total', [0.0], True)
         return points
-        
+          
 
 def pentakers_chance(team, review_df, review_detailed, horizon, next_gw, review_horizon, gw, i, pid):
     gws = list(range(next_gw, next_gw + horizon))
@@ -375,10 +394,11 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
     #proj_scores_df = proj_scores_df[proj_scores_df['league_id']==2411]
     # Update fixture probabilities
     fixtures = adjust_fixtures(review_detailed, fixtures, teams, season, gws)
-    print(fixtures)
+
     master_df = pd.read_csv(master_path)
     #review_df = review_df[:5]      #for tests
     for player_id in tqdm(review_df['ID'].to_list()): 
+
         try:
             #name = players_raw[season][players_raw[season]['id']==player_id]['web_name'].iloc[0]
             #row = id_dict_df[id_dict_df[fpl_id]==player_id].iloc[0]
@@ -414,7 +434,12 @@ def compute_analytical_ev(next_gw, horizon, review_horizon, season, review_df, r
             url = 'https://fantasy.premierleague.com/api/element-summary/' + str(int(player_id)) + '/'
             main_df = pd.DataFrame(requests.get(url).json()['history'])
             history_df = pd.DataFrame(requests.get(url).json()['history_past'])
-            understat_id = int(master_df[master_df[season[2:]]==player_id]['understat'].iloc[0])
+
+            try:
+                understat_id = int(master_df[master_df[season[2:]]==player_id]['understat'].iloc[0])
+            except:
+                if player_id == 393:
+                    understat_id = 12073
             understat_df = loop.run_until_complete(player_understat_file(understat_id))
             #understat_df = pd.read_csv('../data/Fantasy-Premier-League/data/2022-23/understat/' + master_df[master_df[season[2:]]==player_id]['first_name'].iloc[0] + '_' + master_df[master_df[season[2:]]==player_id]['second_name'].iloc[0] + '_' + str(understat_id) + '.csv')
 

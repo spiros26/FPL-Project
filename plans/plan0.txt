@@ -1,56 +1,107 @@
-** GW 13:
-ITB=0.8, FT=1.0, PT=0, NT=0
+** GW 21:
+ITB=9.8, FT=1.0, PT=2.0, NT=3.0
+Buy 131 - Estupiñan
+Buy 362 - Palmer
+Buy 134 - Gross
+Sell 308 - Salah
+Sell 516 - Son
+Sell 419 - Lascelles
 ---
 Lineup: 
-	Leno (4.42)
-	Tsimikas (2.57), Trippier (4.21), Andersen (4.23)
-	Saka (4.29), Bowen (4.45), Mbeumo (4.96), Salah (5.37, V), Son (6.16, C)
-	Watkins (4.22), J.Alvarez (4.31)
+	Areola (4.32)
+	Pedro Porro (3.7), Gabriel (4.37), Estupiñan (5.37)
+	Richarlison (4.61), Foden (4.72), Gross (4.87), Palmer (5.54, V), Saka (5.56, C)
+	Solanke (3.76), Watkins (4.24)
 Bench: 
-	Areola, Archer, Zinchenko, White
-Lineup xPts: 55.34
+	Dubravka, Taylor, Mubama, Alexander-Arnold
+Lineup xPts: 56.61
 ---
 
-** GW 14:
-ITB=0.6, FT=2.0, PT=0, NT=2.0
+** GW 22:
+ITB=0.1, FT=1.0, PT=0, NT=1.0
+Buy 355 - Haaland
+Sell 538 - Mubama
+---
+Lineup: 
+	Areola (4.24)
+	Pedro Porro (3.92), Gabriel (4.03), Estupiñan (5.27)
+	Palmer (4.43), Richarlison (4.75), Gross (4.96), Foden (5.3), Saka (5.44, V)
+	Solanke (4.19), Haaland (7.06, C)
+Bench: 
+	Dubravka, Watkins, Alexander-Arnold, Taylor
+Lineup xPts: 60.64
+---
+
+** GW 23:
+ITB=0.1, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Dubravka (5.02)
+	Gabriel (3.09), Pedro Porro (3.88), Estupiñan (5.18)
+	Saka (4.55), Richarlison (4.71), Gross (4.82), Palmer (5.6, V)
+	Solanke (4.86), Watkins (5.32), Haaland (5.72, C)
+Bench: 
+	Areola, Foden, Alexander-Arnold, Taylor
+Lineup xPts: 58.48
+---
+
+** GW 24:
+ITB=4.1, FT=2.0, PT=0, NT=1.0
+Buy 314 - Adebayo
+Sell 60 - Watkins
+---
+Lineup: 
+	Dubravka (3.96)
+	Pedro Porro (3.79), Estupiñan (4.53), Alexander-Arnold (7.0, C)
+	Richarlison (4.37), Gross (4.44), Saka (5.25), Palmer (5.28)
+	Solanke (5.0), Adebayo (5.05), Haaland (5.97, V)
+Bench: 
+	Areola, Foden, Gabriel, Taylor
+Lineup xPts: 61.65
+---
+
+** GW 25:
+ITB=0, FT=2.0, PT=1.0, NT=3.0
+Buy 308 - Salah
+Buy 369 - Walker
 Buy 557 - Hee Chan
-Buy 290 - Alexander-Arnold
-Sell 526 - Bowen
-Sell 29 - White
+Sell 353 - Foden
+Sell 509 - Richarlison
+Sell 506 - Pedro Porro
 ---
 Lineup: 
-	Areola (3.82)
-	Tsimikas (4.87), Trippier (5.08), Alexander-Arnold (5.38)
-	Hee Chan (3.97), Saka (4.87), Son (5.41), Mbeumo (6.49, V), Salah (7.28, C)
-	J.Alvarez (4.51), Watkins (4.67)
+	Dubravka (4.3)
+	Estupiñan (5.28), Walker (6.39), Alexander-Arnold (9.66)
+	Palmer (4.26), Hee Chan (4.51), Gross (5.0), Saka (5.65), Salah (12.74, C)
+	Adebayo (6.01), Haaland (9.88, V)
 Bench: 
-	Leno, Andersen, Archer, Zinchenko
-Lineup xPts: 63.64
+	Areola, Solanke, Gabriel, Taylor
+Lineup xPts: 86.41
 ---
 
-** GW 15:
-ITB=0.6, FT=1.0, PT=0, NT=0
+** GW 26:
+ITB=0, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Leno (4.63)
-	Andersen (4.5), Trippier (4.63), Tsimikas (4.71), Alexander-Arnold (5.2)
-	Mbeumo (4.84), Saka (5.28), Hee Chan (5.95), Son (6.93, V), Salah (8.44, C)
-	J.Alvarez (4.47)
+	Areola (3.89)
+	Taylor (2.05), Gabriel (3.47), Walker (3.78), Estupiñan (5.04)
+	Palmer (1.59), Gross (4.67), Saka (5.08), Hee Chan (6.24, C)
+	Solanke (3.99), Haaland (6.01, V)
 Bench: 
-	Areola, Watkins, Archer, Zinchenko
-Lineup xPts: 68.03
+	Dubravka, Salah, Alexander-Arnold, Adebayo
+Lineup xPts: 52.05
 ---
 
-** GW 16:
-ITB=0.6, FT=2.0, PT=0, NT=0
+** GW 27:
+ITB=0, FT=2.0, PT=0, NT=0
 ---
 Lineup: 
-	Leno (4.28)
-	Tsimikas (4.07), Trippier (4.16), Alexander-Arnold (4.45)
-	Saka (4.16), Hee Chan (4.98), Son (5.69), Mbeumo (6.25, V), Salah (6.99, C)
-	Watkins (4.2), J.Alvarez (4.98)
+	Dubravka (4.32)
+	Gabriel (4.42), Estupiñan (4.75), Alexander-Arnold (5.54)
+	Hee Chan (4.23), Gross (4.65), Palmer (5.0), Saka (5.82), Salah (7.1, C)
+	Solanke (4.46), Haaland (5.91, V)
 Bench: 
-	Areola, Archer, Andersen, Zinchenko
-Lineup xPts: 61.19
+	Areola, Walker, Adebayo, Taylor
+Lineup xPts: 63.32
 ---
 

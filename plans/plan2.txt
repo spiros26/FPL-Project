@@ -1,56 +1,105 @@
-** GW 13:
-ITB=0.4, FT=1.0, PT=0, NT=1.0
-Buy 369 - Walker
-Sell 31 - Zinchenko
----
-Lineup: 
-	Leno (4.42)
-	Walker (3.79), Trippier (4.21), Andersen (4.23)
-	Saka (4.29), Bowen (4.45), Mbeumo (4.96), Salah (5.37, V), Son (6.16, C)
-	Watkins (4.22), J.Alvarez (4.31)
-Bench: 
-	Areola, Archer, Tsimikas, White
-Lineup xPts: 56.56
----
-
-** GW 14:
-ITB=0.4, FT=1.0, PT=0, NT=1.0
-Buy 353 - Foden
+** GW 21:
+ITB=14.1, FT=1.0, PT=2.0, NT=3.0
+Buy 131 - Estupiñan
+Buy 134 - Gross
+Buy 43 - Douglas Luiz
 Sell 526 - Bowen
+Sell 516 - Son
+Sell 602 - Kaboré
 ---
 Lineup: 
-	Areola (3.82)
-	Walker (4.74), Tsimikas (4.87), Trippier (5.08)
-	Saka (4.87), Foden (5.23), Son (5.41), Mbeumo (6.49, V), Salah (7.28, C)
-	J.Alvarez (4.51), Watkins (4.67)
+	Areola (4.32)
+	Pedro Porro (3.7), Saliba (4.28), Estupiñan (5.37)
+	Douglas Luiz (4.25), Richarlison (4.61), Gross (4.87), Palmer (5.54, V), Saka (5.56, C)
+	J.Alvarez (4.11), Watkins (4.24)
 Bench: 
-	Leno, Andersen, Archer, White
-Lineup xPts: 64.26
+	Dubravka, Archer, Branthwaite, Alexander-Arnold
+Lineup xPts: 56.41
 ---
 
-** GW 15:
-ITB=0.4, FT=1.0, PT=0, NT=0
+** GW 22:
+ITB=7.1, FT=1.0, PT=0, NT=1.0
+Buy 355 - Haaland
+Sell 343 - J.Alvarez
 ---
 Lineup: 
-	Leno (4.63)
-	Andersen (4.5), Trippier (4.63), Tsimikas (4.71)
-	Mbeumo (4.84), Foden (4.92), Saka (5.28), Son (6.93, V), Salah (8.44, C)
-	Watkins (3.92), J.Alvarez (4.47)
+	Areola (4.24)
+	Pedro Porro (3.92), Saliba (3.93), Estupiñan (5.27)
+	Douglas Luiz (4.07), Palmer (4.43), Richarlison (4.75), Gross (4.96), Saka (5.44, V)
+	Watkins (4.02), Haaland (7.06, C)
 Bench: 
-	Areola, Walker, Archer, White
-Lineup xPts: 65.73
+	Dubravka, Archer, Branthwaite, Alexander-Arnold
+Lineup xPts: 59.14
 ---
 
-** GW 16:
-ITB=0.4, FT=2.0, PT=0, NT=0
+** GW 23:
+ITB=7.1, FT=1.0, PT=0, NT=0
 ---
 Lineup: 
-	Leno (4.28)
-	Tsimikas (4.07), Trippier (4.16), Walker (4.66)
-	Saka (4.16), Foden (5.64), Son (5.69), Mbeumo (6.25, V), Salah (6.99, C)
-	Watkins (4.2), J.Alvarez (4.98)
+	Dubravka (5.02)
+	Branthwaite (3.1), Pedro Porro (3.88), Estupiñan (5.18)
+	Saka (4.55), Richarlison (4.71), Gross (4.82), Douglas Luiz (4.98), Palmer (5.6, V)
+	Watkins (5.32), Haaland (5.72, C)
 Bench: 
-	Areola, Archer, Andersen, White
-Lineup xPts: 62.06
+	Areola, Archer, Saliba, Alexander-Arnold
+Lineup xPts: 58.61
+---
+
+** GW 24:
+ITB=6.3, FT=2.0, PT=0, NT=1.0
+Buy 313 - Virgil
+Sell 506 - Pedro Porro
+---
+Lineup: 
+	Dubravka (3.96)
+	Estupiñan (4.53), Virgil (5.82), Alexander-Arnold (7.0, C)
+	Douglas Luiz (4.32), Richarlison (4.37), Gross (4.44), Saka (5.25), Palmer (5.28)
+	Watkins (4.2), Haaland (5.97, V)
+Bench: 
+	Areola, Saliba, Archer, Branthwaite
+Lineup xPts: 62.15
+---
+
+** GW 25:
+ITB=0, FT=2.0, PT=0, NT=2.0
+Buy 308 - Salah
+Buy 106 - Jensen
+Sell 362 - Palmer
+Sell 509 - Richarlison
+---
+Lineup: 
+	Dubravka (4.3)
+	Estupiñan (5.28), Virgil (7.83), Alexander-Arnold (9.66)
+	Douglas Luiz (4.42), Gross (5.0), Saka (5.65), Jensen (5.77), Salah (12.74, C)
+	Watkins (4.42), Haaland (9.88, V)
+Bench: 
+	Areola, Saliba, Archer, Branthwaite
+Lineup xPts: 87.68
+---
+
+** GW 26:
+ITB=0, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Areola (3.89)
+	Branthwaite (2.32), Saliba (3.32), Estupiñan (5.04)
+	Jensen (3.78), Gross (4.67), Douglas Luiz (4.86), Saka (5.08, V)
+	Archer (3.49), Watkins (4.55), Haaland (6.01, C)
+Bench: 
+	Dubravka, Salah, Alexander-Arnold, Virgil
+Lineup xPts: 53.04
+---
+
+** GW 27:
+ITB=0, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Dubravka (4.32)
+	Saliba (4.33), Virgil (4.48), Estupiñan (4.75), Alexander-Arnold (5.54)
+	Gross (4.65), Douglas Luiz (4.92), Saka (5.82), Salah (7.1, C)
+	Watkins (5.27), Haaland (5.91, V)
+Bench: 
+	Areola, Jensen, Branthwaite, Archer
+Lineup xPts: 64.2
 ---
 

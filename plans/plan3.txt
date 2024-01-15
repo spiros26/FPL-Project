@@ -1,15 +1,88 @@
-** GW 7:
-ITB=0.1, FT=1.0, PT=0, NT=1.0
-Buy 614 - Kaminski
-Sell 230 - Johnstone
+** GW 20:
+ITB=5.0, FT=2.0, PT=0, NT=2.0
+Buy 353 - Foden
+Buy 32 - Alex Moreno
+Sell 308 - Salah
+Sell 311 - Tsimikas
 ---
 Lineup: 
-	Kaminski (7.3, V)
-	Colwill (3.45), Pinnock (3.8), Estupiñan (4.42), Burke (6.4)
-	B.Fernandes (5.06), Mbeumo (5.54), Salah (6.31), Saka (6.39)
-	Wilson (5.3), Haaland (7.51, C)
+	Areola (3.57)
+	Alexander-Arnold (4.44), Konsa (4.45), Alex Moreno (5.32)
+	Bowen (5.02), Saka (5.03), Palmer (5.52), Foden (5.75, V), Son (6.35, C)
+	Solanke (4.04), Watkins (4.69)
 Bench: 
-	Leno, Udogie, Mubama, Rodrigo
-Lineup xPts: 68.99
+	Leno, Zinchenko, Trippier, Archer
+Lineup xPts: 60.52
+---
+
+** GW 21:
+ITB=8.1, FT=1.0, PT=0, NT=1.0
+Buy 134 - Gross
+Sell 516 - Son
+---
+Lineup: 
+	Areola (4.06)
+	Alex Moreno (4.17), Zinchenko (4.3), Alexander-Arnold (5.07)
+	Foden (4.63), Palmer (4.96), Gross (5.14), Saka (5.27, V), Bowen (6.44, C)
+	Solanke (3.76), Watkins (4.28)
+Bench: 
+	Leno, Archer, Konsa, Trippier
+Lineup xPts: 58.5
+---
+
+** GW 22:
+ITB=8.1, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Areola (4.06)
+	Trippier (3.69), Zinchenko (3.99), Alexander-Arnold (4.84)
+	Palmer (4.01), Saka (5.18), Gross (5.3), Bowen (5.39, V), Foden (5.59, C)
+	Watkins (4.02), Solanke (4.12)
+Bench: 
+	Leno, Alex Moreno, Archer, Konsa
+Lineup xPts: 55.79
+---
+
+** GW 23:
+ITB=1.7, FT=2.0, PT=0, NT=2.0
+Buy 355 - Haaland
+Buy 313 - Virgil
+Sell 60 - Watkins
+Sell 31 - Zinchenko
+---
+Lineup: 
+	Leno (3.98)
+	Konsa (3.86), Alex Moreno (5.8, V), Trippier (6.09, C)
+	Saka (4.48), Foden (4.79), Bowen (5.01), Palmer (5.02), Gross (5.07)
+	Solanke (5.22), Haaland (5.32)
+Bench: 
+	Areola, Alexander-Arnold, Virgil, Archer
+Lineup xPts: 60.72
+---
+
+** GW 24:
+ITB=1.7, FT=1.0, PT=0, NT=0
+---
+Lineup: 
+	Leno (4.07)
+	Trippier (4.93), Virgil (6.6, V), Alexander-Arnold (7.55, C)
+	Bowen (4.56), Gross (4.67), Palmer (4.67), Saka (4.94), Foden (5.11)
+	Solanke (4.91), Haaland (5.98)
+Bench: 
+	Areola, Alex Moreno, Konsa, Archer
+Lineup xPts: 65.55
+---
+
+** GW 25:
+ITB=1.7, FT=2.0, PT=0, NT=0
+---
+Lineup: 
+	Areola (3.87)
+	Alex Moreno (4.33), Trippier (5.06), Virgil (5.46), Alexander-Arnold (6.33)
+	Saka (5.35), Gross (5.36), Bowen (5.52), Foden (8.17, V)
+	Solanke (4.32), Haaland (9.65, C)
+Bench: 
+	Leno, Palmer, Konsa, Archer
+Lineup xPts: 73.07
 ---
 

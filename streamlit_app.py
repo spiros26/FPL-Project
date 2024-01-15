@@ -29,7 +29,7 @@ def generate_transfer_suggestions(team_data, next_gw, horizon, iterations):
         json.dump(team_data, outfile, indent=4)
     # Run solver and get transfers
     os.chdir('solver_fpl/run/')
-    subprocess.call(['python3', 'solve_regular.py'])
+    subprocess.call(['python', 'solve_regular.py'])
     filename_list = os.listdir('../data/results/')[-iterations:]
     transfer_breakdown_list = []
     for filename in filename_list:
